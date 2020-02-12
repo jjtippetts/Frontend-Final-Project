@@ -1,5 +1,24 @@
-.nav {
-    height: 92vh;
+@media (min-width: 576px) {
+
+    html, body {
+        height: 100%;
+    }
+
+    body, body .container-fluid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-fluid,.container-fluid main{
+        flex: 1
+    }
+}
+
+
+@media (max-width: 575px) {
+    .nav a {
+        text-align: center;
+    }
 }
 
 .nav-pills .nav-link:not(.active) {
