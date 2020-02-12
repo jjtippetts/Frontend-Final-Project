@@ -9,7 +9,7 @@
         flex-direction: column;
     }
 
-    .container-fluid,.container-fluid main{
+    .container-fluid,.container-fluid .nav-main{
         flex: 1
     }
 }
