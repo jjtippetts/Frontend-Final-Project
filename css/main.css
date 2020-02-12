@@ -1,3 +1,14 @@
+/* Mobile devices */
+@media (max-width: 575px) {
+    .nav {
+        border-right: 0px solid !important;
+        border-bottom: solid 1px black;
+    }
+    .nav a {
+        text-align: center;
+    }
+}
+
 @media (min-width: 576px) {
 
     html, body {
@@ -11,13 +22,6 @@
 
     .container-fluid,.container-fluid .nav-main{
         flex: 1
-    }
-}
-
-
-@media (max-width: 575px) {
-    .nav a {
-        text-align: center;
     }
 }
 
