@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Jordan Tippetts, Lily Tran, Frank Sun">
-    <meta name="description" content="This dashboard provides a comprehensive and detailed description of Portland including popular places to visit, the weather, and much more!">
+    <meta name="description"
+        content="This dashboard provides a comprehensive and detailed description of Portland including popular places to visit, the weather, and much more!">
     <title>Portland Dashboard</title>
 
     <!-- Bootstrap CSS -->
@@ -34,16 +36,16 @@
             <!-- Sidebar Navigation -->
             <div class="col-12 col-sm-3 col-lg-2 nav flex-column flex-grow-1 nav-pills border-right border-secondary bg-light p-2"
                 id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="lead row m-1 nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab"
-                    aria-controls="v-pills-home" aria-selected="true">
+                <a class="lead row m-1 nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
+                    role="tab" aria-controls="v-pills-home" aria-selected="true">
                     Home
                 </a>
                 <a class="lead nav-link" id="v-pills-weather-tab" data-toggle="pill" href="#v-pills-weather" role="tab"
                     aria-controls="v-pills-weather" aria-selected="false">
                     Weather
                 </a>
-                <a class="lead nav-link" id="v-pills-attractions-tab" data-toggle="pill" href="#v-pills-attractions" role="tab"
-                    aria-controls="v-pills-attractions" aria-selected="false">
+                <a class="lead nav-link" id="v-pills-attractions-tab" data-toggle="pill" href="#v-pills-attractions"
+                    role="tab" aria-controls="v-pills-attractions" aria-selected="false">
                     Attractions
                 </a>
                 <!-- Change attributes if we decide to add another tab... currently blank -->
@@ -59,10 +61,57 @@
                     aria-labelledby="v-pills-home-tab">
                     <div class="jumbotron jumbotron-fluid">
                         <div class="container">
-                          <h1 class="display-4">About Portland</h1>
-                          <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa sed modi accusantium.</p>
+                            <h1 class="display-4">About Portland</h1>
+                            <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa sed modi
+                                accusantium.</p>
                         </div>
-                      </div>
+                    </div>
+
+                    <div class="d-flex flex-wrap justify-content-around">
+                        <div class="card m-2" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Today's Forecast</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+
+                        <div class="card m-2" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Top Resturant</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+
+                        <div class="card m-2" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Top Resturant</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+
+                        <div class="card m-2" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Top Resturant</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ad vero corporis optio
                         voluptates eveniet possimus officiis consequatur debitis eum explicabo itaque voluptatum
                         architecto cupiditate sit provident, ex molestiae expedita asperiores, ut magnam obcaecati!
@@ -70,8 +119,7 @@
                         dolorum non iusto eius?</p>
                 </div>
                 <!-- Weather Tab -->
-                <div class="tab-pane fade" id="v-pills-weather" role="tabpanel"
-                    aria-labelledby="v-pills-weather-tab">
+                <div class="tab-pane fade" id="v-pills-weather" role="tabpanel" aria-labelledby="v-pills-weather-tab">
                     <div class="row">
                         <div class="col-1 bg-dark">
                             <p>Lorem ipsum dolor sit amet.</p>
@@ -99,8 +147,7 @@
                         cumque pariatur soluta?</p>
                 </div>
                 <!-- Blank Tab -->
-                <div class="tab-pane fade" id="v-pills-blank" role="tabpanel"
-                    aria-labelledby="v-pills-blank-tab">
+                <div class="tab-pane fade" id="v-pills-blank" role="tabpanel" aria-labelledby="v-pills-blank-tab">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, deleniti.
                 </div>
             </div>
