@@ -1,5 +1,7 @@
-$primary-color: yellow;
-$secondary-color: black;
+$primary-color: #2b3d41;
+$secondary-color: #4c5f6b;
+$accent-color: #62b6cb;
+$light-color: #f7f7f7;
 
 @media (max-width: 575px) {
     .nav {
@@ -27,13 +29,21 @@ $secondary-color: black;
     }
 }
 
-.nav-pills .nav-link:not(.active) {
-    color: dimgrey;
+header {
+    background-color: $accent-color !important;
 }
 
+.nav {
+    background-color: $secondary-color;
+}
 
-.nav-pills .nav-link.active{
-    background-color: darkgreen;
+// .nav-pills > .nav-link:not(.active){
+// }
+
+
+.row .nav-pills .active{
+    background-color: $light-color;
+    color: $primary-color !important;
 }
 
 /* .jumbotron {

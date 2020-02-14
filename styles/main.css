@@ -28,12 +28,17 @@
   }
 }
 
-.nav-pills .nav-link:not(.active) {
-  color: dimgrey;
+header {
+  background-color: #62b6cb !important;
 }
 
-.nav-pills .nav-link.active {
-  background-color: darkgreen;
+.nav {
+  background-color: #4c5f6b;
+}
+
+.row .nav-pills .active {
+  background-color: #f7f7f7;
+  color: #2b3d41 !important;
 }
 
 /* .jumbotron {
