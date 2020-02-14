@@ -1,0 +1,42 @@
+$primary-color: yellow;
+$secondary-color: black;
+
+@media (max-width: 575px) {
+    .nav {
+        border-right: 0px solid !important;
+        border-bottom: solid 1px black;
+    }
+    .nav a {
+        text-align: center;
+    }
+}
+
+@media (min-width: 576px) {
+
+    html, body {
+        height: 100%;
+    }
+
+    body, body .container-fluid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-fluid,.container-fluid .nav-main{
+        flex: 1
+    }
+}
+
+.nav-pills .nav-link:not(.active) {
+    color: dimgrey;
+}
+
+
+.nav-pills .nav-link.active{
+    background-color: darkgreen;
+}
+
+/* .jumbotron {
+    background-image: url("../images/architecture-buildings-city-city-lights-432361.jpg") ;
+    background-size: contain;
+} */

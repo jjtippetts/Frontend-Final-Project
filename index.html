@@ -1,49 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Required Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/main.css">
+    <meta name="author" content="Jordan Tippetts, Lily Tran, Frank Sun">
+    <meta name="description"
+        content="This dashboard provides a comprehensive and detailed description of Portland including popular places to visit, the weather, and much more!">
+    <title>Portland Dashboard</title>
 
     <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css">
 </head>
-<body>
-    <!-- Header Bar -->
+
+<body class="flex flex-column">
+
+    <!-- Header -->
     <header>
-        <h1>Header</h1>
+        <div class="container-fluid bg-dark text-light">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="display-4">Portland Dashboard</h1>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <!-- Sidebar Site Navigation -->
-    <nav>
-        <h1>Navigation</h1>
-        <ul>
-            <li>Home</li>
-            <li>Weather</li>
-            <li>Attractions</li>
-        </ul>
-    </nav>
+    <!-- Sidebar Plus Main Content -->
+    <div class="container-fluid">
+        <div class="row nav-main">
+            <!-- Sidebar Navigation -->
+            <div class="col-12 col-sm-3 col-lg-2 nav flex-column flex-grow-1 nav-pills border-right border-secondary bg-light p-2"
+                id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="lead row m-1 nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
+                    role="tab" aria-controls="v-pills-home" aria-selected="true">
+                    Home
+                </a>
+                <a class="lead nav-link" id="v-pills-weather-tab" data-toggle="pill" href="#v-pills-weather" role="tab"
+                    aria-controls="v-pills-weather" aria-selected="false">
+                    Weather
+                </a>
+                <a class="lead nav-link" id="v-pills-attractions-tab" data-toggle="pill" href="#v-pills-attractions"
+                    role="tab" aria-controls="v-pills-attractions" aria-selected="false">
+                    Attractions
+                </a>
+                <!-- Change attributes if we decide to add another tab... currently blank -->
+                <a class="lead nav-link" id="v-pills-blank-tab" data-toggle="pill" href="#v-pills-blank" role="tab"
+                    aria-controls="v-pills-blank" aria-selected="false">
+                    Empty Tab
+                </a>
+            </div>
+            <!-- Main Content of page -->
+            <div class="col-12 col-sm-9 col-lg-10 tab-content p-3" id="v-pills-tabContent">
+                <!-- Home Tab -->
+                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                    aria-labelledby="v-pills-home-tab">
+                    <div class="jumbotron jumbotron-fluid">
+                        <div class="container">
+                            <h1 class="display-4">About Portland</h1>
+                            <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa sed modi
+                                accusantium.</p>
+                        </div>
+                    </div>
 
-    <!-- Main Content of Page -->
-    <main>
-        <h1>Main</h1>
-        <section>
+                    <div class="d-flex flex-wrap justify-content-between">
+                        <div class="card m-2" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Today's Forecast</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
 
-        </section>
+                        <div class="card m-2" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Top Resturant</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
 
-        <section>
+                        <div class="card m-2" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Top Resturant</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
 
-        </section>
-    </main>
+                        <div class="card m-2" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Top Resturant</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk
+                                    of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ad vero corporis optio
+                        voluptates eveniet possimus officiis consequatur debitis eum explicabo itaque voluptatum
+                        architecto cupiditate sit provident, ex molestiae expedita asperiores, ut magnam obcaecati!
+                        Vitae et ab, officiis consectetur quod laborum dolorem eius voluptas? Libero distinctio
+                        dolorum non iusto eius?</p>
+                </div>
+                <!-- Weather Tab -->
+                <div class="tab-pane fade" id="v-pills-weather" role="tabpanel" aria-labelledby="v-pills-weather-tab">
+                    <div class="row">
+                        <div class="col-1 bg-dark">
+                            <p>Lorem ipsum dolor sit amet.</p>
+                        </div>
+                    </div>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed ipsam, voluptatem eos nesciunt
+                        velit laborum quisquam cum labore. Quia eum placeat, cupiditate rerum sit incidunt repellat,
+                        dolorum nesciunt odit exercitationem soluta architecto nisi, cumque excepturi. Natus eaque
+                        quos suscipit asperiores, explicabo adipisci sapiente et. Pariatur dolor error corporis eum
+                        temporibus fugit ad. Libero hic laudantium ut tenetur eum facilis explicabo modi alias,
+                        corporis, quo reprehenderit eligendi consectetur accusamus vero magnam dolore blanditiis
+                        atque assumenda nesciunt asperiores consequuntur neque recusandae sunt distinctio? Aliquam
+                        quasi earum facere obcaecati quod, ratione laudantium sit beatae nostrum aut vitae molestias
+                        deleniti officiis! Animi, explicabo unde?</p>
+                </div>
+                <!-- Attractions Tab -->
+                <div class="tab-pane fade" id="v-pills-attractions" role="tabpanel"
+                    aria-labelledby="v-pills-attractions-tab">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dignissimos atque
+                        necessitatibus corrupti placeat unde. Distinctio minus, repellendus cum incidunt debitis
+                        nostrum commodi laboriosam eum mollitia, natus at doloremque maxime asperiores,
+                        necessitatibus explicabo libero totam! Rerum, consequuntur quidem quam quibusdam quisquam
+                        soluta in quia perspiciatis hic error cupiditate eveniet officiis sint ratione illum facilis
+                        doloribus nemo ipsum sapiente? Libero sit fuga quis ex exercitationem sequi doloribus ea
+                        cumque pariatur soluta?</p>
+                </div>
+                <!-- Blank Tab -->
+                <div class="tab-pane fade" id="v-pills-blank" role="tabpanel" aria-labelledby="v-pills-blank-tab">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, deleniti.
+                </div>
+            </div>
+        </div>
+    </div>
 
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
