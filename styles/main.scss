@@ -1,4 +1,6 @@
-/* Mobile devices */
+$primary-color: yellow;
+$secondary-color: black;
+
 @media (max-width: 575px) {
     .nav {
         border-right: 0px solid !important;
@@ -33,3 +35,8 @@
 .nav-pills .nav-link.active{
     background-color: darkgreen;
 }
+
+/* .jumbotron {
+    background-image: url("../images/architecture-buildings-city-city-lights-432361.jpg") ;
+    background-size: contain;
+} */
