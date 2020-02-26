@@ -30,7 +30,8 @@ $light-color: #f7f7f7;
 }
 
 header {
-    background-color: $accent-color !important;
+    // background-color: $accent-color !important;
+    background-color: #34a65f;
 }
 
 .nav {
@@ -46,7 +47,14 @@ header {
     color: $primary-color !important;
 }
 
-/* .jumbotron {
-    background-image: url("../images/architecture-buildings-city-city-lights-432361.jpg") ;
-    background-size: contain;
-} */
+.jumbotron {
+    height: 400px;
+    // background-image: url("../images/concrete-bridge-1438884.jpg");
+    background-image: url("../images/green-grass-field-during-sunset-1080722.jpg");
+    background-size: cover;
+    background-position: 75% 20%;
+}
+
+.jumbotron .container {
+    background-color: rgba(247,247,247, .8);
+}
