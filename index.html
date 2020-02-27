@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,10 @@
     <meta name="description"
         content="This dashboard provides a comprehensive and detailed description of Portland including popular places to visit, the weather, and much more!">
     <title>Portland Dashboard</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -37,19 +42,22 @@
                 id="v-pills-tab" role="tablist" aria-orientation="vertical">
                 <a class="text-light nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
                     role="tab" aria-controls="v-pills-home" aria-selected="true">
+                    <i class="fas fa-home"></i>
                     Home
                 </a>
-                <a class="text-light nav-link" id="v-pills-weather-tab" data-toggle="pill" href="#v-pills-weather" role="tab"
-                    aria-controls="v-pills-weather" aria-selected="false">
+                <a class="text-light nav-link" id="v-pills-weather-tab" data-toggle="pill" href="#v-pills-weather"
+                    role="tab" aria-controls="v-pills-weather" aria-selected="false">
+                    <i class="fas fa-cloud"></i>
                     Weather
                 </a>
-                <a class="text-light nav-link" id="v-pills-attractions-tab" data-toggle="pill" href="#v-pills-attractions"
-                    role="tab" aria-controls="v-pills-attractions" aria-selected="false">
+                <a class="text-light nav-link" id="v-pills-attractions-tab" data-toggle="pill"
+                    href="#v-pills-attractions" role="tab" aria-controls="v-pills-attractions" aria-selected="false">
+                    <i class="fas fa-city"></i>
                     Attractions
                 </a>
                 <!-- Change attributes if we decide to add another tab... currently blank -->
-                <a class="text-light nav-link" id="v-pills-blank-tab" data-toggle="pill" href="#v-pills-blank" role="tab"
-                    aria-controls="v-pills-blank" aria-selected="false">
+                <a class="text-light nav-link" id="v-pills-blank-tab" data-toggle="pill" href="#v-pills-blank"
+                    role="tab" aria-controls="v-pills-blank" aria-selected="false">
                     Empty Tab
                 </a>
             </div>
@@ -65,8 +73,20 @@
                                 accusantium.</p>
                         </div>
                     </div>
-
-                    <div class="d-flex flex-wrap justify-content-between">
+                    <div class="row">
+                        <div class="col-6 pl-3 pr-3">
+                            <div class="bg-dark text-light rounded h-100 p-2">
+                                <h2 >Portland Demographics</h2>
+                            </div>
+                        </div>
+                        <div id="map" class="col-6 pl-3 pr-3">
+                            <iframe class="bg-dark p-2 rounded" width="100%" height="100%" frameborder="0" style="border:0"
+                                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJ3SpfQsLlVQRkYXR9ua5Nhw&key=AIzaSyAfRQKlVXD_-ocS06kuBFggcj-GcMAVQFo"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-wrap">
                         <div class="card m-2" style="width: 18rem;">
                             <img src="..." class="card-img-top" alt="...">
                             <div class="card-body">
@@ -119,10 +139,10 @@
                 </div>
                 <!-- Weather Tab -->
                 <div class="tab-pane fade" id="v-pills-weather" role="tabpanel" aria-labelledby="v-pills-weather-tab">
-                    <div class="row">
-                        <div class="col-1 bg-dark">
-                            <p>Lorem ipsum dolor sit amet.</p>
-                        </div>
+                    <h1 class="display-4">Weather</h1>
+                    <div class="col-4 bg-secondary">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor necessitatibus praesentium id
+                            commodi sequi magni inventore iste qui magnam reprehenderit!</p>
                     </div>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed ipsam, voluptatem eos nesciunt
                         velit laborum quisquam cum labore. Quia eum placeat, cupiditate rerum sit incidunt repellat,
@@ -164,4 +184,5 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
 </body>
+
 </html>

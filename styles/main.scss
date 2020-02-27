@@ -4,57 +4,58 @@ $accent-color: #62b6cb;
 $light-color: #f7f7f7;
 
 @media (max-width: 575px) {
-    .nav {
-        border-right: 0px solid !important;
-        border-bottom: solid 1px black;
-    }
-    .nav a {
-        text-align: center;
-    }
+  .nav {
+    border-right: 0px solid !important;
+    border-bottom: solid 1px black;
+  }
+  .nav a {
+    text-align: center;
+  }
 }
 
 @media (min-width: 576px) {
+  html,
+  body {
+    height: 100%;
+  }
 
-    html, body {
-        height: 100%;
-    }
+  body,
+  body .container-fluid {
+    display: flex;
+    flex-direction: column;
+  }
 
-    body, body .container-fluid {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .container-fluid,.container-fluid .nav-main{
-        flex: 1
-    }
+  .container-fluid,
+  .container-fluid .nav-main {
+    flex: 1;
+  }
 }
 
 header {
-    // background-color: $accent-color !important;
-    background-color: #34a65f;
+  background-color: #34a65f;
 }
 
 .nav {
-    background-color: $secondary-color;
+  background-color: $secondary-color;
 }
 
-// .nav-pills > .nav-link:not(.active){
-// }
-
-
-.row .nav-pills .active{
-    background-color: $light-color;
-    color: $primary-color !important;
+.row .nav-pills .active {
+  background-color: $light-color;
+  color: $primary-color !important;
 }
 
 .jumbotron {
-    height: 400px;
-    // background-image: url("../images/concrete-bridge-1438884.jpg");
-    background-image: url("../images/green-grass-field-during-sunset-1080722.jpg");
-    background-size: cover;
-    background-position: 75% 20%;
+  height: 400px;
+  // UPDATE PHOTO
+  background-image: url("../images/green-grass-field-during-sunset-1080722.jpg");
+  background-size: cover;
+  background-position: 75% 20%;
 }
 
 .jumbotron .container {
-    background-color: rgba(247,247,247, .8);
+  background-color: rgba(247, 247, 247, 0.8);
+}
+
+#map {
+  height: 300px;
 }
