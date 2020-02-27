@@ -1,195 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Jordan Tippetts, Lily Tran, Frank Sun">
-    <meta name="description"
-        content="This dashboard provides a comprehensive and detailed description of Portland including popular places to visit, the weather, and much more!">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Jordan Tippetts, Lily Tran, Frank Sun" />
+    <meta
+      name="description"
+      content="This dashboard provides a comprehensive and detailed description of Portland including popular places to visit, the weather, and much more!"
+    />
     <title>Portland Dashboard</title>
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/main.css">
-</head>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
 
-<body class="flex flex-column">
-
+  <body class="flex flex-column">
     <!-- Header -->
     <header>
-        <div class="container-fluid text-dark">
-            <div class="row">
-                <div class="col-12">
-                    <h3 class="">City of Portland</h1>
-                </div>
-            </div>
+      <div class="container-fluid text-dark">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="">City of Portland</h3>
+          </div>
         </div>
+      </div>
     </header>
 
     <!-- Sidebar Plus Main Content -->
     <div class="container-fluid">
-        <div class="row nav-main">
+      <div class="row nav-main">
+        <!-- SIDEBAR NAV -->
+        <div
+          class="col-12 col-sm-3 col-lg-2 nav flex-column flex-grow-1 nav-pills border-right border-secondary bg-dark p-2"
+          id="v-pills-tab"
+          role="tablist"
+          aria-orientation="vertical"
+        >
+          <a
+            class="text-light nav-link active"
+            id="v-pills-home-tab"
+            data-toggle="pill"
+            href="#v-pills-home"
+            role="tab"
+            aria-controls="v-pills-home"
+            aria-selected="true"
+          >
+            <i class="fas fa-home"></i>
+            Home
+          </a>
+          <a
+            class="text-light nav-link"
+            id="v-pills-weather-tab"
+            data-toggle="pill"
+            href="#v-pills-weather"
+            role="tab"
+            aria-controls="v-pills-weather"
+            aria-selected="false"
+          >
+            <i class="fas fa-cloud"></i>
+            Weather
+          </a>
 
-            <!-- SIDEBAR NAV -->
-            <div class="col-12 col-sm-3 col-lg-2 nav flex-column flex-grow-1 nav-pills border-right border-secondary bg-dark p-2"
-                id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                <a class="text-light nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home"
-                    role="tab" aria-controls="v-pills-home" aria-selected="true">
-                    <i class="fas fa-home"></i>
-                    Home
-                </a>
-                <a class="text-light nav-link" id="v-pills-weather-tab" data-toggle="pill" href="#v-pills-weather"
-                    role="tab" aria-controls="v-pills-weather" aria-selected="false">
-                    <i class="fas fa-cloud"></i>
-                    Weather
-                </a>
-                <a class="text-light nav-link" id="v-pills-attractions-tab" data-toggle="pill"
-                    href="#v-pills-attractions" role="tab" aria-controls="v-pills-attractions" aria-selected="false">
-                    <i class="fas fa-city"></i>
-                    Attractions
-                </a>
-                <!-- Change attributes if we decide to add another tab... currently blank -->
-                <a class="text-light nav-link" id="v-pills-blank-tab" data-toggle="pill" href="#v-pills-blank"
-                    role="tab" aria-controls="v-pills-blank" aria-selected="false">
-                    Empty Tab
-                </a>
-            </div>
-
-            <!-- MAIN CONTENT -->
-            <div class="col-12 col-sm-9 col-lg-10 tab-content p-3" id="v-pills-tabContent">
-
-                <!-- HOME PILL -->
-                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
-                    aria-labelledby="v-pills-home-tab">
-                    <div class="jumbotron jumbotron-fluid mb-3">
-                        <div class="container">
-                            <h1 class="display-4">About Portland</h1>
-                            <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa sed modi
-                                accusantium.</p>
-                        </div>
-                    </div>
-
-                    <!-- DEMOGRAPHICS/MAP -->
-                    <div class="row">
-                        <div class="col-12 col-sm-6 pl-3 pr-3 pb-2 pb-sm-0">
-                            <div class="bg-dark text-light rounded h-100 p-2">
-                                <h2 >Portland Demographics</h2>
-                            </div>
-                        </div>
-                        <div id="map" class="col-12 col-sm-6 pl-3 pr-3">
-                            <iframe class="bg-dark p-2 rounded" width="100%" height="100%" frameborder="0" style="border:0"
-                                src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJ3SpfQsLlVQRkYXR9ua5Nhw&key=AIzaSyAfRQKlVXD_-ocS06kuBFggcj-GcMAVQFo"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                    </div>
-                    <div class="d-flex flex-wrap">
-                        <div class="card m-2" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Today's Forecast</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-
-                        <div class="card m-2" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Top Resturant</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-
-                        <div class="card m-2" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Top Resturant</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-
-                        <div class="card m-2" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Top Resturant</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the
-                                    bulk
-                                    of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ad vero corporis optio
-                        voluptates eveniet possimus officiis consequatur debitis eum explicabo itaque voluptatum
-                        architecto cupiditate sit provident, ex molestiae expedita asperiores, ut magnam obcaecati!
-                        Vitae et ab, officiis consectetur quod laborum dolorem eius voluptas? Libero distinctio
-                        dolorum non iusto eius?</p>
-                </div>
-
-                <!-- Weather Tab -->
-                <div class="tab-pane fade" id="v-pills-weather" role="tabpanel" aria-labelledby="v-pills-weather-tab">
-                    <h1 class="display-4">Weather</h1>
-                    <div class="col-4 bg-secondary">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor necessitatibus praesentium id
-                            commodi sequi magni inventore iste qui magnam reprehenderit!</p>
-                    </div>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed ipsam, voluptatem eos nesciunt
-                        velit laborum quisquam cum labore. Quia eum placeat, cupiditate rerum sit incidunt repellat,
-                        dolorum nesciunt odit exercitationem soluta architecto nisi, cumque excepturi. Natus eaque
-                        quos suscipit asperiores, explicabo adipisci sapiente et. Pariatur dolor error corporis eum
-                        temporibus fugit ad. Libero hic laudantium ut tenetur eum facilis explicabo modi alias,
-                        corporis, quo reprehenderit eligendi consectetur accusamus vero magnam dolore blanditiis
-                        atque assumenda nesciunt asperiores consequuntur neque recusandae sunt distinctio? Aliquam
-                        quasi earum facere obcaecati quod, ratione laudantium sit beatae nostrum aut vitae molestias
-                        deleniti officiis! Animi, explicabo unde?</p>
-                </div>
-
-                <!-- Attractions Tab -->
-                <div class="tab-pane fade" id="v-pills-attractions" role="tabpanel"
-                    aria-labelledby="v-pills-attractions-tab">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dignissimos atque
-                        necessitatibus corrupti placeat unde. Distinctio minus, repellendus cum incidunt debitis
-                        nostrum commodi laboriosam eum mollitia, natus at doloremque maxime asperiores,
-                        necessitatibus explicabo libero totam! Rerum, consequuntur quidem quam quibusdam quisquam
-                        soluta in quia perspiciatis hic error cupiditate eveniet officiis sint ratione illum facilis
-                        doloribus nemo ipsum sapiente? Libero sit fuga quis ex exercitationem sequi doloribus ea
-                        cumque pariatur soluta?</p>
-                </div>
-                <!-- Blank Tab -->
-                <div class="tab-pane fade" id="v-pills-blank" role="tabpanel" aria-labelledby="v-pills-blank-tab">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. In, deleniti.
-                </div>
-            </div>
+          <a
+            class="text-light nav-link"
+            id="v-pills-attractions-tab"
+            data-toggle="pill"
+            href="#v-pills-attractions"
+            role="tab"
+            aria-controls="v-pills-attractions"
+            aria-selected="false"
+          >
+            <i class="fas fa-city"></i>
+            Attractions
+          </a>
+          <!-- Change attributes if we decide to add another tab... currently blank -->
+          <a
+            class="text-light nav-link mb-auto"
+            id="v-pills-blank-tab"
+            data-toggle="pill"
+            href="#v-pills-blank"
+            role="tab"
+            aria-controls="v-pills-blank"
+            aria-selected="false"
+          >
+            Empty Tab </a
+          >align-self-end
+          <button class="">collapse</button>
         </div>
+
+        <!-- MAIN CONTENT -->
+        <div
+          class="col-12 col-sm-9 col-lg-10 tab-content p-3"
+          id="v-pills-tabContent"
+        >
+          <!-- HOME PILL -->
+          <div
+            class="tab-pane fade show active"
+            id="v-pills-home"
+            role="tabpanel"
+            aria-labelledby="v-pills-home-tab"
+          >
+            <div class="jumbotron jumbotron-fluid mb-3">
+              <div class="container">
+                <h1 class="display-4">About Portland</h1>
+                <p class="lead">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa
+                  sed modi accusantium.
+                </p>
+              </div>
+            </div>
+
+            <!-- DEMOGRAPHICS/MAP -->
+            <div class="row">
+              <div class="col-12 col-sm-6 pl-3 pr-3 pb-2 pb-sm-0">
+                <div class="bg-dark text-light rounded h-100 p-2">
+                  <h2>Portland Demographics</h2>
+                </div>
+              </div>
+              <div id="map" class="col-12 col-sm-6 pl-3 pr-3">
+                <iframe
+                  class="bg-dark p-2 rounded"
+                  width="100%"
+                  height="100%"
+                  frameborder="0"
+                  style="border:0"
+                  src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJJ3SpfQsLlVQRkYXR9ua5Nhw&key=AIzaSyAfRQKlVXD_-ocS06kuBFggcj-GcMAVQFo"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+            </div>
+            <div class="d-flex flex-wrap">
+              <div class="card m-2" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Today's Forecast</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+
+              <div class="card m-2" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Top Resturant</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+
+              <div class="card m-2" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Top Resturant</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+
+              <div class="card m-2" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Top Resturant</h5>
+                  <p class="card-text">
+                    Some quick example text to build on the card title and make
+                    up the bulk of the card's content.
+                  </p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+            </div>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem,
+              ad vero corporis optio voluptates eveniet possimus officiis
+              consequatur debitis eum explicabo itaque voluptatum architecto
+              cupiditate sit provident, ex molestiae expedita asperiores, ut
+              magnam obcaecati! Vitae et ab, officiis consectetur quod laborum
+              dolorem eius voluptas? Libero distinctio dolorum non iusto eius?
+            </p>
+          </div>
+
+          <!-- Weather Tab -->
+          <div
+            class="tab-pane fade"
+            id="v-pills-weather"
+            role="tabpanel"
+            aria-labelledby="v-pills-weather-tab"
+          >
+            <h1 class="display-4">Weather</h1>
+            <div class="col-4 bg-secondary">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                necessitatibus praesentium id commodi sequi magni inventore iste
+                qui magnam reprehenderit!
+              </p>
+            </div>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
+              ipsam, voluptatem eos nesciunt velit laborum quisquam cum labore.
+              Quia eum placeat, cupiditate rerum sit incidunt repellat, dolorum
+              nesciunt odit exercitationem soluta architecto nisi, cumque
+              excepturi. Natus eaque quos suscipit asperiores, explicabo
+              adipisci sapiente et. Pariatur dolor error corporis eum temporibus
+              fugit ad. Libero hic laudantium ut tenetur eum facilis explicabo
+              modi alias, corporis, quo reprehenderit eligendi consectetur
+              accusamus vero magnam dolore blanditiis atque assumenda nesciunt
+              asperiores consequuntur neque recusandae sunt distinctio? Aliquam
+              quasi earum facere obcaecati quod, ratione laudantium sit beatae
+              nostrum aut vitae molestias deleniti officiis! Animi, explicabo
+              unde?
+            </p>
+          </div>
+
+          <!-- Attractions Tab -->
+          <div
+            class="tab-pane fade"
+            id="v-pills-attractions"
+            role="tabpanel"
+            aria-labelledby="v-pills-attractions-tab"
+          >
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
+              dignissimos atque necessitatibus corrupti placeat unde. Distinctio
+              minus, repellendus cum incidunt debitis nostrum commodi laboriosam
+              eum mollitia, natus at doloremque maxime asperiores,
+              necessitatibus explicabo libero totam! Rerum, consequuntur quidem
+              quam quibusdam quisquam soluta in quia perspiciatis hic error
+              cupiditate eveniet officiis sint ratione illum facilis doloribus
+              nemo ipsum sapiente? Libero sit fuga quis ex exercitationem sequi
+              doloribus ea cumque pariatur soluta?
+            </p>
+          </div>
+          <!-- Blank Tab -->
+          <div
+            class="tab-pane fade"
+            id="v-pills-blank"
+            role="tabpanel"
+            aria-labelledby="v-pills-blank-tab"
+          >
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. In,
+            deleniti.
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Javascript -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-</body>
-
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
