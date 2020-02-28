@@ -49,11 +49,20 @@ header {
   height: 50px;
   z-index: 1;
   width: 100%;
-  background-color: #34a65f;
+  background-color: #4c5c68;
 }
 
 .nav {
-  background-color: #4c5f6b;
+  background-color: #c5c3c6;
+  position: fixed !important;
+}
+
+.weather-box {
+  background-color: #1985a1;
+}
+
+.box {
+  background-color: #4c5c68;
 }
 
 .row .nav-pills .active {

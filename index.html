@@ -36,7 +36,7 @@
       <div class="container-fluid text-dark">
         <div class="row">
           <div class="col-12">
-            <h3 class="">City of Portland</h3>
+            <h3 class="mt-2 text-light">City of Portland</h3>
           </div>
         </div>
       </div>
@@ -47,13 +47,13 @@
       <div class="row nav-main">
         <!-- SIDEBAR NAV -->
         <div
-          class="col-12 nav flex-column flex-grow-1 nav-pills border-right border-secondary bg-dark p-2"
+          class="col-12 nav flex-column flex-grow-1 nav-pills p-2"
           id="v-pills-tab"
           role="tablist"
           aria-orientation="vertical"
         >
           <a
-            class="text-light nav-link active"
+            class="text-dark nav-link active"
             id="v-pills-home-tab"
             data-toggle="pill"
             href="#v-pills-home"
@@ -65,7 +65,7 @@
             Home
           </a>
           <a
-            class="text-light nav-link"
+            class="text-dark nav-link"
             id="v-pills-weather-tab"
             data-toggle="pill"
             href="#v-pills-weather"
@@ -78,7 +78,7 @@
           </a>
 
           <a
-            class="text-light nav-link"
+            class="text-dark nav-link"
             id="v-pills-attractions-tab"
             data-toggle="pill"
             href="#v-pills-attractions"
@@ -89,22 +89,23 @@
             <i class="fas fa-city"></i>
             Attractions
           </a>
-          <!-- Change attributes if we decide to add another tab... currently blank -->
+
           <a
-            class="text-light nav-link mb-auto"
-            id="v-pills-blank-tab"
+            class="text-dark nav-link mb-auto"
+            id="v-pills-support-tab"
             data-toggle="pill"
-            href="#v-pills-blank"
+            href="#v-pills-support"
             role="tab"
-            aria-controls="v-pills-blank"
+            aria-controls="v-pills-support"
             aria-selected="false"
           >
-            Empty Tab
+          <i class="fas fa-wrench"></i>
+            Support
           </a>
         </div>
 
         <!-- MAIN CONTENT -->
-        <div class="col-12 col-sm tab-content p-3" id="v-pills-tabContent">
+        <div class="col-12 col-sm tab-content p-3 bg-light" id="v-pills-tabContent">
           <!-- HOME PILL -->
           <div
             class="tab-pane fade show active"
@@ -125,13 +126,15 @@
             <!-- DEMOGRAPHICS/MAP -->
             <div class="row">
               <div class="col-12 col-sm-6 pl-3 pr-3 pb-2 pb-sm-0">
-                <div class="bg-dark text-light rounded h-100 p-2">
+                <div class="box text-light rounded h-100 p-2">
                   <h2>Portland Demographics</h2>
+                  <h4 class="d-inline">Population:</h4>
+                  <p class="d-inline">540,000</p>
                 </div>
               </div>
               <div id="map" class="col-12 col-sm-6 pl-3 pr-3">
                 <iframe
-                  class="bg-dark p-2 rounded"
+                  class="box p-2 rounded"
                   width="100%"
                   height="100%"
                   frameborder="0"
@@ -208,8 +211,10 @@
             role="tabpanel"
             aria-labelledby="v-pills-weather-tab"
           >
-            <h1 class="display-4">Weather</h1>
-            <div class="col-4 bg-secondary">
+            <h1 class="display-4">Today's Forcast</h1>
+            <div class="weather-box col-4 rounded">
+              <h3 class="text-light d-inline">Current Weather:</h1>
+              <h3 class="current-weather text-light d-inline"></h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
                 necessitatibus praesentium id commodi sequi magni inventore iste
@@ -252,12 +257,12 @@
               doloribus ea cumque pariatur soluta?
             </p>
           </div>
-          <!-- Blank Tab -->
+          <!-- Support -->
           <div
             class="tab-pane fade"
-            id="v-pills-blank"
+            id="v-pills-support"
             role="tabpanel"
-            aria-labelledby="v-pills-blank-tab"
+            aria-labelledby="v-pills-support-tab"
           >
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. In,
             deleniti.
@@ -282,5 +287,74 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Open Weather API -->
+    <script>
+      let weatherData = {};
+      let weatherCurrent = 0;
+      let weatherDescription;
+      let weatherHumidity;
+      let weatherPressure;
+      let weatherWindSpeed;
+      let weatherSunrise;
+      let weatherSunset;
+
+      function convertTimestamptoTime(unixTimestamp) {
+        unixTimestamp;
+
+        // convert to milliseconds and
+        // then create a new Date object
+        dateObj = new Date(unixTimestamp * 1000);
+        utcString = dateObj.toUTCString();
+
+        time = utcString.slice(-11, -4);
+        console.log(time);
+
+        // document.querySelector(
+        // '.output').textContent = time;
+      }
+
+      const url =
+        "https://api.openweathermap.org/data/2.5/weather?q=Portland&units=imperial&appid=a0c908be7bf2e72f9b00b4f7f2d3a43f";
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          weatherData = data;
+          console.log(weatherData);
+          currentWeather = data.main.temp;
+          console.log(currentWeather);
+
+          document.getElementsByClassName(
+            "current-weather"
+          )[0].innerHTML = currentWeather;
+
+          let timeZone;
+          timeZone = weatherData.timezone;
+          console.log(timeZone);
+          weatherSunrise = weatherData.sys.sunrise + timeZone;
+          console.log(weatherSunrise);
+          convertTimestamptoTime(weatherSunrise);
+          weatherSunset = weatherData.sys.sunset;
+          console.log(weatherSunset);
+          convertTimestamptoTime(weatherSunset);
+
+          return data.results;
+        })
+        // .then(data => {
+        // //   numberOfPlanets = data.results.length;
+
+        //   //   console.log(data.results.map(x => x.name));
+        //   let lpop = data.results.filter(x => x.population > 10, 000);
+        //   console.log(lpop);
+        //   //   console.log(data.results.map(x => x.name));
+
+        //   for (i = 0; i < numberOfPlanets; ++i) {
+        //     console.log(data.results[i].name);
+        //   }
+        //})
+        .catch(error => {
+          console.log(error);
+        });
+    </script>
   </body>
 </html>

@@ -3,6 +3,13 @@ $secondary-color: #4c5f6b;
 $accent-color: #62b6cb;
 $light-color: #f7f7f7;
 
+// Weather Page Colors
+$light-blue: #1985a1;
+$dark-blue: #4c5c68;
+$dark-gray: #46494c;
+$gray: #c5c3c6;
+$light-gray: #dcdcdd;
+
 // Mobile Devices
 @media (max-width: 575px) {
   .nav {
@@ -55,12 +62,24 @@ header {
   height: 50px;
   z-index: 1;
   width: 100%;
-  background-color: #34a65f;
+  // background-color: #34a65f;
+  background-color: $dark-blue;
 }
 
 .nav {
-  background-color: $secondary-color;
-  //   position: fixed !important;
+  // background-color: $secondary-color;
+  background-color: $gray;
+  position: fixed !important;
+}
+
+.tab-content {
+}
+
+.weather-box {
+  background-color: $light-blue;
+}
+.box {
+  background-color: $dark-blue;
 }
 
 // .nav-link {
