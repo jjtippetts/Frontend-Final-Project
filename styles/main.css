@@ -23,6 +23,20 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  header {
+    position: fixed;
+  }
+  .main-content {
+    margin-top: 50px;
+  }
+  .nav {
+    max-width: 200px !important;
+    position: fixed;
+    height: 100%;
+  }
+  .tab-content {
+    margin-left: 200px;
+  }
   .container-fluid,
   .container-fluid .nav-main {
     -webkit-box-flex: 1;
@@ -32,6 +46,9 @@
 }
 
 header {
+  height: 50px;
+  z-index: 1;
+  width: 100%;
   background-color: #34a65f;
 }
 
