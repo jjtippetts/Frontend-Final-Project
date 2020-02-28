@@ -64,15 +64,13 @@ header {
   width: 100%;
   // background-color: #34a65f;
   background-color: $dark-blue;
+  font-family: "Pacifico";
 }
 
 .nav {
   // background-color: $secondary-color;
   background-color: $gray;
   position: fixed !important;
-}
-
-.tab-content {
 }
 
 .weather-box {
