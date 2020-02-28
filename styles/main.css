@@ -9,10 +9,12 @@
 }
 
 @media (min-width: 576px) {
-  html, body {
+  html,
+  body {
     height: 100%;
   }
-  body, body .container-fluid {
+  body,
+  body .container-fluid {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -21,7 +23,22 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .container-fluid, .container-fluid .nav-main {
+  header {
+    position: fixed;
+  }
+  .main-content {
+    margin-top: 50px;
+  }
+  .nav {
+    max-width: 200px !important;
+    position: fixed;
+    height: 100%;
+  }
+  .tab-content {
+    margin-left: 200px;
+  }
+  .container-fluid,
+  .container-fluid .nav-main {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
@@ -29,7 +46,10 @@
 }
 
 header {
-  background-color: #62b6cb !important;
+  height: 50px;
+  z-index: 1;
+  width: 100%;
+  background-color: #34a65f;
 }
 
 .nav {
@@ -41,8 +61,18 @@ header {
   color: #2b3d41 !important;
 }
 
-/* .jumbotron {
-    background-image: url("../images/architecture-buildings-city-city-lights-432361.jpg") ;
-    background-size: contain;
-} */
+.jumbotron {
+  height: 400px;
+  background-image: url("../images/green-grass-field-during-sunset-1080722.jpg");
+  background-size: cover;
+  background-position: 75% 20%;
+}
+
+.jumbotron .container {
+  background-color: rgba(247, 247, 247, 0.8);
+}
+
+#map {
+  height: 300px;
+}
 /*# sourceMappingURL=main.css.map */
