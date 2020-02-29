@@ -220,16 +220,27 @@
             role="tabpanel"
             aria-labelledby="v-pills-weather-tab"
           >
-            <div class="weather-box col-4 rounded">
-              <h4 class="text-light text-center">Portland, OR</h4>
-              <p class="text-light d-inline">Current Weather:</p>
-              <p class="current-weather text-light d-inline"></p>
-              <br />
-              <p class="text-light d-inline">Sunrise:</p>
-              <p class="sunrise text-light d-inline"></p>
-              <br />
-              <p class="text-light d-inline">Sunset:</p>
-              <p class="sunset text-light d-inline"></p>
+            <div class="row">
+              <div class="wrapper col-4">
+                <div class="weather-box p-2 rounded">
+                  <h4 class="text-light text-center">Current Weather</h4>
+                  <p class="lead current-weather text-light"></p>
+                  <p class="weather-description text-light"></p>
+                  <p class="text-light d-inline">Sunrise:</p>
+                  <p class="sunrise text-light d-inline"></p>
+                  <br />
+                  <p class="text-light d-inline">Sunset:</p>
+                  <p class="sunset text-light d-inline"></p>
+                </div>
+              </div>
+
+              <div class="wrapper col-4">
+                <div class="weather-box p-2 rounded">Hello</div>
+              </div>
+
+              <div class="wrapper col-4">
+                <div class="weather-box p-2 rounded">Hello</div>
+              </div>
             </div>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
@@ -299,67 +310,6 @@
     ></script>
 
     <!-- Open Weather API -->
-    <script>
-      let weatherData = {};
-      let CurrentWeather = 0;
-      let weatherDescription;
-      let Humidity;
-      let Pressure;
-      let WindSpeed;
-      let Sunrise;
-      let Sunset;
-
-      function convertTimestamptoTime(unixTimestamp) {
-        unixTimestamp;
-
-        // convert to milliseconds and
-        // then create a new Date object
-        dateObj = new Date(unixTimestamp * 1000);
-        utcString = dateObj.toUTCString();
-
-        time = utcString.slice(-11, -4);
-        console.log(time);
-        return time;
-
-        // document.querySelector(
-        // '.output').textContent = time;
-      }
-
-      const url =
-        "https://api.openweathermap.org/data/2.5/weather?q=Portland&units=imperial&appid=a0c908be7bf2e72f9b00b4f7f2d3a43f";
-      fetch(url)
-        .then(response => response.json())
-        .then(data => {
-          weatherData = data;
-          console.log(weatherData);
-          currentWeather = data.main.temp;
-          console.log(currentWeather);
-
-          document.getElementsByClassName(
-            "current-weather"
-          )[0].innerHTML = currentWeather;
-
-          let timeZone;
-          timeZone = weatherData.timezone;
-          console.log(timeZone);
-
-          sunrise = weatherData.sys.sunrise + timeZone;
-          console.log(sunrise);
-          sunrise = convertTimestamptoTime(sunrise);
-
-          document.getElementsByClassName("sunrise")[0].innerHTML = sunrise;
-
-          sunset = weatherData.sys.sunset + timeZone;
-          console.log(sunset);
-          sunset = convertTimestamptoTime(sunset);
-
-          document.getElementsByClassName("sunset")[0].innerHTML = sunset;
-
-          return data.results;
-        })
-        .catch(error => {
-          console.log(error);
-        });
-    </script>
+    <script src="/scripts/weather.js"></script>
   </body>
 </html>
