@@ -60,6 +60,11 @@ header {
 
 .weather-box {
   background-color: #1985a1;
+  height: 250px;
+}
+
+.weather-box .current-weather {
+  font-size: 48px;
 }
 
 .box {
@@ -73,9 +78,11 @@ header {
 
 .jumbotron {
   height: 400px;
-  background-image: url("../images/green-grass-field-during-sunset-1080722.jpg");
+  background-image: url("../images/architecture-buildings-city-city-lights-432361.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
-  background-position: 75% 20%;
+  background-position: left bottom;
+  background-attachment: fixed;
 }
 
 .jumbotron .container {
