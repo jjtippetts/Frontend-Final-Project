@@ -8,12 +8,10 @@ function checkTime(i) {
   return i;
 }
 
-$(document).ready(function() {
+$(document).ready(function displayTime() {
   let today = new Date();
   let h = today.getHours();
-  console.log(typeof h);
   let m = today.getMinutes();
-
   let ampm = h >= 12 ? "pm" : "am";
 
   h = h % 12;
@@ -24,7 +22,9 @@ $(document).ready(function() {
   m = checkTime(m);
 
   let currentTime = h + ":" + m + " " + ampm;
-  console.log(currentTime);
   // $(".display-4").append("<p>" + currentTime + "</p>");
-  $('<h4 class="pb-2">' + currentTime + "</h4>").insertAfter(".display-4");
+  // $('<h4 class="pb-2">' + currentTime + "</h4>").insertAfter(".display-4");
+  $(".time").text(currentTime);
+
+  setTimeout(displayTime, 60000);
 });
