@@ -24,11 +24,9 @@ function convertTimestamptoTime(unixTimestamp) {
   time = utcString.slice(-11, -4);
   console.log(time);
   return time;
-
-  // document.querySelector(
-  // '.output').textContent = time;
 }
 
+//Open Weather API
 fetch(url)
   .then(response => response.json())
   .then(data => {
