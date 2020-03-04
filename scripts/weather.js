@@ -12,23 +12,6 @@ let WindSpeed;
 let Sunrise;
 let Sunset;
 
-//Source: www.geeksforgeeks.org
-function convertTimestamptoTime(unixTimestamp) {
-  unixTimestamp;
-
-  // convert to milliseconds and
-  // then create a new Date object
-  dateObj = new Date(unixTimestamp * 1000);
-  utcString = dateObj.toUTCString();
-
-  time = utcString.slice(-11, -4);
-  console.log(time);
-  return time;
-
-  // document.querySelector(
-  // '.output').textContent = time;
-}
-
 fetch(url)
   .then(response => response.json())
   .then(data => {
@@ -52,10 +35,17 @@ fetch(url)
 
     sunrise = weatherData.sys.sunrise + timeZone;
     sunrise = convertTimestamptoTime(sunrise);
+    sunrise = sunrise.split(":").slice(0, 2);
+    sunrise = formatTime(sunrise[0], sunrise[1]);
     document.getElementsByClassName("sunrise")[0].innerHTML = sunrise;
 
     sunset = weatherData.sys.sunset + timeZone;
     sunset = convertTimestamptoTime(sunset);
+    sunset = sunset.split(":").slice(0, 2);
+    sunset = formatTime(sunset[0], sunset[1]);
+    console.log(sunset);
+
+    console.log(typeof sunset);
     document.getElementsByClassName("sunset")[0].innerHTML = sunset;
 
     return data.results;
