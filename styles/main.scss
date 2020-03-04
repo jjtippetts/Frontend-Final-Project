@@ -74,12 +74,18 @@ header {
 }
 
 .weather-box {
-  background-color: $light-blue;
+  // background-color: $light-blue;
+  background-color: $accent-color;
   height: 250px;
+}
 
-  .current-weather {
-    font-size: 48px;
-  }
+.current-weather {
+  font-size: 3rem;
+  // text-align: center;
+}
+
+.weather-description {
+  font-size: 1.2rem;
 }
 
 .box {

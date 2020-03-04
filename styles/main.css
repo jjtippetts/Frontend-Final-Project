@@ -59,12 +59,16 @@ header {
 }
 
 .weather-box {
-  background-color: #1985a1;
+  background-color: #62b6cb;
   height: 250px;
 }
 
-.weather-box .current-weather {
-  font-size: 48px;
+.current-weather {
+  font-size: 3rem;
+}
+
+.weather-description {
+  font-size: 1.2rem;
 }
 
 .box {

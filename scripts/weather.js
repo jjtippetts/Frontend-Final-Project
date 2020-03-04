@@ -4,7 +4,8 @@
 const url =
   "https://api.openweathermap.org/data/2.5/weather?q=Portland&units=imperial&appid=a0c908be7bf2e72f9b00b4f7f2d3a43f";
 let weatherData = {};
-let CurrentWeather = 0;
+let currentWeather;
+let feelsLike;
 let weatherDescription;
 let Humidity;
 let Pressure;
@@ -22,6 +23,14 @@ fetch(url)
     currentWeather = data.main.temp;
     document.getElementsByClassName("current-weather")[0].innerHTML =
       Math.round(currentWeather).toString() + " \xB0 F";
+
+    document.getElementsByClassName("current-weather")[1].innerHTML =
+      Math.round(currentWeather).toString() + " \xB0 F";
+
+    //feels like
+    feelsLike = data.main.feels_like;
+    document.getElementsByClassName("feels-like")[0].innerHTML =
+      Math.round(feelsLike).toString() + " \xB0 F";
 
     //Weather Description
     weatherDescription = weatherData.weather[0].description;

@@ -156,29 +156,30 @@
                         data-slide-to="2"
                       ></li>
                     </ol>
-                    <div class="carousel-inner">
+                    <div class="carousel-inner h-100">
                       <div class="carousel-item active">
-                        <img
+                        <!-- <img
                           class="d-block w-100"
                           src="..."
                           alt="First slide"
-                        />
+                        /> -->
                         <h4 class="text-center">Demographics</h4>
                       </div>
-                      <div class="carousel-item">
-                        <img
+                      <div class="carousel-item carousel-weather">
+                        <!-- <img
                           class="d-block w-100"
                           src="..."
                           alt="Second slide"
-                        />
+                        /> -->
                         <h4 class="text-center">Weather</h4>
+                        <p class="lead current-weather text-light"></p>
                       </div>
                       <div class="carousel-item">
-                        <img
+                        <!-- <img
                           class="d-block w-100"
                           src="..."
                           alt="Third slide"
-                        />
+                        /> -->
                         <h4 class="text-center">About</h4>
                       </div>
                     </div>
@@ -295,14 +296,20 @@
             <div class="row">
               <div class="wrapper col-4">
                 <div class="weather-box p-2 rounded">
-                  <h4 class="text-light text-center">Current Weather</h4>
-                  <p class="lead current-weather text-light"></p>
-                  <p class="weather-description text-light"></p>
-                  <p class="text-light d-inline">Sunrise:</p>
-                  <p class="sunrise text-light d-inline"></p>
+                  <h3 class="text-light text-center">Current Weather</h3>
+                  <ul class="list-unstyled">
+                    <li class="lead current-weather text-light"></li>
+                    <li
+                      class="weather-description text-light text-capitalize font-weight-bold"
+                    ></li>
+                    <li class="feels-like text-light"></li>
+                    <li class="text-light d-inline">Sunrise:</li>
+                    <li class="sunrise text-light d-inline"></li>
+                    <br />
+                    <li class="text-light d-inline">Sunset:</li>
+                    <li class="sunset text-light d-inline"></li>
+                  </ul>
                   <br />
-                  <p class="text-light d-inline">Sunset:</p>
-                  <p class="sunset text-light d-inline"></p>
                 </div>
               </div>
 
@@ -388,10 +395,10 @@
       crossorigin="anonymous"
     ></script> -->
 
-    <!-- Open Weather API -->
-    <script src="/scripts/weather.js"></script>
-
     <!-- Time functionality -->
     <script src="/scripts/time.js"></script>
+
+    <!-- Open Weather API -->
+    <script src="/scripts/weather.js"></script>
   </body>
 </html>
