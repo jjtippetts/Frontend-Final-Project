@@ -98,6 +98,7 @@ function displayFiveDayForecast(fullData) {
       description
     );
     $(".fiveDayForecast").append(parent);
+
   });
 }
 

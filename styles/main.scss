@@ -62,15 +62,12 @@ header {
   height: 50px;
   z-index: 1;
   width: 100%;
-  // background-color: #34a65f;
   background-color: $dark-blue;
   font-family: "Pacifico";
 }
 
 .nav {
-  // background-color: $secondary-color;
   background-color: $gray;
-  position: fixed !important;
 }
 
 // .wrapper {
@@ -108,10 +105,6 @@ header {
 .box {
   background-color: $dark-blue;
 }
-
-// .nav-link {
-//     position: fixed;
-// }
 
 .row .nav-pills .active {
   background-color: $light-color;
