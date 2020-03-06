@@ -59,7 +59,7 @@ header {
 }
 
 .weather-box {
-  background-color: #62b6cb;
+  background-color: #dcdcdd;
   height: 250px;
 }
 
@@ -69,6 +69,21 @@ header {
 
 .weather-description {
   font-size: 1.2rem;
+}
+
+.horizontal-scrollable .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: hidden;
+}
+
+.horizontal-scrollable .row > .weather-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 
 .box {

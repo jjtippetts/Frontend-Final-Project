@@ -1,64 +1,127 @@
 // OPEN WEATHER API
 // **********************************************
 
-const url =
-  "https://api.openweathermap.org/data/2.5/weather?q=Portland&units=imperial&appid=a0c908be7bf2e72f9b00b4f7f2d3a43f";
-let weatherData = {};
-let currentWeather;
-let feelsLike;
-let weatherDescription;
-let Humidity;
-let Pressure;
-let WindSpeed;
-let Sunrise;
-let Sunset;
+//API CALLS TO GET CURRENT WEATHER & FIVE DAY FORECAST
+async function getCurrentWeather() {
+  let url =
+    "https://api.openweathermap.org/data/2.5/weather?q=Portland&units=imperial&appid=a0c908be7bf2e72f9b00b4f7f2d3a43f";
+  let response = await fetch(url);
+  let data = await response.json();
+  return data;
+}
 
-fetch(url)
-  .then(response => response.json())
-  .then(data => {
-    weatherData = data;
-    console.log(weatherData);
+async function getFiveDayForecast() {
+  let url =
+    "https://api.openweathermap.org/data/2.5/forecast?q=Portland&units=imperial&appid=a0c908be7bf2e72f9b00b4f7f2d3a43f";
+  let response = await fetch(url);
+  let data = await response.json();
+  console.log(data);
+  return data;
+}
 
-    //Current Weather
-    currentWeather = data.main.temp;
-    document.getElementsByClassName("current-weather")[0].innerHTML =
-      Math.round(currentWeather).toString() + " \xB0 F";
+//**********************************************************
+//FUNCTIONS TO DISPLAY CURRENT WEATHER AND FIVE DAY FORECAST
 
-    document.getElementsByClassName("current-weather")[1].innerHTML =
-      Math.round(currentWeather).toString() + " \xB0 F";
+//Display Current Weather
+function displayCurrentWeather(data) {
+  //Current Weather
+  const currentWeather = Math.round(data.main.temp).toString() + " \xB0 F";
+  $(".current-weather").prepend(currentWeather);
 
-    //feels like
-    feelsLike = data.main.feels_like;
-    document.getElementsByClassName("feels-like")[0].innerHTML =
-      Math.round(feelsLike).toString() + " \xB0 F";
+  //Weather Icon
+  let iconCode = data.weather[0].icon;
+  let iconURL = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
+  $(".wicon").attr("src", iconURL);
 
-    //Weather Description
-    weatherDescription = weatherData.weather[0].description;
-    document.getElementsByClassName(
-      "weather-description"
-    )[0].innerHTML = weatherDescription;
+  //feels like
+  let feelsLike = Math.round(data.main.feels_like).toString() + " \xB0 F";
+  $(".feels-like").append(" " + feelsLike);
 
-    //Sunrise/Sunset
-    let timeZone;
-    timeZone = weatherData.timezone;
+  //Weather Description
+  let weatherDescription = data.weather[0].description;
+  $(".weather-description").text(weatherDescription);
 
-    sunrise = weatherData.sys.sunrise + timeZone;
-    sunrise = convertTimestamptoTime(sunrise);
-    sunrise = sunrise.split(":").slice(0, 2);
-    sunrise = formatTime(sunrise[0], sunrise[1]);
-    document.getElementsByClassName("sunrise")[0].innerHTML = sunrise;
+  //Humidity
+  let humidity = data.main.humidity;
+  $(".humidity").append(" " + humidity + "%");
 
-    sunset = weatherData.sys.sunset + timeZone;
-    sunset = convertTimestamptoTime(sunset);
-    sunset = sunset.split(":").slice(0, 2);
-    sunset = formatTime(sunset[0], sunset[1]);
-    console.log(sunset);
+  //Sunrise/Sunset
+  let timeZone;
+  timeZone = data.timezone;
 
-    console.log(typeof sunset);
-    document.getElementsByClassName("sunset")[0].innerHTML = sunset;
+  let sunrise = data.sys.sunrise + timeZone;
+  sunrise = convertTimestamptoTime(sunrise);
+  sunrise = sunrise.split(":").slice(0, 2);
+  sunrise = formatTime(sunrise[0], parseInt(sunrise[1]));
+  $(".sunrise").append(" " + sunrise);
 
-    return data.results;
-  })
-  .catch(error => {
-    console.log(error);
+  let sunset = data.sys.sunset + timeZone;
+  sunset = convertTimestamptoTime(sunset);
+  console.log(sunset);
+  sunset = sunset.split(":").slice(0, 2);
+  sunset = formatTime(sunset[0], parseInt(sunset[1]));
+  $(".sunset").append(" " + sunset);
+}
+
+//DISPLAY 3 HOUR FORECAST FOR NEXT FIVE DAYS
+function displayFiveDayForecast(fullData) {
+  data = fullData.list;
+  let timeZone = fullData.city.timezone;
+  let weekDays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ];
+  console.log(timeZone);
+
+  console.log(data);
+  data.forEach(function(forecast) {
+    let date = new Date(forecast.dt * 1000);
+    let day = weekDays[date.getDate()];
+    let hours = date.getHours();
+    let time = formatTime(hours, 00);
+
+    console.log(time);
+
+    day = $("<div></div>").text(day);
+    time = $("<div></div>").text(time);
+    let temp = $("<div></div>").text(forecast.main.temp);
+    let description = $("<div></div>").text(forecast.weather[0].description);
+    let parent = $("<div class='weather-item'></div>").append(
+      day,
+      time,
+      temp,
+      description
+    );
+    $(".fiveDayForecast").append(parent);
   });
+}
+
+//***************************************
+//CALL DISPLAY FUNCTIONS
+async function displayWeather() {
+  //Get Current Weather
+  currentWeatherData = await getCurrentWeather();
+  displayCurrentWeather(currentWeatherData);
+  //Get Five Day Forecast
+  fiveDayForecast = await getFiveDayForecast();
+  displayFiveDayForecast(fiveDayForecast);
+}
+
+displayWeather();
+
+// const map_url =
+//   "https://tile.openweathermap.org/map/clouds/3/2/3.png?appid=a0c908be7bf2e72f9b00b4f7f2d3a43f";
+
+// fetch(map_url)
+//   .then(response => response.json())
+//   .then(data => {
+//     console.log(data);
+//   })
+//   .catch(error => {
+//     console.log(error);
+//   });

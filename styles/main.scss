@@ -78,7 +78,7 @@ header {
 // }
 .weather-box {
   // background-color: $light-blue;
-  background-color: $accent-color;
+  background-color: $light-gray;
   height: 250px;
 }
 
@@ -89,6 +89,20 @@ header {
 
 .weather-description {
   font-size: 1.2rem;
+}
+
+.horizontal-scrollable .row {
+  // overflow-x: auto;
+  // white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+}
+
+.horizontal-scrollable .row > .weather-item {
+  flex: 0 0 auto;
+  // display: inline-block;
+  // float: none;
 }
 
 .box {

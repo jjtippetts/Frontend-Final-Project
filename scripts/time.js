@@ -33,7 +33,7 @@ function formatTime(hours, minutes, military) {
   }
 
   //Add extra zero if single digit
-  // minutes = checkTime(minutes);
+  minutes = addZero(minutes);
 
   //Format
   let currentTime = hours + ":" + minutes + " " + ampm;
