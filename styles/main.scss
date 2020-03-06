@@ -70,13 +70,36 @@ header {
   background-color: $gray;
 }
 
+// .wrapper {
+//   width: 200px;
+// }
 .weather-box {
-  background-color: $light-blue;
+  // background-color: $light-blue;
+  background-color: $light-gray;
   height: 250px;
+}
 
-  .current-weather {
-    font-size: 48px;
-  }
+.current-weather {
+  font-size: 3rem;
+  // text-align: center;
+}
+
+.weather-description {
+  font-size: 1.2rem;
+}
+
+.horizontal-scrollable .row {
+  // overflow-x: auto;
+  // white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+}
+
+.horizontal-scrollable .row > .weather-item {
+  flex: 0 0 auto;
+  // display: inline-block;
+  // float: none;
 }
 
 .box {

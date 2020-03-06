@@ -58,12 +58,31 @@ header {
 }
 
 .weather-box {
-  background-color: #1985a1;
+  background-color: #dcdcdd;
   height: 250px;
 }
 
-.weather-box .current-weather {
-  font-size: 48px;
+.current-weather {
+  font-size: 3rem;
+}
+
+.weather-description {
+  font-size: 1.2rem;
+}
+
+.horizontal-scrollable .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: hidden;
+}
+
+.horizontal-scrollable .row > .weather-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 
 .box {
