@@ -89,7 +89,7 @@ header {
   background-color: #4c5c68;
 }
 
-.row .nav-pills .active {
+.nav a.active {
   background-color: #f7f7f7;
   color: #2b3d41 !important;
 }

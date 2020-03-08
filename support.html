@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Jordan Tippetts, Lily Tran, Frank Sun" />
+    <meta
+      name="description"
+      content="This dashboard provides a comprehensive and detailed description of Portland including popular places to visit, the weather, and much more!"
+    />
+    <title>Portland Dashboard / Weather</title>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+      integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+
+  <body class="flex flex-column">
+    <!-- Header -->
+    <header>
+      <div class="container-fluid text-dark">
+        <div class="row">
+          <div class="col-12">
+            <h3 class="mt-2 text-light">The City of Portland</h3>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sidebar Plus Main Content -->
+    <div class="main-content container-fluid">
+      <div class="row nav-main">
+        <!-- SIDEBAR NAV -->
+        <div
+          class="col-12 nav flex-column flex-grow-1 accordion p-2 align-items-center justify-content-center"
+          role="tablist"
+          aria-orientation="vertical"
+        >
+          <a class="text-dark nav-link rounded w-100" href="/index.html">
+            <i class="fas fa-home"></i>
+            Home
+          </a>
+          <a class="text-dark nav-link rounded w-100" href="/weather.html">
+            <i class="fas fa-cloud"></i>
+            Weather
+          </a>
+
+          <a class="text-dark nav-link rounded w-100" href="/attractions.html">
+            <i class="fas fa-city"></i>
+            Attractions
+          </a>
+
+          <a
+            class="text-dark nav-link mb-auto rounded w-100 active"
+            href="/support.html"
+          >
+            <i class="fas fa-wrench"></i>
+            Support
+          </a>
+        </div>
+
+        <!-- MAIN CONTENT -->
+        <div class="col-12 col-sm p-3 tab-content bg-light">
+          <!-- Support -->
+          <div class="" id="" role="tabpanel" aria-labelledby="">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. In,
+            deleniti.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Javascript -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- jquery -->
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script> -->
+
+    <!-- Time functionality -->
+    <script src="/scripts/time.js"></script>
+
+    <!-- Open Weather API -->
+    <script src="/scripts/weather.js"></script>
+  </body>
+</html>

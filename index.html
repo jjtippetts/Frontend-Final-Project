@@ -53,57 +53,28 @@
       <div class="row nav-main">
         <!-- SIDEBAR NAV -->
         <div
-          class="col-12 nav flex-column flex-grow-1 nav-pills p-2"
+          class="col-12 nav flex-column flex-grow-1 accordion p-2 align-items-center justify-content-center"
           id="v-pills-tab"
           role="tablist"
           aria-orientation="vertical"
         >
-          <a
-            class="text-dark nav-link active"
-            id="v-pills-home-tab"
-            data-toggle="pill"
-            href="#v-pills-home"
-            role="tab"
-            aria-controls="v-pills-home"
-            aria-selected="true"
-          >
+          <a class="text-dark nav-link active rounded w-100" href="/index.html">
             <i class="fas fa-home"></i>
             Home
           </a>
-          <a
-            class="text-dark nav-link"
-            id="v-pills-weather-tab"
-            data-toggle="pill"
-            href="#v-pills-weather"
-            role="tab"
-            aria-controls="v-pills-weather"
-            aria-selected="false"
-          >
+          <a class="text-dark nav-link rounded w-100" href="/weather.html">
             <i class="fas fa-cloud"></i>
             Weather
           </a>
 
-          <a
-            class="text-dark nav-link"
-            id="v-pills-attractions-tab"
-            data-toggle="pill"
-            href="#v-pills-attractions"
-            role="tab"
-            aria-controls="v-pills-attractions"
-            aria-selected="false"
-          >
+          <a class="text-dark nav-link rounded w-100" href="/attractions.html">
             <i class="fas fa-city"></i>
             Attractions
           </a>
 
           <a
-            class="text-dark nav-link mb-auto"
-            id="v-pills-support-tab"
-            data-toggle="pill"
-            href="#v-pills-support"
-            role="tab"
-            aria-controls="v-pills-support"
-            aria-selected="false"
+            class="text-dark nav-link mb-auto rounded w-100"
+            href="/support.html"
           >
             <i class="fas fa-wrench"></i>
             Support
@@ -111,11 +82,8 @@
         </div>
 
         <!-- MAIN CONTENT -->
-        <div
-          class="col-12 col-sm tab-content p-3 bg-light"
-          id="v-pills-tabContent"
-        >
-          <!-- HOME PILL -->
+        <div class="col-12 col-sm tab-content p-3 bg-light">
+          <!-- HOME -->
           <div
             class="tab-pane fade show active"
             id="v-pills-home"
@@ -288,102 +256,6 @@
               magnam obcaecati! Vitae et ab, officiis consectetur quod laborum
               dolorem eius voluptas? Libero distinctio dolorum non iusto eius?
             </p>
-          </div>
-
-          <!-- Weather Tab -->
-          <div
-            class="tab-pane fade"
-            id="v-pills-weather"
-            role="tabpanel"
-            aria-labelledby="v-pills-weather-tab"
-          >
-            <div class="row">
-              <div class="wrapper col-lg-5">
-                <div class="weather-box rounded" id="current-weather-box">
-                  <h3 class="text-center pt-2">Current Weather</h3>
-                  <div
-                    class=" pl-3 pr-3 d-flex flex-row justify-content-between"
-                  >
-                    <div class="lead current-weather d-inline"></div>
-                    <img src="" alt="weather icon" class="wicon" />
-                  </div>
-
-                  <div class="row pl-3 pr-3">
-                    <div class="col-6">
-                      <ul class="list-unstyled">
-                        <li
-                          class="weather-description text-capitalize font-weight-bold"
-                        ></li>
-                        <li class="feels-like">Feels Like:</li>
-                        <li class="humidity">Humidity:</li>
-                      </ul>
-                    </div>
-
-                    <div class="col-6">
-                      <ul class="list-unstyled">
-                        <li class="sunrise text-right">Sunrise:</li>
-                        <li class="sunset text-right">Sunset:</li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <br />
-                </div>
-              </div>
-
-              <div class="wrapper col-lg-7">
-                <div class="weather-box rounded horizontal-scrollable" id="fiveDayForecastBox">
-                  <div class="row fiveDayForecast text-center">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
-              ipsam, voluptatem eos nesciunt velit laborum quisquam cum labore.
-              Quia eum placeat, cupiditate rerum sit incidunt repellat, dolorum
-              nesciunt odit exercitationem soluta architecto nisi, cumque
-              excepturi. Natus eaque quos suscipit asperiores, explicabo
-              adipisci sapiente et. Pariatur dolor error corporis eum temporibus
-              fugit ad. Libero hic laudantium ut tenetur eum facilis explicabo
-              modi alias, corporis, quo reprehenderit eligendi consectetur
-              accusamus vero magnam dolore blanditiis atque assumenda nesciunt
-              asperiores consequuntur neque recusandae sunt distinctio? Aliquam
-              quasi earum facere obcaecati quod, ratione laudantium sit beatae
-              nostrum aut vitae molestias deleniti officiis! Animi, explicabo
-              unde?
-            </p>
-          </div>
-
-          <!-- Attractions Tab -->
-          <div
-            class="tab-pane fade"
-            id="v-pills-attractions"
-            role="tabpanel"
-            aria-labelledby="v-pills-attractions-tab"
-          >
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos
-              dignissimos atque necessitatibus corrupti placeat unde. Distinctio
-              minus, repellendus cum incidunt debitis nostrum commodi laboriosam
-              eum mollitia, natus at doloremque maxime asperiores,
-              necessitatibus explicabo libero totam! Rerum, consequuntur quidem
-              quam quibusdam quisquam soluta in quia perspiciatis hic error
-              cupiditate eveniet officiis sint ratione illum facilis doloribus
-              nemo ipsum sapiente? Libero sit fuga quis ex exercitationem sequi
-              doloribus ea cumque pariatur soluta?
-            </p>
-          </div>
-          <!-- Support -->
-          <div
-            class="tab-pane fade"
-            id="v-pills-support"
-            role="tabpanel"
-            aria-labelledby="v-pills-support-tab"
-          >
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. In,
-            deleniti.
           </div>
         </div>
       </div>

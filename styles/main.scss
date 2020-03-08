@@ -106,7 +106,7 @@ header {
   background-color: $dark-blue;
 }
 
-.row .nav-pills .active {
+.nav a.active {
   background-color: $light-color;
   color: $primary-color !important;
 }
