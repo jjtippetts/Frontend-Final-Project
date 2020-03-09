@@ -88,16 +88,13 @@ function displayFiveDayForecast(fullData) {
 
     console.log(time);
 
-    day = $("<div></div>").text(day);
+    day = $("<div class='font-weight-bold'></div>").text(day);
     time = $("<div></div>").text(time);
     let temp = $("<div></div>").text(forecast.main.temp);
     let description = $("<div></div>").text(forecast.weather[0].description);
-    let parent = $("<div class='weather-item p-4'></div>").append(
-      day,
-      time,
-      temp,
-      description
-    );
+    let parent = $(
+      "<div class='weather-item p-4 h-100 d-flex-column'></div>"
+    ).append(day, time, temp, description);
     $(".fiveDayForecast").append(parent);
   });
 }

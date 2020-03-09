@@ -4,8 +4,13 @@ $accent-color: #62b6cb;
 $light-color: #f7f7f7;
 
 // Weather Page Colors
-$light-blue: #1985a1;
+// $light-blue: #1985a1;
 $dark-blue: #4c5c68;
+$blue-1: #cdddff;
+$blue-2: #89bbff;
+$blue-3: #79aaff;
+$blue-4: #6697ff;
+$blue-5: #4a8dff;
 $dark-gray: #46494c;
 $gray: #c5c3c6;
 $light-gray: #dcdcdd;
@@ -23,9 +28,10 @@ $light-gray: #dcdcdd;
 
 //Desktop devices
 @media (min-width: 576px) {
-  header {
-    position: fixed;
-    top: 0;
+  html,
+  body,
+  .nav-main {
+    height: 100%;
   }
 
   .main-content {
@@ -41,10 +47,13 @@ $light-gray: #dcdcdd;
   .tab-content {
     margin-left: 200px;
     max-width: 100%;
+    height: 100%;
   }
 }
 
 header {
+  position: fixed;
+  top: 0;
   height: 50px;
   z-index: 1;
   width: 100%;
@@ -56,41 +65,41 @@ header {
   background-color: $gray;
 }
 
-// .wrapper {
-//   width: 200px;
-// }
 .weather-box {
-  // background-color: $light-blue;
-  background-color: $light-gray;
+  background-image: linear-gradient(#4a8dff, #89bbff);
   height: 250px;
 }
 
 .current-weather {
   font-size: 3rem;
-  // text-align: center;
 }
 
 .weather-description {
   font-size: 1.2rem;
 }
 
-.horizontal-scrollable {
-  // display: block !important;
-  // width: 600px;
-}
-
 .horizontal-scrollable .fiveDayForecast {
   margin: 0;
   display: flex;
-  // flex-wrap: nowrap;
-  overflow: scroll;
+  flex-wrap: nowrap;
+  overflow-x: auto;
   align-items: center;
 }
 
 .horizontal-scrollable .fiveDayForecast > .weather-item {
-  // display: inline;
-  // display: inline-block;
-  // float: none;
+  flex-basis: 150px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.weather-item:nth-child(3n + 1) {
+  background-color: $blue-1;
+}
+.weather-item:nth-child(3n + 2) {
+  background-color: $blue-2;
+}
+.weather-item:nth-child(3n + 3) {
+  background-color: $blue-3;
 }
 
 .box {
@@ -117,14 +126,4 @@ header {
 
 #map {
   height: 300px;
-}
-.hi {
-  width: 400px;
-  height: 50px;
-  display: flex;
-  overflow: scroll;
-
-  .hit {
-    // display: inline;
-  }
 }
