@@ -23,19 +23,9 @@ $light-gray: #dcdcdd;
 
 //Desktop devices
 @media (min-width: 576px) {
-  html,
-  body {
-    height: 100%;
-  }
-
-  body,
-  body .container-fluid {
-    display: flex;
-    flex-direction: column;
-  }
-
   header {
     position: fixed;
+    top: 0;
   }
 
   .main-content {
@@ -50,11 +40,7 @@ $light-gray: #dcdcdd;
 
   .tab-content {
     margin-left: 200px;
-  }
-
-  .container-fluid,
-  .container-fluid .nav-main {
-    flex: 1;
+    max-width: 100%;
   }
 }
 
@@ -88,16 +74,21 @@ header {
   font-size: 1.2rem;
 }
 
-.horizontal-scrollable .row {
-  // overflow-x: auto;
-  // white-space: nowrap;
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: hidden;
+.horizontal-scrollable {
+  // display: block !important;
+  // width: 600px;
 }
 
-.horizontal-scrollable .row > .weather-item {
-  flex: 0 0 auto;
+.horizontal-scrollable .fiveDayForecast {
+  margin: 0;
+  display: flex;
+  // flex-wrap: nowrap;
+  overflow: scroll;
+  align-items: center;
+}
+
+.horizontal-scrollable .fiveDayForecast > .weather-item {
+  // display: inline;
   // display: inline-block;
   // float: none;
 }
@@ -126,4 +117,14 @@ header {
 
 #map {
   height: 300px;
+}
+.hi {
+  width: 400px;
+  height: 50px;
+  display: flex;
+  overflow: scroll;
+
+  .hit {
+    // display: inline;
+  }
 }

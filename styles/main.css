@@ -9,22 +9,9 @@
 }
 
 @media (min-width: 576px) {
-  html,
-  body {
-    height: 100%;
-  }
-  body,
-  body .container-fluid {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
   header {
     position: fixed;
+    top: 0;
   }
   .main-content {
     margin-top: 50px;
@@ -36,12 +23,7 @@
   }
   .tab-content {
     margin-left: 200px;
-  }
-  .container-fluid,
-  .container-fluid .nav-main {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+    max-width: 100%;
   }
 }
 
@@ -70,19 +52,15 @@ header {
   font-size: 1.2rem;
 }
 
-.horizontal-scrollable .row {
+.horizontal-scrollable .fiveDayForecast {
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  overflow-x: hidden;
-}
-
-.horizontal-scrollable .row > .weather-item {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  overflow: scroll;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .box {
@@ -109,5 +87,14 @@ header {
 
 #map {
   height: 300px;
+}
+
+.hi {
+  width: 400px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: scroll;
 }
 /*# sourceMappingURL=main.css.map */
