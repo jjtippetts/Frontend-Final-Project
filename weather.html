@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="styles/main.css" />
   </head>
 
-  <body class="flex flex-column">
+  <body class="">
     <!-- Header -->
     <header>
       <div class="container-fluid text-dark">
@@ -49,11 +49,11 @@
     </header>
 
     <!-- Sidebar Plus Main Content -->
-    <div class="main-content container-fluid">
-      <div class="row nav-main">
+    <div class="main-content container-fluid pl-0 pr-0 h-100">
+      <div class="nav-main">
         <!-- SIDEBAR NAV -->
         <div
-          class="col-12 nav flex-column flex-grow-1 accordion p-2 align-items-center justify-content-center"
+          class="col-12 navbar nav flex-column flex-grow-1 accordion p-2 align-items-center justify-content-center"
           role="tablist"
           aria-orientation="vertical"
         >
@@ -84,11 +84,11 @@
         </div>
 
         <!-- MAIN CONTENT -->
-        <div class="col-12 col-sm p-3 tab-content bg-light">
+        <div class="p-3 tab-content bg-light">
           <!-- Weather Tab -->
-          <div class="" aria-labelledby="weather-tab">
+          <div class="weather-tab">
             <div class="row">
-              <div class="wrapper col-lg-5">
+              <div class="wrapper col-lg-5 pb-4">
                 <div class="weather-box rounded" id="current-weather-box">
                   <h3 class="text-center pt-2">Current Weather</h3>
                   <div
@@ -116,35 +116,20 @@
                       </ul>
                     </div>
                   </div>
-
-                  <br />
                 </div>
               </div>
 
-              <div class="wrapper col-lg-7">
+              <div class="col-lg-7 wrapper pb-4">
                 <div
                   class="weather-box rounded horizontal-scrollable"
                   id="fiveDayForecastBox"
                 >
-                  <div class="row fiveDayForecast text-center"></div>
+                  <div
+                    class="fiveDayForecast text-center w-100 h-100 rounded"
+                  ></div>
                 </div>
               </div>
             </div>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
-              ipsam, voluptatem eos nesciunt velit laborum quisquam cum labore.
-              Quia eum placeat, cupiditate rerum sit incidunt repellat, dolorum
-              nesciunt odit exercitationem soluta architecto nisi, cumque
-              excepturi. Natus eaque quos suscipit asperiores, explicabo
-              adipisci sapiente et. Pariatur dolor error corporis eum temporibus
-              fugit ad. Libero hic laudantium ut tenetur eum facilis explicabo
-              modi alias, corporis, quo reprehenderit eligendi consectetur
-              accusamus vero magnam dolore blanditiis atque assumenda nesciunt
-              asperiores consequuntur neque recusandae sunt distinctio? Aliquam
-              quasi earum facere obcaecati quod, ratione laudantium sit beatae
-              nostrum aut vitae molestias deleniti officiis! Animi, explicabo
-              unde?
-            </p>
           </div>
         </div>
       </div>
