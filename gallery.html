@@ -8,7 +8,7 @@
       name="description"
       content="This dashboard provides a comprehensive and detailed description of Portland including popular places to visit, the weather, and much more!"
     />
-    <title>Portland Dashboard / Weather</title>
+    <title>Portland Dashboard / Gallery</title>
 
     <!-- Google Fonts -->
     <link
@@ -76,23 +76,40 @@
             Gallery
           </a>
 
-          <a class="text-dark nav-link mb-auto rounded w-100 active" href="./support.html">
+          <a
+            class="text-dark nav-link mb-auto rounded w-100 active"
+            href="./support.html">
             <i class="fas fa-wrench"></i>
             Support
           </a>
         </div>
 
-        <!-- MAIN CONTENT -->
-        <div class="col-12 col-sm p-3 tab-content bg-light">
-          <!-- Support -->
-          <div class="" id="" role="tabpanel" aria-labelledby="">
-            <div id="main">
-              <h1>Is there an issue?  Submit your concern here</h1>
-              <div id="form_sample"></div> <!-- Include JS file here -->
-              <script src="scripts/support.js"></script>
+        <h2 class="w3-center">Portland Gallery</h2>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="w3-content w3-display-container">
+              <img class="NWSlides" src="images/23.jpg" height="200px" width="500px"> 
+              <img class="NWSlides" src="images/23_2.jpg" height="200px" width="500px">
+              <img class="NWSlides" src="images/23)3.jpg" height="200px" width="500px">
+              <img class="NWSlides" src="images/forestpark.jpg" height="200px" width="500px">
+
+              <button class="w3-button w3-display-left" onclick="plusNW(-1)">&#10094;</button>
+              <button class="w3-button w3-display-right" onclick="plusNW(+1)">&#10095;</button>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="w3-content w3-display-container">
+              <img class="SouthWaterSlides" src="images/aerialtram.jpg" height="200px" width="500px"> 
+              <img class="SouthWatermySlides" src="images/south-waterfront.jpg" height="200px" width="500px">
+              <img class="SouthWaterSlides" src="images/southwaterfront.jpg" height="200px" width="500px">
+              <img class="SouthWaterSlides" src="images/southwaterfront.jpg" height="200px" width="500px">
+
+              <button class="w3-button w3-display-left" onclick="plusSouthWater(-1)">&#10094;</button>
+              <button class="w3-button w3-display-right" onclick="plusSouthWater(+1)">&#10095;</button>
             </div>
           </div>
         </div>
+        <script src="scripts/gallery.js"></script>
       </div>
     </div>
 
