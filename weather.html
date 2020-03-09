@@ -61,7 +61,10 @@
             <i class="fas fa-home"></i>
             Home
           </a>
-          <a class="text-dark nav-link rounded w-100" href="/weather.html">
+          <a
+            class="text-dark nav-link rounded w-100 active"
+            href="/weather.html"
+          >
             <i class="fas fa-cloud"></i>
             Weather
           </a>
@@ -71,12 +74,10 @@
             Attractions
           </a>
 
-          <a class="text-dark nav-link rounded w-100" href="./gallery.html">
-            <i class="fas fa-images"></i>
-            Gallery
-          </a>
-
-          <a class="text-dark nav-link mb-auto rounded w-100 active" href="./support.html">
+          <a
+            class="text-dark nav-link mb-auto rounded w-100"
+            href="/support.html"
+          >
             <i class="fas fa-wrench"></i>
             Support
           </a>
@@ -84,13 +85,66 @@
 
         <!-- MAIN CONTENT -->
         <div class="col-12 col-sm p-3 tab-content bg-light">
-          <!-- Support -->
-          <div class="" id="" role="tabpanel" aria-labelledby="">
-            <div id="main">
-              <h1>Is there an issue?  Submit your concern here</h1>
-              <div id="form_sample"></div> <!-- Include JS file here -->
-              <script src="scripts/support.js"></script>
+          <!-- Weather Tab -->
+          <div class="" aria-labelledby="weather-tab">
+            <div class="row">
+              <div class="wrapper col-lg-5">
+                <div class="weather-box rounded" id="current-weather-box">
+                  <h3 class="text-center pt-2">Current Weather</h3>
+                  <div
+                    class=" pl-3 pr-3 d-flex flex-row justify-content-between"
+                  >
+                    <div class="lead current-weather d-inline"></div>
+                    <img src="" alt="weather icon" class="wicon" />
+                  </div>
+
+                  <div class="row pl-3 pr-3">
+                    <div class="col-6">
+                      <ul class="list-unstyled">
+                        <li
+                          class="weather-description text-capitalize font-weight-bold"
+                        ></li>
+                        <li class="feels-like">Feels Like:</li>
+                        <li class="humidity">Humidity:</li>
+                      </ul>
+                    </div>
+
+                    <div class="col-6">
+                      <ul class="list-unstyled">
+                        <li class="sunrise text-right">Sunrise:</li>
+                        <li class="sunset text-right">Sunset:</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <br />
+                </div>
+              </div>
+
+              <div class="wrapper col-lg-7">
+                <div
+                  class="weather-box rounded horizontal-scrollable"
+                  id="fiveDayForecastBox"
+                >
+                  <div class="row fiveDayForecast text-center"></div>
+                </div>
+              </div>
             </div>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
+              ipsam, voluptatem eos nesciunt velit laborum quisquam cum labore.
+              Quia eum placeat, cupiditate rerum sit incidunt repellat, dolorum
+              nesciunt odit exercitationem soluta architecto nisi, cumque
+              excepturi. Natus eaque quos suscipit asperiores, explicabo
+              adipisci sapiente et. Pariatur dolor error corporis eum temporibus
+              fugit ad. Libero hic laudantium ut tenetur eum facilis explicabo
+              modi alias, corporis, quo reprehenderit eligendi consectetur
+              accusamus vero magnam dolore blanditiis atque assumenda nesciunt
+              asperiores consequuntur neque recusandae sunt distinctio? Aliquam
+              quasi earum facere obcaecati quod, ratione laudantium sit beatae
+              nostrum aut vitae molestias deleniti officiis! Animi, explicabo
+              unde?
+            </p>
           </div>
         </div>
       </div>

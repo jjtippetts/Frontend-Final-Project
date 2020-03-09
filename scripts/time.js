@@ -1,11 +1,43 @@
 //Display Time
 //**************************************************************
 
-function checkTime(i) {
+//Source: www.geeksforgeeks.org
+function convertTimestamptoTime(unixTimestamp) {
+  // convert to milliseconds and
+  // then create a new Date object
+  dateObj = new Date(unixTimestamp * 1000);
+  console.log(dateObj);
+  utcString = dateObj.toUTCString();
+  console.log(utcString);
+
+  time = utcString.slice(-12, -4);
+  console.log(time);
+  return time;
+}
+
+function addZero(i) {
   if (i < 10) {
     i = "0" + i;
   }
   return i;
+}
+
+function formatTime(hours, minutes, military) {
+  //Get AM or PM
+  let ampm = hours >= 12 ? "pm" : "am";
+
+  //Change Hours
+  hours = hours % 12;
+  if (hours == 0) {
+    hours = 12;
+  }
+
+  //Add extra zero if single digit
+  minutes = addZero(minutes);
+
+  //Format
+  let currentTime = hours + ":" + minutes + " " + ampm;
+  return currentTime;
 }
 
 $(document).ready(function displayTime() {
@@ -19,7 +51,7 @@ $(document).ready(function displayTime() {
     h = 12;
   }
 
-  m = checkTime(m);
+  m = addZero(m);
 
   let currentTime = h + ":" + m + " " + ampm;
   // $(".display-4").append("<p>" + currentTime + "</p>");
