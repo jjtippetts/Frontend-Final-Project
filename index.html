@@ -43,6 +43,15 @@
         <div class="row">
           <div class="col-12">
             <h3 class="mt-2 text-light">The City of Portland</h3>
+
+            <button
+              type="button"
+              class="btn btn-primary mb-auto"
+              data-toggle="collapse"
+              data-target="#navbar-example"
+            >
+              click
+            </button>
           </div>
         </div>
       </div>
@@ -53,8 +62,8 @@
       <div class="row nav-main">
         <!-- SIDEBAR NAV -->
         <div
-          class="col-12 nav flex-column flex-grow-1 accordion p-2 align-items-center justify-content-center"
-          id="v-pills-tab"
+          class="collapse col-12 navbar nav flex-column flex-grow-1 accordion p-2 align-items-center justify-content-center"
+          id="navbar-example"
           role="tablist"
           aria-orientation="vertical"
         >
@@ -77,13 +86,19 @@
             Gallery
           </a>
 
-          <a
-            class="text-dark nav-link mb-auto rounded w-100"
-            href="./support.html"
-          >
+          <a class="text-dark nav-link rounded w-100" href="./support.html">
             <i class="fas fa-wrench"></i>
             Support
           </a>
+
+          <button
+            type="button"
+            class="btn btn-primary mb-auto"
+            data-toggle="collapse"
+            data-target="#navbar-example"
+          >
+            click
+          </button>
         </div>
 
         <!-- MAIN CONTENT -->
