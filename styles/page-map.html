@@ -1,166 +1,156 @@
 <!doctype html>
 <link rel="stylesheet" type="text/css" href="mappage.css">
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Map-Page-Layout</title>
-        <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-    </head>
-    <body>
-        <div class="container">  
-            <div class="row">    
-                <div class="col-lg-4 col-md-12 col-sm-12 p-3 my-3 border text-black" style="background-color:white;">
-                    <h2>Location Recommend</h2><br>
-                    <button type = "button" id = "museum1" onclick="displayhide('description1')"> Oregon Museum of Science and Industry</button><br>
-                    <button type = "button" id = "museum2" onclick="displayhide('description2')"> Portland Art Museum</button><br>
-                    <button type = "button" id = "museum3" onclick="displayhide('description3')"> Oregon Historical Society</button><br>
-                    <button type = "button" id = "museum4" onclick="displayhide('description4')"> Portland Police Museum</button><br>
-                    <button type = "button" id = "museum5" onclick="displayhide('description5')"> Oregon Maritime Museum</button><br>
+<html lang=English></html>
+<head> 
+    <meta charset="utf-8">
+    <title>Map-Page-Layout</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12 p-3 my-3 border text-black" id="cpanel"">
+                <h2>Location Recommend</h2><br>
+                <button type = "button" id = "museum1" onclick="clickswitch(1)"> Oregon Museum of Science and Industry </button><br>
+                <button type = "button" id = "museum2" onclick="clickswitch(2)"> Portland Art Museum </button><br>
+                <button type = "button" id = "museum3" onclick="clickswitch(3)"> Oregon Historical Society </button><br>
+                <button type = "button" id = "museum4" onclick="clickswitch(4)"> Portland Police Museum </button><br>
+                <button type = "button" id = "museum5" onclick="clickswitch(5)"> Oregon Zoo </button><br>
+            </div>
+            <div class="col-lg-8 col-md-12 col-sm-12 p-3 my-3 border text-black" id="mappanel">
+                <div id="map"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 p-3 my-3 border text-black" style="background-color:white;">
+                <div id="intro0">
+                    <h1>Portland, Oregon</h1>
                 </div>
-                <div class="col-lg-8 col-md-12 col-sm-12 p-3 my-3 border text-black" style="background-color:white;">
-                    <div id="map"></div>
+                <div id='intro1' style="display:none">
+                    <h1>Oregon Museum of Science and Industry</h1>
                 </div>
-            </div>  
-            <div class = "row">
-                <div class="col-lg-12 col-md-12 col-sm-12 p-3 my-3 border text-black" style="background-color:white;">
-                    <div id = "description0">
-                        <h1>Portland, Oregon</h1>
-                        <p>Portland (/ˈpɔːrtlənd/; PORT-lənd) is the largest and most populous city in the U.S. state of Oregon and the seat of Multnomah County. 
-                            It is a major port in the Willamette Valley region of the Pacific Northwest, at the confluence of the Willamette and Columbia rivers. 
-                            As of 2018, Portland had an estimated population of 653,115, making it the 25th most populated city in the United States, 
-                            and the second-most populous in the Pacific Northwest after Seattle.
-                            Approximately 2.4 million people live in the Portland metropolitan statistical area (MSA), making it the 25th most populous in the United States. 
-                            Its combined statistical area (CSA) ranks 19th-largest with a population of around 3.2 million. 
-                            Approximately 60% of Oregon's population resides within the Portland metropolitan area.
-                        </p>
-                        </div>
-                    <div id = "description1" style = "display:none">
-                        <h1>Oregon Museum of Science and Industry</h1>
-                        <p>The Oregon Museum of Science and Industry (OMSI, /ˈɒmziː/ OM-zee) 
-                            is a science and technology museum in Portland, Oregon, United States. 
-                            It contains three auditoriums, including a large-screen theatre, 
-                            planetarium, and exhibition halls with a variety of hands-on permanent exhibits focused on natural sciences, industry, and technology. 
-                            Transient exhibits span a wider range of disciplines. 
-                        </p>
-                    </div>
-                    <div id = "description2" style = "display:none">
-                        <h1>Portland Art Museum</h1>
-                        <p>The Portland Art Museum in Portland, Oregon, United States, was founded in 1892, 
-                            making it the oldest art museum on the West Coast and seventh oldest in the US.
-                            Upon completion of the most recent renovations, the Portland Art Museum became one of the 25 largest art museums in the US, at a total of 240,000 square feet (22,000 m²), 
-                            with more than 112,000 square feet (10,400 m²) of gallery space. 
-                            The permanent collection has more than 42,000 works of art, and at least one major traveling exhibition is usually on show. 
-                            The Portland Art Museum features a center for Native American art, a center for Northwest art, a center for modern and contemporary art, permanent exhibitions of Asian art, 
-                            and an outdoor public sculpture garden. The Northwest Film Center is also a component of Portland Art Museum. 
-                        </p>
-                    </div>
-                    <div id = "description3" style = "display:none">
-                        <h1>The Oregon Historical Society</h1>
-                        <p>The Oregon Historical Society (OHS) is an organization that encourages and promotes the study 
-                            and understanding of the history of the Oregon Country, within the broader context of U.S. history. 
-                            Incorporated in 1898, the Society collects, preserves, and makes available materials of historical character and interest, 
-                            and collaborates with other groups and individuals with similar aims. 
-                            The society operates the Oregon History Center that includes the Oregon Historical Society Museum in downtown Portland. 
-                        </p>
-                    </div>
-                    <div id = "description4" style = "display:none">
-                        <h1>Portland Police Museum</h1>
-                        <p>The Portland Police Museum is a museum located inside the Department of Justice building in downtown Portland, Oregon, United States. 
-                            It showcases artifacts related to the city's law enforcement history. Admission is free. 
-                            The Portland Police Historical Society has three areas of focus: The Portland Police Memorial Fund, The Portland Police Museum, and Portland Police Highland Guard. 
-                            The society is a non-profit organization formed by the members of the Portland Police Bureau, and interested groups and individuals.
-                        </p>
-                    </div>
-                    <div id = "description5" style = "display:none">
-                        <h1>The Oregon Maritime Museum</h1>
-                        <p>The Oregon Maritime Museum contains s catalog of over 2,500 volumes and 22,000 photographs 
-                            and negatives related to maritime history both in the Northwest region and elsewhere. 
-                            The library is staffed by volunteer librarians and researchers who can assist visitors and those who want to conduct research. 
-                            It is open to the public when a librarian is on duty. We are not able to loan out materials.
-                        </p>
-                    </div>
+                <div id='intro2' style="display:none">
+                    <h1>Portland Art Museumy</h1>
+                </div>
+                <div id='intro3' style="display:none">
+                    <h1>The Oregon Historical Society</h1>
+                </div>
+                <div id='intro4' style="display:none">
+                    <h1>Portland Police Museum</h1>
+                </div>
+                <div id='intro5' style="display:none">
+                    <h1>Oregon Zoo</h1>
                 </div>
             </div>
-            <div class="row">    
-                <div class="col-lg-4 col-md-6 col-sm-12 p-3 my-3 border text-black" style="background-color:white;">
-                    <h3>small picture 1 of location</h3>
-                    <img src="https://images.app.goo.gl/7vH22YAdQEUkwYZu9" alt="Portland1">
-                </div>    
-                <div class="col-lg-4 col-md-6 col-sm-12 p-3 my-3 border text-black" style="background-color:white;">
-                    <h3>small picture 1 of location</h3>
-                </div>    
-                <div class="col-lg-4 col-md-6 col-sm-12 p-3 my-3 border text-black" style="background-color:white;">
-                    <h3>small picture 1 of location</h3>
-                </div>  
+        </div>
+        <div class="row" id="image0">
+            <div class="col-lg-6 col-md-6 col-sm-12 p-3 my-3 border text-black" style="background-color:white;">
+                <!--<h3>small picture 1 of location</h3>-->
+                <img src="/images/Portland1.jpg" id = "imagePL1" alt="Portland image 1">
+            </div>    
+            <div class="col-lg-6 col-md-6 col-sm-12 p-3 my-3 border text-black" style="background-color:white;">
+                <!--<h3>small picture 2 of location</h3>-->
+                <img src="/images/Portland2.jpg" id = "imagePL2" alt="Portland image 2">       
+            </div>
+        </div>
+        <div class="row" id="image1" style="display:none">
+            <div class="col-lg-6 col-md-6 col-sm-12 p-3 my-3 border text-black" style="background-color:white;">
+                <!--<h3>small picture 1 of location</h3>-->
+                <img src="/images/Industry Museum 1.jpg" id = "imageMZ11" alt="Mueseum1 image 1">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 p-3 my-3 border text-black" style="background-color:white;">
+                <!--<h3>small picture 2 of location</h3>-->  
+                <img src="/images/Industry Museum 2.jpg" id = "imageMZ12" alt="Musesum1 image 2">              
             </div> 
         </div>
+        <div class="row" id = "image2" style="display:none">    
+            <div class="col-lg-6 col-md-6 col-sm-12 p-3 my-3 border text-black" style="background-color:white;">
+                <!--<h3>small picture 1 of location</h3>-->
+                <img src="/images/Art Museum 1.jpg" id = "imageMZ21" alt="Muesum2 image 1">
+            </div>    
+            <div class="col-lg-6 col-md-6 col-sm-12 p-3 my-3 border text-black" style="background-color:white;">
+                <!--<h3>small picture 2 of location</h3>-->  
+                <img src="/images/Art Museum 2.jpg" id = "imageMZ22" alt="Muesum2 image 2">             
+            </div>
+        </div>
+    </div>
+    <!--optional javascript-->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASboHPi1uBcf0bh-2D146ldzkwBDUGr68&callback=initMap&language=EN&region=US"></script>
+    
+    <script LANGUAGE = "javascript">
+        var keyi = 0;
 
-        <!--optional javascript-->
-        <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
-        <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASboHPi1uBcf0bh-2D146ldzkwBDUGr68&callback=initMap"></script>
-        <script>
-            function initMap(){
-                var uluru = {
-                    lat: 45.5428679,
-                    lng: -122.7944107
-                };
-                var map = new google.maps.Map(
-                    document.getElementById('map'), {
-                        zoom: 10, 
-                        center: uluru
-                    });
-                var marker = new google.maps.Marker({position: uluru, map: map});
+        function initMap() {
+        var Portland = new google.maps.LatLng(45.5428679, -122.7944107);
+
+        infowindow = new google.maps.InfoWindow();
+
+        map = new google.maps.Map(
+            document.getElementById('map'), {center: Portland, zoom: 15});
+
+        var request = {
+          query: 'Portland Downtown',
+          fields: ['name', 'geometry'],
+        };
+
+        service = new google.maps.places.PlacesService(map);
+
+        service.findPlaceFromQuery(request, function(results, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            for (var i = 0; i < results.length; i++) {
+              createMarker(results[i]);
             }
 
-            function reinitMap(){
-                var uluru = {
-                    lat: 0,
-                    lng: 0
-                };
-                var map = new google.maps.Map(
-                    document.getElementById('map'),{
-                        zoom: 12,
-                        center: uluru
-                    });
-                    var marker = new google.maps.Marker({position: uluru, map:map});
-            }
+            map.setCenter(results[0].geometry.location);
+          }
+        });
+      }
 
-            function click1(id){
+      function createMarker(place) {
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location
+        });
 
-            }
-            function click2(id){
-                
-            }
-            function click3(id){
-                
-            }
-            function click4(id){
-                
-            }
-            function click5(id){
-                
-            }
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.setContent(place.name);
+          infowindow.open(map, this);
+        });
+      }
 
+        function reinitMap(){
+            var uluru = {
+                lat: 0,
+                lng: 0
+            };
+            var map = new google.maps.Map(
+                document.getElementById('map'),{
+                    zoom: 12,
+                    center: uluru
+                });
+            var marker = new google.maps.Marker({position: uluru, map:map});
+        }
 
-            function displayhide(id){
-                var target = document.getElementById(id);
-                if(target.style.display == "none"){
-                    documnet.getElementById("description0").style.display = "none";
-                    documnet.getElementById("description1").style.display = "none";
-                    documnet.getElementById("description2").style.display = "none";
-                    documnet.getElementById("description3").style.display = "none";
-                    documnet.getElementById("description4").style.display = "none";
-                    documnet.getElementById("description5").style.display = "none";
-                    target.style.display= ""
-                }else{
-                    target.style.display="none"
-                    documnet.getElementById("description0").style.display = "";
-                }
-
+        function clickswitch(numberk){
+            if(keyi == numberk){
+                //situation that return to description 0 status
+                document.getElementById('intro'+keyi).style.display="none";
+                document.getElementById('image'+keyi).style.display="none";
+                document.getElementById('intro0').style.display="";
+                document.getElementById('image0').style.display="";
+                keyi = 0;
+            }else{
+                //from current keyi to new numberk status
+                document.getElementById('intro'+keyi).style.display="none";
+                document.getElementById('image'+keyi).style.display="none";
+                document.getElementById('intro'+numberk).style.display="";
+                document.getElementById('image'+numberk).style.display="";
+                keyi = numberk;
             }
-        </script>
-
-    </body>
+        }
+    </script>  
+</body>
 </html>
