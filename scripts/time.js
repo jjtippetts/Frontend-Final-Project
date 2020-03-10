@@ -6,12 +6,9 @@ function convertTimestamptoTime(unixTimestamp) {
   // convert to milliseconds and
   // then create a new Date object
   dateObj = new Date(unixTimestamp * 1000);
-  console.log(dateObj);
   utcString = dateObj.toUTCString();
-  console.log(utcString);
 
   time = utcString.slice(-12, -4);
-  console.log(time);
   return time;
 }
 
