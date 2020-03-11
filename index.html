@@ -49,8 +49,8 @@
     </header>
 
     <!-- Sidebar Plus Main Content -->
-    <div class="main-content container-fluid">
-      <div class="row nav-main">
+    <div class="main-content container-fluid pl-0 pr-0 h-100">
+      <div class="nav-main">
         <!-- SIDEBAR NAV -->
         <div
           class="collapse col-12 navbar nav flex-column flex-grow-1 accordion p-2 align-items-center justify-content-center"
@@ -90,14 +90,9 @@
         </div>
 
         <!-- MAIN CONTENT -->
-        <div class="col-12 col-sm tab-content p-3 bg-light">
+        <div class="tab-content p-3 bg-light">
           <!-- HOME -->
-          <div
-            class="tab-pane fade show active"
-            id="v-pills-home"
-            role="tabpanel"
-            aria-labelledby="v-pills-home-tab"
-          >
+          <div class="tab-pane fade show active">
             <div class="jumbotron jumbotron-fluid mb-3">
               <div class="container">
                 <h1 class="display-4">Portland, OR</h1>
@@ -207,6 +202,18 @@
                   allowfullscreen
                 >
                 </iframe>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 wrapper pb-4 pt-4">
+                <div
+                  class="weather-box rounded horizontal-scrollable"
+                  id="fiveDayForecastBox"
+                >
+                  <div
+                    class="fiveDayForecast text-center w-100 h-100 rounded"
+                  ></div>
+                </div>
               </div>
             </div>
 
