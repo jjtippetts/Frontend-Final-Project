@@ -3,50 +3,127 @@ $secondary-color: #4c5f6b;
 $accent-color: #62b6cb;
 $light-color: #f7f7f7;
 
+// Weather Page Colors
+// $light-blue: #1985a1;
+$dark-blue: #4c5c68;
+$blue-1: #cdddff;
+$blue-2: #89bbff;
+$blue-3: #79aaff;
+$blue-4: #6697ff;
+$blue-5: #4a8dff;
+$dark-gray: #46494c;
+$gray: #c5c3c6;
+$light-gray: #dcdcdd;
+
+// Mobile Devices
 @media (max-width: 575px) {
-    .nav {
-        border-right: 0px solid !important;
-        border-bottom: solid 1px black;
-    }
-    .nav a {
-        text-align: center;
-    }
+  .nav {
+    border-right: 0px solid !important;
+    border-bottom: solid 1px black;
+  }
+  .nav a {
+    text-align: center;
+  }
 }
 
+//Desktop devices
 @media (min-width: 576px) {
+  html,
+  body,
+  .nav-main {
+    height: 100%;
+  }
 
-    html, body {
-        height: 100%;
-    }
+  .main-content {
+    margin-top: 50px;
+  }
 
-    body, body .container-fluid {
-        display: flex;
-        flex-direction: column;
-    }
+  .nav {
+    max-width: 200px !important;
+    position: fixed;
+    height: 100%;
+  }
 
-    .container-fluid,.container-fluid .nav-main{
-        flex: 1
-    }
+  .tab-content {
+    margin-left: 200px;
+    max-width: 100%;
+    height: 100%;
+  }
 }
 
 header {
-    background-color: $accent-color !important;
+  position: fixed;
+  top: 0;
+  height: 50px;
+  z-index: 1;
+  width: 100%;
+  background-color: $dark-blue;
+  font-family: "Pacifico";
 }
 
 .nav {
-    background-color: $secondary-color;
+  background-color: $gray;
 }
 
-// .nav-pills > .nav-link:not(.active){
-// }
-
-
-.row .nav-pills .active{
-    background-color: $light-color;
-    color: $primary-color !important;
+.weather-box {
+  background-image: linear-gradient(#4a8dff, #89bbff);
+  height: 250px;
 }
 
-/* .jumbotron {
-    background-image: url("../images/architecture-buildings-city-city-lights-432361.jpg") ;
-    background-size: contain;
-} */
+.current-weather {
+  font-size: 3rem;
+}
+
+.weather-description {
+  font-size: 1.2rem;
+}
+
+.horizontal-scrollable .fiveDayForecast {
+  margin: 0;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  align-items: center;
+}
+
+.horizontal-scrollable .fiveDayForecast > .weather-item {
+  flex-basis: 150px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.weather-item:nth-child(3n + 1) {
+  background-color: $blue-1;
+}
+.weather-item:nth-child(3n + 2) {
+  background-color: $blue-2;
+}
+.weather-item:nth-child(3n + 3) {
+  background-color: $blue-3;
+}
+
+.box {
+  background-color: $dark-blue;
+}
+
+.nav a.active {
+  background-color: $light-color;
+  color: $primary-color !important;
+}
+
+.jumbotron {
+  height: 400px;
+  background-image: url("../images/architecture-buildings-city-city-lights-432361.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left bottom;
+  background-attachment: fixed;
+}
+
+.jumbotron .container {
+  background-color: rgba(247, 247, 247, 0.8);
+}
+
+#map {
+  height: 300px;
+}

@@ -9,40 +9,176 @@
 }
 
 @media (min-width: 576px) {
-  html, body {
+  html,
+  body,
+  .nav-main {
     height: 100%;
   }
-  body, body .container-fluid {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  .main-content {
+    margin-top: 50px;
   }
-  .container-fluid, .container-fluid .nav-main {
-    -webkit-box-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
+  .nav {
+    max-width: 200px !important;
+    position: fixed;
+    height: 100%;
+  }
+  .tab-content {
+    margin-left: 200px;
+    max-width: 100%;
+    height: 100%;
   }
 }
 
 header {
-  background-color: #62b6cb !important;
+  position: fixed;
+  top: 0;
+  height: 50px;
+  z-index: 1;
+  width: 100%;
+  background-color: #4c5c68;
+  font-family: "Pacifico";
 }
 
 .nav {
-  background-color: #4c5f6b;
+  background-color: #c5c3c6;
 }
 
-.row .nav-pills .active {
+.weather-box {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#4a8dff), to(#89bbff));
+  background-image: linear-gradient(#4a8dff, #89bbff);
+  height: 250px;
+}
+
+.current-weather {
+  font-size: 3rem;
+}
+
+.weather-description {
+  font-size: 1.2rem;
+}
+
+.horizontal-scrollable .fiveDayForecast {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.horizontal-scrollable .fiveDayForecast > .weather-item {
+  -ms-flex-preferred-size: 150px;
+      flex-basis: 150px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.weather-item:nth-child(3n + 1) {
+  background-color: #cdddff;
+}
+
+.weather-item:nth-child(3n + 2) {
+  background-color: #89bbff;
+}
+
+.weather-item:nth-child(3n + 3) {
+  background-color: #79aaff;
+}
+
+.box {
+  background-color: #4c5c68;
+}
+
+.nav a.active {
   background-color: #f7f7f7;
   color: #2b3d41 !important;
 }
 
-/* .jumbotron {
-    background-image: url("../images/architecture-buildings-city-city-lights-432361.jpg") ;
-    background-size: contain;
-} */
+.jumbotron {
+  height: 400px;
+  background-image: url("../images/architecture-buildings-city-city-lights-432361.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left bottom;
+  background-attachment: fixed;
+}
+
+.jumbotron .container {
+  background-color: rgba(247, 247, 247, 0.8);
+}
+
+#map {
+  height: 300px;
+}
 /*# sourceMappingURL=main.css.map */
+
+/*Support form*/
+@import "http://fonts.googleapis.com/css?family=Ubuntu";
+div#main{
+width:830px;
+height:650px;
+margin:0 auto;
+font-family:'Ubuntu',sans-serif
+}
+div#form_sample{
+text-align:center;
+border:1px solid #ccc;
+width:300px;
+padding:0 50px 15px;
+margin-top:20px;
+box-shadow:0 0 15px;
+border-radius:6px;
+float:left
+}
+#main h1{
+margin-top:40px
+}
+hr{
+margin-top:-5px
+}
+label{
+float:left;
+font-size:16px
+}
+input[type="text"]{
+width:100%;
+margin-top:10px;
+height:35px;
+margin-bottom:25px;
+padding:10px;
+border:3px solid #2BC1F2
+}
+textarea{
+width:100%;
+border:3px solid #2BC1F2;
+padding:10px;
+margin-bottom:25px;
+margin-top:10px;
+height:100px;
+resize:none
+}
+input[type="submit"]{
+width:100%;
+padding:10px 45px;
+background-color:#2BC1F2;
+border:none;
+color:#fff;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+font-family:'Ubuntu',sans-serif
+}
+/* -------------------------------------
+CSS for Sidebar (optional)
+---------------------------------------- */
+div#fugo{
+float:right
+}
+
