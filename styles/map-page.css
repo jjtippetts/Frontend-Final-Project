@@ -1,0 +1,262 @@
+/*Below are main button setting*/
+[id ^= "butcla"]{
+    background-color: white;
+    color: teal;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+
+    border-radius: 15px;
+    background: #f2f2f2;
+    box-shadow:  5px 5px 20px #cecece, 
+             -5px -5px 20px #ffffff;
+}
+[id ^= "butcla"]:hover{
+    text-decoration: underline;
+    background-color: lightblue;
+    color: black;
+
+    border-radius: 15px;
+    background: linear-gradient(145deg, #ffffff, #dadada);
+    box-shadow:  5px 5px 20px #cecece, 
+             -5px -5px 20px #ffffff;
+}
+[id ^= "butcla"]:focus{
+    color: rgba(0, 128, 128, 0.5);
+}
+[id ^= "butcla"]:active{
+    color: black;
+
+    border-radius: 15px;
+    background: #f2f2f2;
+    box-shadow: inset 5px 5px 20px #cecece, 
+            inset -5px -5px 20px #ffffff;
+}
+
+/*Below are Sub1 button setting*/
+[id ^= "butmus"]{
+    background-color: white;
+    color: rgba(128, 62, 0, 0.808);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+
+    border-radius: 15px;
+    background: #b1d4f6;
+    box-shadow:  5px 5px 20px #96b4d1, 
+             -5px -5px 20px #ccf4ff;
+}
+[id ^= "butmus"]:hover{
+    text-decoration: underline;
+    background-color: lightblue;
+    color: black;
+
+    border-radius: 15px;
+    background: linear-gradient(145deg, #bde3ff, #9fbfdd);
+    box-shadow:  5px 5px 20px #96b4d1, 
+             -5px -5px 20px #ccf4ff;
+}
+[id ^= "butmus"]:focus{
+    color: rgba(128, 62, 0, 0.808);
+}
+[id ^= "butmus"]:active{
+    color: black;
+
+    border-radius: 15px;
+    background: #b1d4f6;
+    box-shadow: inset 5px 5px 20px #96b4d1, 
+            inset -5px -5px 20px #ccf4ff;
+}
+
+/*Below are Sub2 button setting*/
+[id ^= "butlmk"]{
+    background-color: white;
+    color: rgba(194, 0, 107, 0.808);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+
+    border-radius: 15px;
+    background: #b1d4f6;
+    box-shadow:  5px 5px 20px #96b4d1, 
+             -5px -5px 20px #ccf4ff;
+}
+[id ^= "butlmk"]:hover{
+    text-decoration: underline;
+    background-color: lightblue;
+    color: black;
+
+    border-radius: 15px;
+    background: linear-gradient(145deg, #bde3ff, #9fbfdd);
+    box-shadow:  5px 5px 20px #96b4d1, 
+             -5px -5px 20px #ccf4ff;
+}
+[id ^= "butlmk"]:focus{
+    color: rgba(194, 0, 107, 0.808);
+}
+[id ^= "butlmk"]:active{
+    color: black;
+
+    border-radius: 15px;
+    background: #b1d4f6;
+    box-shadow: inset 5px 5px 20px #96b4d1, 
+            inset -5px -5px 20px #ccf4ff;
+}
+
+/*Below are Sub3 button setting*/
+[id ^= "butspc"]{
+    background-color: white;
+    color: rgb(214, 182, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+
+    border-radius: 15px;
+    background: #b1d4f6;
+    box-shadow:  5px 5px 20px #96b4d1, 
+             -5px -5px 20px #ccf4ff;
+}
+[id ^= "butspc"]:hover{
+    text-decoration: underline;
+    background-color: lightblue;
+    color: black;
+
+    border-radius: 15px;
+    background: linear-gradient(145deg, #bde3ff, #9fbfdd);
+    box-shadow:  5px 5px 20px #96b4d1, 
+             -5px -5px 20px #ccf4ff;
+}
+[id ^= "butspc"]:focus{
+    color: rgb(214, 182, 0);
+}
+[id ^= "butspc"]:active{
+    color: black;
+
+    border-radius: 15px;
+    background: #b1d4f6;
+    box-shadow: inset 5px 5px 20px #96b4d1, 
+            inset -5px -5px 20px #ccf4ff;
+}
+
+/*Below are Sub4 button setting*/
+[id ^= "butuvt"]{
+    background-color: white;
+    color: rgba(40, 70, 202, 0.767);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+
+    border-radius: 15px;
+    background: #b1d4f6;
+    box-shadow:  5px 5px 20px #96b4d1, 
+             -5px -5px 20px #ccf4ff;
+}
+[id ^= "butuvt"]:hover{
+    text-decoration: underline;
+    background-color: lightblue;
+    color: black;
+
+    border-radius: 15px;
+    background: linear-gradient(145deg, #bde3ff, #9fbfdd);
+    box-shadow:  5px 5px 20px #96b4d1, 
+             -5px -5px 20px #ccf4ff;
+}
+[id ^= "butuvt"]:focus{
+    color: rgba(40, 70, 202, 0.767);
+}
+[id ^= "butuvt"]:active{
+    color: black;
+
+    border-radius: 15px;
+    background: #b1d4f6;
+    box-shadow: inset 5px 5px 20px #96b4d1, 
+            inset -5px -5px 20px #ccf4ff;
+}
+
+/*Below are map nevgation button setting*/
+[id ^= "trigger"]{
+    color: black;
+    border-radius: 15px;
+    background: #f0f0f0;
+    box-shadow:  5px 5px 20px #cccccc, 
+                -5px -5px 20px #ffffff;
+}
+[id ^= "trigger"]:hover{
+    color: black;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #ffffff, #d8d8d8);
+    box-shadow:  5px 5px 20px #cccccc, 
+                -5px -5px 20px #ffffff;
+}
+[id ^= "trigger"]:focus{
+    color: rgba(255, 0, 0, 0.541);
+}
+[id ^= "trigger"]:active{
+    color: rgba(0, 0, 0, 0.363);
+    border-radius: 15px;
+    background: #f0f0f0;
+    box-shadow: inset 5px 5px 20px #cccccc, 
+                inset -5px -5px 20px #ffffff;
+}
+
+#memupanel{
+    background-color: #f2f2f2;
+}
+#submenupanel{
+    background-color: #f2f2f2;
+}
+
+#mappanel{
+    background-color: white;
+}
+
+#map{
+    width: 100%;
+    height: 100%;
+    margin:0;
+}
+
+[id ^= "image"]{
+    width: 100%;
+    height: 100%;
+}
+
+#pac-input {
+    background-color: #fff;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 12px;
+    margin-left: 12px;
+    padding: 0 11px 0 13px;
+    text-overflow: ellipsis;
+    width: 400px;
+}
+
+#pac-input:focus {
+    border-color: #4d90fe;
+}
+[id ^= "standard"]{
+    height: 100%;
+    width: 100%;
+}

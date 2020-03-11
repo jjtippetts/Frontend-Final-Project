@@ -1,0 +1,156 @@
+<!doctype html>
+<link rel="stylesheet" type="text/css" href="mappage.css">
+<html lang=English></html>
+<head> 
+    <meta charset="utf-8">
+    <title>Map-Page-Layout</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12 p-3 my-3 border text-black" id="cpanel"">
+                <h2>Location Recommend</h2><br>
+                <button type = "button" id = "museum1" onclick="clickswitch(1)"> Oregon Museum of Science and Industry </button><br>
+                <button type = "button" id = "museum2" onclick="clickswitch(2)"> Portland Art Museum </button><br>
+                <button type = "button" id = "museum3" onclick="clickswitch(3)"> Oregon Historical Society </button><br>
+                <button type = "button" id = "museum4" onclick="clickswitch(4)"> Portland Police Museum </button><br>
+                <button type = "button" id = "museum5" onclick="clickswitch(5)"> Oregon Zoo </button><br>
+            </div>
+            <div class="col-lg-8 col-md-12 col-sm-12 p-3 my-3 border text-black" id="mappanel">
+                <div id="map"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 p-3 my-3 border text-black" style="background-color:white;">
+                <div id="intro0">
+                    <h1>Portland, Oregon</h1>
+                </div>
+                <div id='intro1' style="display:none">
+                    <h1>Oregon Museum of Science and Industry</h1>
+                </div>
+                <div id='intro2' style="display:none">
+                    <h1>Portland Art Museumy</h1>
+                </div>
+                <div id='intro3' style="display:none">
+                    <h1>The Oregon Historical Society</h1>
+                </div>
+                <div id='intro4' style="display:none">
+                    <h1>Portland Police Museum</h1>
+                </div>
+                <div id='intro5' style="display:none">
+                    <h1>Oregon Zoo</h1>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="image0">
+            <div class="col-lg-6 col-md-6 col-sm-12 p-3 my-3 border text-black" style="background-color:white;">
+                <!--<h3>small picture 1 of location</h3>-->
+                <img src="/images/Portland1.jpg" id = "imagePL1" alt="Portland image 1">
+            </div>    
+            <div class="col-lg-6 col-md-6 col-sm-12 p-3 my-3 border text-black" style="background-color:white;">
+                <!--<h3>small picture 2 of location</h3>-->
+                <img src="/images/Portland2.jpg" id = "imagePL2" alt="Portland image 2">       
+            </div>
+        </div>
+        <div class="row" id="image1" style="display:none">
+            <div class="col-lg-6 col-md-6 col-sm-12 p-3 my-3 border text-black" style="background-color:white;">
+                <!--<h3>small picture 1 of location</h3>-->
+                <img src="/images/Industry Museum 1.jpg" id = "imageMZ11" alt="Mueseum1 image 1">
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 p-3 my-3 border text-black" style="background-color:white;">
+                <!--<h3>small picture 2 of location</h3>-->  
+                <img src="/images/Industry Museum 2.jpg" id = "imageMZ12" alt="Musesum1 image 2">              
+            </div> 
+        </div>
+        <div class="row" id = "image2" style="display:none">    
+            <div class="col-lg-6 col-md-6 col-sm-12 p-3 my-3 border text-black" style="background-color:white;">
+                <!--<h3>small picture 1 of location</h3>-->
+                <img src="/images/Art Museum 1.jpg" id = "imageMZ21" alt="Muesum2 image 1">
+            </div>    
+            <div class="col-lg-6 col-md-6 col-sm-12 p-3 my-3 border text-black" style="background-color:white;">
+                <!--<h3>small picture 2 of location</h3>-->  
+                <img src="/images/Art Museum 2.jpg" id = "imageMZ22" alt="Muesum2 image 2">             
+            </div>
+        </div>
+    </div>
+    <!--optional javascript-->
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASboHPi1uBcf0bh-2D146ldzkwBDUGr68&callback=initMap&language=EN&region=US"></script>
+    
+    <script LANGUAGE = "javascript">
+        var keyi = 0;
+
+        function initMap() {
+        var Portland = new google.maps.LatLng(45.5428679, -122.7944107);
+
+        infowindow = new google.maps.InfoWindow();
+
+        map = new google.maps.Map(
+            document.getElementById('map'), {center: Portland, zoom: 15});
+
+        var request = {
+          query: 'Portland Downtown',
+          fields: ['name', 'geometry'],
+        };
+
+        service = new google.maps.places.PlacesService(map);
+
+        service.findPlaceFromQuery(request, function(results, status) {
+          if (status === google.maps.places.PlacesServiceStatus.OK) {
+            for (var i = 0; i < results.length; i++) {
+              createMarker(results[i]);
+            }
+
+            map.setCenter(results[0].geometry.location);
+          }
+        });
+      }
+
+      function createMarker(place) {
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.setContent(place.name);
+          infowindow.open(map, this);
+        });
+      }
+
+        function reinitMap(){
+            var uluru = {
+                lat: 0,
+                lng: 0
+            };
+            var map = new google.maps.Map(
+                document.getElementById('map'),{
+                    zoom: 12,
+                    center: uluru
+                });
+            var marker = new google.maps.Marker({position: uluru, map:map});
+        }
+
+        function clickswitch(numberk){
+            if(keyi == numberk){
+                //situation that return to description 0 status
+                document.getElementById('intro'+keyi).style.display="none";
+                document.getElementById('image'+keyi).style.display="none";
+                document.getElementById('intro0').style.display="";
+                document.getElementById('image0').style.display="";
+                keyi = 0;
+            }else{
+                //from current keyi to new numberk status
+                document.getElementById('intro'+keyi).style.display="none";
+                document.getElementById('image'+keyi).style.display="none";
+                document.getElementById('intro'+numberk).style.display="";
+                document.getElementById('image'+numberk).style.display="";
+                keyi = numberk;
+            }
+        }
+    </script>  
+</body>
+</html>

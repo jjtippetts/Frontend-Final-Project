@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['White', 'Population'],
+          ['Hispanic or Latino', 507166],
+          ['Asian', 33470],
+          ['Black or Afican', 35115],
+          ['Multiple Race', 21955],
+          ['Native American',5587],
+          ['Hawiian', 1993],
+          ['Other', 18760]
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Portland Races Distribution',
+            subtitle: 'February 28, 2017',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+  </head>
+  <body>
+    <div id="columnchart_material" style="width: 800px; height: 500px;"></div>
+  </body>
+</html>
