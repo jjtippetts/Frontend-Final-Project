@@ -1,0 +1,486 @@
+<!doctype html>
+<link rel="stylesheet" type="text/css" href="map-page.css">
+<html lang=English></html>
+<head> 
+    <meta charset="utf-8">
+    <title>Map-Page-Layout</title>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-12 col-sm-12 p-3 my-3 border text-black" id="memupanel"">
+                <h2>Local Tour Hot Spot</h2><br>
+                <button type = "button" id = "butcla1" onclick="clickswitch(0)"> Portland Info </button><br>
+                <button type = "button" id = "butcla2" onclick="clickswitch(1)"> Museum </button><br>
+                <button type = "button" id = "butcla3" onclick="clickswitch(2)"> Landmark </button><br>
+                <button type = "button" id = "butcla4" onclick="clickswitch(3)"> Shopping Center </button><br>
+                <button type = "button" id = "butcla5" onclick="clickswitch(4)"> University </button><br>
+            </div>
+            <div class="col-lg-8 col-md-12 col-sm-12 p-3 my-3 border text-black" id="submenupanel">
+                <div id="submenu0">
+                    <img src="/images/Portland2.jpg" id = "imagePL1" alt="Portland image 1" style="height:100%">
+                </div>
+                <div id="submenu1" style="display:none">
+                    <h3>Museum List:</h3>
+                    <button type="button" id="butmus1" onclick="clickmus(1)">Oregon Museum of Science and Industry</button><br>
+                    <button type="button" id="butmus2" onclick="clickmus(2)">Portland Art Museum</button><br>
+                    <button type="button" id="butmus3" onclick="clickmus(3)">Oregon Historical Society Museum</button><br>
+                    <button type="button" id="butmus4" onclick="clickmus(4)">Portland Children's Museum</button><br>
+                </div>
+                <div id="submenu2" style="display:none">
+                    <h3>Landmark List:</h3>
+                    <button type="button" id="butlmk1" onclick="clicklmk(1)">Pioneer Courthouse Square</button><br>
+                    <button type="button" id="butlmk2" onclick="clicklmk(2)">Oregon Zoo</button><br>
+                    <button type="button" id="butlmk3" onclick="clicklmk(3)">Pittock Mansion</button><br>
+                    <button type="button" id="butlmk4" onclick="clicklmk(4)">Portland Japanese Garden</button><br>
+                    <button type="button" id="butlmk5" onclick="clicklmk(5)">Washington Park</button><br>
+                </div>
+                <div id="submenu3" style="display:none">
+                    <h3>Shopping Center List:</h3>
+                    <button type="button" id="butspc1" onclick="clicklmk(1)">Pioneer Place</button><br>
+                    <button type="button" id="butspc2" onclick="clicklmk(2)">Lloyd Center</button><br>
+                    <button type="button" id="butspc3" onclick="clicklmk(3)">Uptown Shopping Center</button><br>
+                    <button type="button" id="butspc4" onclick="clicklmk(4)">Woodburn Premium Outlets</button><br>
+                    <button type="button" id="butspc5" onclick="clicklmk(5)">Columbia Gorge Premium Outlets</button><br>
+                </div>
+                <div id="submenu4" style="display:none">
+                    <h3>University List:</h3>
+                    <button type="button" id="butuvt1" onclick="clicklmk(1)">Portland State University</button><br>
+                    <button type="button" id="butuvt1" onclick="clicklmk(2)">Oregon Health & Science University</button><br>
+                    <button type="button" id="butuvt1" onclick="clicklmk(3)">University of Portland</button><br>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 p3 my-3 border text-black" id="mappannel" style="height:720px">
+                <input id="pac-input" class="controls" type="text" placeholder="Search Box">
+                <div id="map"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 p3 my-3 border text-black" id="infopannel">
+                <div id="description0">
+                    <h1>Portland, Oregon</h1>
+                    <p>Portland (/ˈpɔːrtlənd/; PORT-lənd) is the largest and most populous city in the U.S. state of Oregon and the seat of Multnomah County. 
+                        It is a major port in the Willamette Valley region of the Pacific Northwest, at the confluence of the Willamette and Columbia rivers. 
+                        As of 2018, Portland had an estimated population of 653,115, making it the 25th most populated city in the United States, 
+                        and the second-most populous in the Pacific Northwest after Seattle.
+                        Approximately 2.4 million people live in the Portland metropolitan statistical area (MSA), making it the 25th most populous in the United States. 
+                        Its combined statistical area (CSA) ranks 19th-largest with a population of around 3.2 million. 
+                        Approximately 60% of Oregon's population resides within the Portland metropolitan area.
+                    </p>
+                </div>
+                <div id="musdescription1" style="display:none">
+                    <h1>Oregon Museum of Science and Industry</h1>
+                    <p>The Oregon Museum of Science and Industry (OMSI, /ˈɒmziː/ OM-zee) 
+                        is a science and technology museum in Portland, Oregon, United States. 
+                        It contains three auditoriums, including a large-screen theatre, 
+                        planetarium, and exhibition halls with a variety of hands-on permanent exhibits focused on natural sciences, industry, and technology. 
+                        Transient exhibits span a wider range of disciplines. 
+                    </p>
+                </div>
+                <div id="musdescription2" style="display:none">
+                    <h1>Portland Art Museum</h1>
+                    <p>The Portland Art Museum in Portland, Oregon, United States, was founded in 1892, 
+                        making it the oldest art museum on the West Coast and seventh oldest in the US.
+                        Upon completion of the most recent renovations, the Portland Art Museum became one of the 25 largest art museums in the US, at a total of 240,000 square feet (22,000 m²), 
+                        with more than 112,000 square feet (10,400 m²) of gallery space. 
+                        The permanent collection has more than 42,000 works of art, and at least one major traveling exhibition is usually on show. 
+                        The Portland Art Museum features a center for Native American art, a center for Northwest art, a center for modern and contemporary art, permanent exhibitions of Asian art, 
+                        and an outdoor public sculpture garden. The Northwest Film Center is also a component of Portland Art Museum. 
+                    </p>
+                </div>
+                <div id="musdescription3" style="display:none">
+                    <h1>Portland Children's Museum</h1>
+                    <p>Portland Children's Museum is a children's museum located in Portland's Washington Park, adjacent to the Oregon Zoo.
+                        Founded in 1946, Portland Children's Museum is the sixth oldest children's museum in the world and the oldest West of the Mississippi.
+                        The 50,000 sq ft (4,600 m2) museum receives over a quarter of a million visits from children and their families every year.
+                        It is a non-profit organization with tax-exempt status and member of the Association of Children's Museums. 
+                    </p> 
+                </div>
+                <div id="lmkdescription1" style="display:none">
+                    <h1>Portland Pioneer Courthouse</h1>
+                    <p>The Pioneer Courthouse is a federal courthouse in Portland, Oregon, United States. 
+                        Built beginning in 1869, the structure is the oldest federal building in the Pacific Northwest, 
+                        and the second-oldest west of the Mississippi River.Along with Pioneer Courthouse Square, it serves as the center of downtown Portland. 
+                        It is also known as the Pioneer Post Office because a popular downtown Portland post office was, until 2005, located inside. 
+                        The courthouse is one of four primary locations where the United States Court of Appeals for the Ninth Circuit hears oral arguments. 
+                        It also houses the chambers of the Portland-based judges on the Ninth Circuit. 
+                    </p>
+                </div>
+                <div id="lmkdescription2" style="display:none">
+                    <h1>Oregon Zoo</h1>
+                    <p>The Oregon Zoo, originally the Portland Zoo and later the Washington Park Zoo, 
+                        is a zoo located in Washington Park, Portland, Oregon, approximately 2 miles (3.2 km) southwest of 
+                        downtown Portland. Founded in 1888, it is the oldest zoo west of the Mississippi River. 
+                        The 64-acre (26 ha) zoo is owned by the regional Metro government. 
+                        It currently holds more than 1,800 animals of more than 230 species, 
+                        including 19 endangered species and 9 threatened species.
+                        The zoo also boasts an extensive plant collection throughout its animal exhibits 
+                        and specialized gardens.The zoo also operates and maintains the 2 ft 6 in (762 mm) 
+                        narrow gauge Washington Park & Zoo Railway that 
+                        previously connected to the International Rose Test Garden inside the park, 
+                        but currently runs only within the zoo. 
+                    </p>
+                </div>
+                <div id="lmkdescription3" style="display:none">
+                    <h1>The Pittock Mansion</h1>
+                    <p>The Pittock Mansion is a French Renaissance-style château in the West Hills of Portland, Oregon, United States. 
+                        The mansion was originally built in 1914 as a private home for London-born Oregonian publisher Henry Pittock and his wife, Georgiana Burton Pittock. 
+                        It is a 46-room estate built of Tenino Sandstone situated on 46 acres (19 ha) that is now owned by the city's Bureau of Parks and Recreation and open for touring.
+                        Modeled after Victorian and French Renaissance architecture, 
+                        the forty-six room house is situated on an expanse in the West Hills that provides panoramic views of Downtown Portland. 
+                        The building was added to the National Register of Historic Places in 1974.
+                    </p>
+                </div>
+                <div id="lmkdescription4" style="display:none">
+                    <h1>Portland Japanese Garden</h1>
+                    <p>The Portland Japanese Garden is a traditional Japanese garden occupying 12 acres, located within Washington Park in the West Hills of Portland, Oregon, United States. 
+                        It is operated as a private non-profit organization, which leased the site from the city in the early 1960s. 
+                        Stephen D. Bloom has been the chief executive officer of the Portland Japanese Garden since 2005.
+                        In April 2017, the Garden unveiled its Cultural Crossing expansion project. This $33.5 million expansion added 3.4 acres to the Garden. 
+                        The addition included three new garden spaces and a Cultural Village, designed by world-renowned architect Kengo Kuma.
+                    </p>
+                </div>
+                <div id="lmkdescription5" style="display:none">
+                    <h1>Washington Park</h1>
+                    <p>Washington Park is a public urban park in Portland in the U.S. state of Oregon. 
+                        It includes a zoo, forestry museum, arboretum, children's museum, rose garden, amphitheatre, memorials, archery range, tennis courts, 
+                        soccer field, picnic areas, playgrounds, public art and many acres of wild forest with miles of trails. 
+                        Washington Park covers more than 410 acres (166 hectares) on mostly steep, wooded hillsides which range in elevation from 200 feet (61 m) at 
+                        24th & West Burnside Street to 870 feet (265 m) at SW Fairview Blvd. 
+                        It comprises 159.7 acres (64.63 hectares) of city park land that has been officially designated as "Washington Park" by the City of Portland, 
+                        as well as the adjacent 64-acre (26 ha) Oregon Zoo and the 189-acre (76 ha) Hoyt Arboretum, 
+                        which together make up the area described as "Washington Park" on signs and maps.
+                    </p>
+                </div>
+                <div id="spcdescription1" style="display:none">
+                    <h1>Pioneer Place</h1>
+                    <p>Pioneer Place is an upscale, urban shopping mall in downtown Portland, Oregon. 
+                        It consists of four blocks of retail, dining, parking, and an office tower named Pioneer Tower. 
+                        The mall itself is spread out between four buildings, interconnected by skywalks or underground mall sections. 
+                        The footprint of the entire complex consists of four full city blocks, bisected by SW Yamhill and Fourth, 
+                        bounded north-south by SW Morrison and Taylor Streets and east-west by SW Third and Fifth Avenues.
+                        In 2014, Pioneer Place was the third-highest selling mall in the United States based on sales per square foot, 
+                        sitting just behind Bal Harbour Shops and The Grove at Farmers Market.
+                    </p>
+                </div>
+                <div id="spcdescription2" style="display:none">
+                    <h1>Lloyd Center</h1>
+                    <p>Lloyd Center is a shopping mall in the Lloyd District of Portland, Oregon, United States, just northeast of downtown. 
+                        It is owned by Arrow Retail of Dallas and anchored by Macy's. 
+                        The mall features three floors of shopping with the third level serving mostly as professional office spaces, a food court, 
+                        and U.S. Education Corporation's Carrington College. A Regal Cinemas multiplex is located across the street. 
+                    </p>
+                </div>
+                <div id="spcdescription3" style="display:none">
+                    <h1>Uptown Shopping Center</h1>
+                    <p>The heart of the urban Uptown District and recognized as Oregon's first shopping center, 
+                        Uptown connects Portland's urban core with the affluent West Hills
+                    </p>
+                </div>
+                <div id="spcdescription4" style="display:none">
+                    <h1>Woodburn Premium Outlets</h1>
+                    <p>Woodburn Premium Outlets is an outlet mall in Woodburn, Oregon, United States. 
+                        The complex, located between the cities of Portland and Salem on Interstate 5, opened in 1999 as the Woodburn Company Stores.
+                        Owned and operated by Craig Realty Group, the center has over 350,000 square feet (33,000 m2) of retail space.
+                    </p>
+                </div>
+                <div id="spcdescription5" style="display:none">
+                    <h1>Columbia Gorge Outlet</h1>
+                    <p>Conveniently located just 15 minutes east of Portland and Portland International Airport, Columbia Gorge Outlets is situated directly off Interstate 84, 
+                        Exit 17 in Troutdale. Columbia Gorge Outlets features a fabulous selection of brand name outlet stores including Adidas, 
+                        Carter's, Coach & Coach Men's, Eddie Bauer Outlet, Gap Outlet, Harry & David, Loft Outlet, Pendleton, Samsonite, Tommy Hilfiger, Van Heusen and more.
+                    </p>
+                </div>
+                <div id="uvtdescription1" style="display:none">
+                    <h1>Portland State University</h1>
+                    <p>Portland State University (PSU) is a public research university in Portland, Oregon. 
+                        It was founded in 1946 as a post-secondary educational institution for World War II veterans. 
+                        It evolved into a four-year college over the following two decades and was granted university status in 1969.
+                        It is the only public urban university in the state of Oregon that is located in a large city. It is governed by a board of trustees. 
+                        The university is categorized as an R2: Doctoral University – Higher Research Activity in the Carnegie Classification of Institutions of Higher Education.
+                    </p>
+                </div>
+                <div id="uvtdescription2" style="display:none">
+                    <h1>Oregon Health & Science University</h1>
+                    <p>Oregon Health & Science University (OHSU) is a public university in Oregon with a main campus, including two hospitals, in Portland, Oregon. 
+                        The institution was founded in 1887 as the University of Oregon Medical Department and later became the University of Oregon Medical School.
+                        In 1974, the campus became an independent, self-governed institution called the University of Oregon Health Sciences Center, 
+                        combining state dentistry, medicine, nursing, and public health programs into a single center.
+                        It was renamed Oregon Health Sciences University in 1981 and took its current name in 2001, as part of a merger with the Oregon Graduate Institute (OGI), 
+                        in Hillsboro.[5] The university has several partnership programs including a joint PharmD Pharmacy program with Oregon State University in Corvallis. 
+                    </p>
+                </div>
+                <div id="uvtdescription3" style="display:none">
+                    <h1>University of Portland</h1>
+                    <p>The University of Portland (UP) is a private Roman Catholic university in Portland, Oregon. It was founded in 1901 and is affiliated with the Congregation of Holy Cross, which also founded UP's sister school the University of Notre Dame. The university has a student body of approximately 4,200 students. 
+                        The campus is located in the University Park neighborhood near St. Johns, on a bluff overlooking the Willamette River. 
+                        With a college of arts and sciences; a graduate school; and schools of business, education, engineering, and nursing, 
+                        it is the only comprehensive Catholic university in Oregon.
+                        It is the largest corporation in North Portland and has an annual economic impact on Portland of some $170 million. 
+                        More than 13,000 alumni live in the Portland metropolitan area.
+                    </p>
+                </div>
+
+
+            </div> 
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-6 col-md-12 col-sm-12 p3 my-3 border text-black" id="PLG1">
+                <div id="curve_chart" style="width: 100%; height: 400px"></div>
+                <!--style="width: 900px; height: 500px"-->
+                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                <script type="text/javascript">
+                    google.charts.load('current', {'packages':['corechart']});
+                    google.charts.setOnLoadCallback(drawChart);
+            
+                    function drawChart() {
+                    var data = google.visualization.arrayToDataTable([
+                        ['year', 'Population'],
+                        ['2010',  585463],
+                        ['2011',  595410],
+                        ['2012',  604285],
+                        ['2013',  609970],
+                        ['2014',  620647],
+                        ['2015',  631539],
+                        ['2016',  643136],
+                        ['2017',  648630],
+                        ['2018',  653115],
+                    ]);
+        
+                    var options = {
+                        title: 'Portland Population Statistic',
+                        legend: { position: 'bottom' }
+                    };
+        
+                    var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+            
+                    chart.draw(data, options);
+                    }
+                </script>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        var keypri = 0;
+        var keysub = 0;
+
+        function cleandescription(){
+            document.getElementById("description0").style.display="none";
+            document.getElementById("musdescription1").style.display="none";
+            document.getElementById("musdescription2").style.display="none";
+            document.getElementById("musdescription3").style.display="none";
+            document.getElementById("musdescription4").style.display="none";
+            document.getElementById("lmkdescription1").style.display="none";
+            document.getElementById("lmkdescription2").style.display="none";
+            document.getElementById("lmkdescription3").style.display="none";
+            document.getElementById("lmkdescription4").style.display="none";
+            document.getElementById("lmkdescription5").style.display="none";
+            document.getElementById("spcdescription1").style.display="none";
+            document.getElementById("spcdescription2").style.display="none";
+            document.getElementById("spcdescription3").style.display="none";
+            document.getElementById("spcdescription4").style.display="none";
+            document.getElementById("spcdescription5").style.display="none";
+            document.getElementById("uvtdescription1").style.display="none";
+            document.getElementById("uvtdescription2").style.display="none";
+            document.getElementById("uvtdescription3").style.display="none";
+            keysub = 0;
+        }
+
+        function clickswitch(key1){
+            if(keypri == key1){
+                document.getElementById("submenu"+key1).style.display="none";
+                document.getElementById("submenu0").style.display="";
+                keypri = 0;
+                cleandescription();
+                document.getElementById("description0").style.display="";
+            }else{
+                document.getElementById("submenu"+keypri).style.display="none";
+                document.getElementById("submenu0").style.display="none";
+                document.getElementById("submenu"+key1).style.display="";
+                keypri = key1;
+                cleandescription();
+                document.getElementById("description0").style.display="";
+            }
+        }
+
+        function clickdescription(key2){
+            if(keypri == 0){
+                cleandescription();
+                document.getElementById("description0").style.display="";
+            }
+            else if(keypri == 1){
+                if(key2 == 1){
+                    cleandescription();
+                    document.getElementById("musdescription1").style.display="";
+                }
+                else if(key2==2){
+                    cleandescription();
+                    document.getElementById("musdescription2").style.display="";
+                }
+                else if(key2==3){
+                    cleandescription();
+                    document.getElementById("musdescription3").style.display="";
+                }
+                else if(key2==4){
+                    cleandescription();
+                    document.getElementById("musdescription4").style.display="";
+                }
+            }
+            else if(keypri == 2){
+                if(key2 == 1){
+                    cleandescription();
+                    document.getElementById("lmkdescription1").style.display="";
+                }
+                else if(key2==2){
+                    cleandescription();
+                    document.getElementById("lmkdescription2").style.display="";
+                }
+                else if(key2==3){
+                    cleandescription();
+                    document.getElementById("lmkdescription3").style.display="";
+                }
+                else if(key2==4){
+                    cleandescription();
+                    document.getElementById("lmkdescription4").style.display="";
+                }
+                else if(key2==5){
+                    cleandescription();
+                    document.getElementById("lmkdescription5").style.display="";
+                }
+            }
+            else if(keypri == 3){
+                if(key2 == 1){
+                    cleandescription();
+                    document.getElementById("spcdescription1").style.display="";
+                }
+                else if(key2==2){
+                    cleandescription();
+                    document.getElementById("spcdescription2").style.display="";
+                }
+                else if(key2==3){
+                    cleandescription();
+                    document.getElementById("spcdescription3").style.display="";
+                }
+                else if(key2==4){
+                    cleandescription();
+                    document.getElementById("spcdescription4").style.display="";
+                }
+                else if(key2==5){
+                    cleandescription();
+                    document.getElementById("spcdescription5").style.display="";
+                }
+            }
+            else if(keypri == 4){
+                if(key2 == 1){
+                    cleandescription();
+                    document.getElementById("uvtdescription1").style.display="";
+                }
+                else if(key2==2){
+                    cleandescription();
+                    document.getElementById("uvtdescription2").style.display="";
+                }
+                else if(key2==3){
+                    cleandescription();
+                    document.getElementById("uvtdescription3").style.display="";
+                }
+            }
+
+        }
+
+        function initAutocomplete() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 45.5186307, lng:  -122.6960515},
+          zoom: 13,
+          mapTypeId: 'roadmap'
+        });
+
+        // Create the search box and link it to the UI element.
+        var input = document.getElementById('pac-input');
+        var searchBox = new google.maps.places.SearchBox(input);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+        // Bias the SearchBox results towards current map's viewport.
+        map.addListener('bounds_changed', function() {
+          searchBox.setBounds(map.getBounds());
+        });
+
+        var markers = [];
+        // Listen for the event fired when the user selects a prediction and retrieve
+        // more details for that place.
+        searchBox.addListener('places_changed', function() {
+          var places = searchBox.getPlaces();
+
+          if (places.length == 0) {
+            return;
+          }
+
+          // Clear out the old markers.
+          markers.forEach(function(marker) {
+            marker.setMap(null);
+          });
+          markers = [];
+
+          // For each place, get the icon, name and location.
+          var bounds = new google.maps.LatLngBounds();
+          places.forEach(function(place) {
+            if (!place.geometry) {
+              console.log("Returned place contains no geometry");
+              return;
+            }
+            var icon = {
+              url: place.icon,
+              size: new google.maps.Size(71, 71),
+              origin: new google.maps.Point(0, 0),
+              anchor: new google.maps.Point(17, 34),
+              scaledSize: new google.maps.Size(25, 25)
+            };
+
+            // Create a marker for each place.
+            markers.push(new google.maps.Marker({
+              map: map,
+              icon: icon,
+              title: place.name,
+              position: place.geometry.location
+            }));
+
+            if (place.geometry.viewport) {
+              // Only geocodes have viewport.
+              bounds.union(place.geometry.viewport);
+            } else {
+              bounds.extend(place.geometry.location);
+            }
+          });
+          map.fitBounds(bounds);
+        });
+      }
+
+        function createMarker(place) {
+        var marker = new google.maps.Marker({
+          map: map,
+          position: place.geometry.location
+        });
+
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.setContent(place.name);
+          infowindow.open(map, this);
+        });
+      }
+    </script>
+
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASboHPi1uBcf0bh-2D146ldzkwBDUGr68&libraries=places"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASboHPi1uBcf0bh-2D146ldzkwBDUGr68&libraries=places&callback=initAutocomplete&language=EN&region=US"></script>
+    
+</body>
+</html>
