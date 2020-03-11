@@ -37,7 +37,6 @@
             inset -5px -5px 20px #ffffff;
 }
 
-
 /*Below are Sub1 button setting*/
 [id ^= "butmus"]{
     background-color: white;
@@ -116,8 +115,6 @@
             inset -5px -5px 20px #ccf4ff;
 }
 
-
-
 /*Below are Sub3 button setting*/
 [id ^= "butspc"]{
     background-color: white;
@@ -156,8 +153,6 @@
     box-shadow: inset 5px 5px 20px #96b4d1, 
             inset -5px -5px 20px #ccf4ff;
 }
-
-
 
 /*Below are Sub4 button setting*/
 [id ^= "butuvt"]{
@@ -198,6 +193,32 @@
             inset -5px -5px 20px #ccf4ff;
 }
 
+/*Below are map nevgation button setting*/
+[id ^= "trigger"]{
+    color: black;
+    border-radius: 15px;
+    background: #f0f0f0;
+    box-shadow:  5px 5px 20px #cccccc, 
+                -5px -5px 20px #ffffff;
+}
+[id ^= "trigger"]:hover{
+    color: black;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #ffffff, #d8d8d8);
+    box-shadow:  5px 5px 20px #cccccc, 
+                -5px -5px 20px #ffffff;
+}
+[id ^= "trigger"]:focus{
+    color: rgba(255, 0, 0, 0.541);
+}
+[id ^= "trigger"]:active{
+    color: rgba(0, 0, 0, 0.363);
+    border-radius: 15px;
+    background: #f0f0f0;
+    box-shadow: inset 5px 5px 20px #cccccc, 
+                inset -5px -5px 20px #ffffff;
+}
+
 #memupanel{
     background-color: #f2f2f2;
 }
@@ -212,6 +233,7 @@
 #map{
     width: 100%;
     height: 100%;
+    margin:0;
 }
 
 [id ^= "image"]{
@@ -233,4 +255,8 @@
 
 #pac-input:focus {
     border-color: #4d90fe;
+}
+[id ^= "standard"]{
+    height: 100%;
+    width: 100%;
 }
