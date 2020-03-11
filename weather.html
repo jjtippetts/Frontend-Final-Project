@@ -91,28 +91,30 @@
               <div class="wrapper col-lg-5 pb-4">
                 <div class="weather-box rounded" id="current-weather-box">
                   <h3 class="text-center pt-2">Current Weather</h3>
-                  <div
-                    class=" pl-3 pr-3 d-flex flex-row justify-content-between"
-                  >
-                    <div class="lead current-weather d-inline"></div>
-                    <img src="" alt="weather icon" class="wicon" />
-                  </div>
 
-                  <div class="row pl-3 pr-3">
+                  <div class="row d-flex justify-content-between">
+                    <div
+                      class="col-6 lead current-weather d-inline text-center"
+                    ></div>
+
+                    <div class="col-6 d-flex justify-content-center">
+                      <img src="" alt="weather icon" class="wicon" />
+                    </div>
+
                     <div class="col-6">
                       <ul class="list-unstyled">
                         <li
-                          class="weather-description text-capitalize font-weight-bold"
+                          class="weather-description text-capitalize text-center font-weight-bold"
                         ></li>
-                        <li class="feels-like">Feels Like:</li>
-                        <li class="humidity">Humidity:</li>
+                        <li class="feels-like text-center">Feels Like:</li>
+                        <li class="humidity text-center">Humidity:</li>
                       </ul>
                     </div>
 
                     <div class="col-6">
                       <ul class="list-unstyled">
-                        <li class="sunrise text-right">Sunrise:</li>
-                        <li class="sunset text-right">Sunset:</li>
+                        <li class="sunrise text-center">Sunrise:</li>
+                        <li class="sunset text-center">Sunset:</li>
                       </ul>
                     </div>
                   </div>
