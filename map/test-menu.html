@@ -1,0 +1,89 @@
+<SCRIPT LANGUAGE="JavaScript">
+    var i = 0;
+    function fn(){
+        if(i == 0){
+           document.getElementById('ChildMenu1').style.display = "";
+           document.getElementById('ChildMenu2').style.display = "none";
+           document.getElementById('ChildMenu3').style.display = "none";
+           i +=1;
+         }
+        else if(i == 1){
+            document.getElementById('ChildMenu2').style.display = "";
+            document.getElementById('ChildMenu1').style.display = "none";
+            document.getElementById('ChildMenu3').style.display = "none";
+            i +=1;
+        }
+        else if(i == 2){
+            document.getElementById('ChildMenu3').style.display = "";
+            document.getElementById('ChildMenu1').style.display = "none";
+            document.getElementById('ChildMenu2').style.display = "none";
+            i +=1 ;
+        }
+        else if(i == 3){
+            document.getElementById('ChildMenu3').style.display = "";
+            document.getElementById('ChildMenu1').style.display = "";
+            document.getElementById('ChildMenu2').style.display = "";
+            i = 0;
+        }
+        else{
+            i = 0;
+        }
+    }
+</SCRIPT>
+<div class = "container">
+    <div class = "row" style="display:none" id="ChildMenu1">
+        <ul>
+            <li>子菜单1 </li>
+        </ul> 
+    </div>
+    <div class = "row">
+        <div style="display:none" id="ChildMenu2">
+            <li>子菜单2 </li>
+        </div>
+    </div>
+    <div class = "row">
+        <div style="display:none" id="ChildMenu3">
+            <li>子菜单3 </li>
+        </div>
+    </div>
+</div>
+
+    
+    <input type="button" value="display&show" onclick="fn()"/>
+
+<script>
+    if(keyi == numberk){
+        //situation that return to description 0 status
+        document.getElementById('description'+numberk).style.display="none";
+        document.getElementById('image'+numberk).style.display="none";
+        document.getElementById('description0').style.display="";
+        document.getElementById('image0').style.display="";
+        keyi = 0;
+    }else{
+        //from current keyi to new numberk status
+        clickreset();
+        document.getElementById('description0').style.display="none";
+        document.getElementById('image0').style.display="none";
+        document.getElementById('description'+numberk).style.display="";
+        document.getElementById('image'+numberk).style.display="";
+        keyi = numberk;
+    }
+</script>
+<script>
+    if(keyi == numberk){
+        //situation that return to description 0 status
+        document.getElementById('description'+keyi).style.display="none";
+        document.getElementById('image'+keyi).style.display="none";
+        document.getElementById('description0').style.display="";
+        document.getElementById('image0').style.display="";
+        keyi = 0;
+    }else{
+        //from current keyi to new numberk status
+        document.getElementById('description'+keyi).style.display="none";
+        document.getElementById('image'+keyi).style.display="none";
+        document.getElementById('description'+numberk).style.display="";
+        document.getElementById('image'+numberk).style.display="";
+        keyi = numberk;
+    }
+</script>
+    

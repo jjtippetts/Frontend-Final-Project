@@ -1,0 +1,53 @@
+[id ^= "museum"]{
+    background-color: white;
+    color: teal;
+    padding: 15px 32px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+
+    border-radius: 15px;
+    background: #b1d4f6;
+    box-shadow:  5px 5px 20px #96b4d1, 
+             -5px -5px 20px #ccf4ff;
+}
+[id ^= "museum"]:hover{
+    text-decoration: underline;
+    background-color: lightblue;
+    color: black;
+
+    border-radius: 15px;
+    background: linear-gradient(145deg, #bde3ff, #9fbfdd);
+    box-shadow:  5px 5px 20px #96b4d1, 
+             -5px -5px 20px #ccf4ff;
+}
+[id ^= "museum"]:focus{
+    color: rgba(0, 128, 128, 0.5);
+}
+[id ^= "museum"]:active{
+    color: black;
+
+    border-radius: 15px;
+    background: #b1d4f6;
+    box-shadow: inset 5px 5px 20px #96b4d1, 
+            inset -5px -5px 20px #ccf4ff;
+}
+#cpanel{
+    background-color: #b1d4f6;
+}
+
+#mappanel{
+    background-color: white;
+}
+
+#map{
+    width: 100%;
+    height: 100%;
+}
+
+[id ^= "image"]{
+    width: 100%;
+    height: 100%;
+}

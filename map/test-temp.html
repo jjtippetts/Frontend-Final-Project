@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Geocoding Service</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #floating-panel {
+        position: absolute;
+        top: 10px;
+        left: 25%;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="floating-panel">
+      <input id="address" type="textbox" value="Sydney, NSW">
+      <input id="submit" type="button" value="Geocode">
+    </div>
+    <div id="map"></div>
+    <script>
+        //I implemented something similar recently. I needed to use two different functions; one for when places_changed is called (which already has the geolocation data) and one for when the button event is triggered which needs to manage the geolocation call to Google manually. You code might look something like this:
+        var searchBox, map, geocoder;
+
+        function processPlacesSearch() {
+        var places = searchBox.getPlaces();
+        if (places.length) {
+            location = places[0].geometry.location;
+            var origin = new google.maps.LatLng(location.lat(), location.lng());
+            // plot origin
+        }
+        }
+
+        function processButtonSearch(location) {
+        geocoder = new google.maps.Geocoder();
+        geocoder.geocode(location, function (data) {
+            var lat = data[0].geometry.location.lat();
+            var lng = data[0].geometry.location.lng();
+            var origin = new google.maps.LatLng(lat, lng);
+            // plot origin
+        });
+        }
+
+        function initialize() {
+        map = new google.maps.Map(document.getElementById('map'), options);
+        searchBox = new google.maps.places.SearchBox(document.getElementById('searchbox'));
+        google.maps.event.addListener(searchBox, 'places_changed', processPlacesSearch);
+        }
+
+        var button = document.getElementById('searchbutton');
+        var searchbox = document.getElementById('searchbox');
+
+        button.onclick = function () {
+        var location = searchbox.value;
+        processButtonSearch(location);
+        }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASboHPi1uBcf0bh-2D146ldzkwBDUGr68&callback=initMap">
+    </script>
+  </body>
+</html>

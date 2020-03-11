@@ -1,0 +1,48 @@
+
+<div id = "description0">
+    <h1>Portland, Oregon</h1>
+    <p>Portland (/ˈpɔːrtlənd/; PORT-lənd) is the largest and most populous city in the U.S. state of Oregon and the seat of Multnomah County. 
+        It is a major port in the Willamette Valley region of the Pacific Northwest, at the confluence of the Willamette and Columbia rivers. 
+        As of 2018, Portland had an estimated population of 653,115, making it the 25th most populated city in the United States, 
+        and the second-most populous in the Pacific Northwest after Seattle.
+        Approximately 2.4 million people live in the Portland metropolitan statistical area (MSA), making it the 25th most populous in the United States. 
+        Its combined statistical area (CSA) ranks 19th-largest with a population of around 3.2 million. 
+        Approximately 60% of Oregon's population resides within the Portland metropolitan area.
+    </p>
+    </div>
+<div id = "description1">
+    <h1>Oregon Museum of Science and Industry</h1>
+    <p>The Oregon Museum of Science and Industry (OMSI, /ˈɒmziː/ OM-zee) 
+        is a science and technology museum in Portland, Oregon, United States. 
+        It contains three auditoriums, including a large-screen theatre, 
+        planetarium, and exhibition halls with a variety of hands-on permanent exhibits focused on natural sciences, industry, and technology. 
+        Transient exhibits span a wider range of disciplines. 
+    </p>
+</div>
+<br>
+<button type = "button" id = "museum1" onclick="displayinit()"> Oregon Museum of Science and Industry</button><br>
+<script>
+    function displayinit(){
+        var target =documnet.getElementById("description0");
+        target.style.display = 'none';
+        var target =documnet.getElementById("description1");
+        target.style.display = 'none';
+    }
+    function displayhide(id){
+        var target = document.getElementById(id);
+        if(target.style.display == "none"){
+            displayinit();
+            target.style.display= ""
+        }else{
+            target.style.display="none"
+            documnet.getElementById('description0').style.display = "";   
+        }
+    }
+</script>
+
+<!--
+<img src="https://images.app.goo.gl/7vH22YAdQEUkwYZu9" alt="Portland1">
+<img src="/images/Portland1.jpg" alt="Daylight" style="width:100%;height:100%;">
+<img src="/images/Portland2.jpg" alt="Daylight"style="width:100%;height:100%;">
+<img src="/images/Portland3.jpg" alt="Daylight"style="width:100%;height:100%;">
+-->

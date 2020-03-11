@@ -18,6 +18,7 @@ $light-gray: #dcdcdd;
 // Mobile Devices
 @media (max-width: 575px) {
   .nav {
+    margin-top: 50px;
     border-right: 0px solid !important;
     border-bottom: solid 1px black;
   }
