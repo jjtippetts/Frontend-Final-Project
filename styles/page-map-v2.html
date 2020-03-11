@@ -23,32 +23,32 @@
                 </div>
                 <div id="submenu1" style="display:none">
                     <h3>Museum List:</h3>
-                    <button type="button" id="butmus1" onclick="clickmus(1)">Oregon Museum of Science and Industry</button><br>
-                    <button type="button" id="butmus2" onclick="clickmus(2)">Portland Art Museum</button><br>
-                    <button type="button" id="butmus3" onclick="clickmus(3)">Oregon Historical Society Museum</button><br>
-                    <button type="button" id="butmus4" onclick="clickmus(4)">Portland Children's Museum</button><br>
+                    <button type="button" id="butmus1" onclick="clickdescription(1)">Oregon Museum of Science and Industry</button><br>
+                    <button type="button" id="butmus2" onclick="clickdescription(2)">Portland Art Museum</button><br>
+                    <button type="button" id="butmus3" onclick="clickdescription(3)">Oregon Historical Society Museum</button><br>
+                    <button type="button" id="butmus4" onclick="clickdescription(4)">Portland Children's Museum</button><br>
                 </div>
                 <div id="submenu2" style="display:none">
                     <h3>Landmark List:</h3>
-                    <button type="button" id="butlmk1" onclick="clicklmk(1)">Pioneer Courthouse Square</button><br>
-                    <button type="button" id="butlmk2" onclick="clicklmk(2)">Oregon Zoo</button><br>
-                    <button type="button" id="butlmk3" onclick="clicklmk(3)">Pittock Mansion</button><br>
-                    <button type="button" id="butlmk4" onclick="clicklmk(4)">Portland Japanese Garden</button><br>
-                    <button type="button" id="butlmk5" onclick="clicklmk(5)">Washington Park</button><br>
+                    <button type="button" id="butlmk1" onclick="clickdescription(1)">Pioneer Courthouse Square</button><br>
+                    <button type="button" id="butlmk2" onclick="clickdescription(2)">Oregon Zoo</button><br>
+                    <button type="button" id="butlmk3" onclick="clickdescription(3)">Pittock Mansion</button><br>
+                    <button type="button" id="butlmk4" onclick="clickdescription(4)">Portland Japanese Garden</button><br>
+                    <button type="button" id="butlmk5" onclick="clickdescription(5)">Washington Park</button><br>
                 </div>
                 <div id="submenu3" style="display:none">
                     <h3>Shopping Center List:</h3>
-                    <button type="button" id="butspc1" onclick="clicklmk(1)">Pioneer Place</button><br>
-                    <button type="button" id="butspc2" onclick="clicklmk(2)">Lloyd Center</button><br>
-                    <button type="button" id="butspc3" onclick="clicklmk(3)">Uptown Shopping Center</button><br>
-                    <button type="button" id="butspc4" onclick="clicklmk(4)">Woodburn Premium Outlets</button><br>
-                    <button type="button" id="butspc5" onclick="clicklmk(5)">Columbia Gorge Premium Outlets</button><br>
+                    <button type="button" id="butspc1" onclick="clickdescription(1)">Pioneer Place</button><br>
+                    <button type="button" id="butspc2" onclick="clickdescription(2)">Lloyd Center</button><br>
+                    <button type="button" id="butspc3" onclick="clickdescription(3)">Uptown Shopping Center</button><br>
+                    <button type="button" id="butspc4" onclick="clickdescription(4)">Woodburn Premium Outlets</button><br>
+                    <button type="button" id="butspc5" onclick="clickdescription(5)">Columbia Gorge Premium Outlets</button><br>
                 </div>
                 <div id="submenu4" style="display:none">
                     <h3>University List:</h3>
-                    <button type="button" id="butuvt1" onclick="clicklmk(1)">Portland State University</button><br>
-                    <button type="button" id="butuvt1" onclick="clicklmk(2)">Oregon Health & Science University</button><br>
-                    <button type="button" id="butuvt1" onclick="clicklmk(3)">University of Portland</button><br>
+                    <button type="button" id="butuvt1" onclick="clickdescription(1)">Portland State University</button><br>
+                    <button type="button" id="butuvt1" onclick="clickdescription(2)">Oregon Health & Science University</button><br>
+                    <button type="button" id="butuvt1" onclick="clickdescription(3)">University of Portland</button><br>
                 </div>
 
             </div>
@@ -95,6 +95,15 @@
                     </p>
                 </div>
                 <div id="musdescription3" style="display:none">
+                    <h1>Oregon Historical Society Museum</h1>
+                    <p>The Oregon Historical Society Museum is a history museum housed at the Oregon Historical Society in downtown Portland, Oregon, United States. 
+                        The museum was created in 1898 and receives about 44,000 visitors annually. 
+                        It houses the Portland Penny that decided the city’s name.
+                        This 1835 copper penny was flipped to decide between the names of Boston and Portland, with Portland as the winner.
+                        The museum contains over 85,000 artifacts, and is accredited by the American Alliance of Museums. 
+                    </p> 
+                </div>
+                <div id="musdescription4" style="display:none">
                     <h1>Portland Children's Museum</h1>
                     <p>Portland Children's Museum is a children's museum located in Portland's Washington Park, adjacent to the Oregon Zoo.
                         Founded in 1946, Portland Children's Museum is the sixth oldest children's museum in the world and the oldest West of the Mississippi.
@@ -199,6 +208,10 @@
                 </div>
                 <div id="uvtdescription1" style="display:none">
                     <h1>Portland State University</h1>
+                    <a href="https://en.wikipedia.org/wiki/File:Portland_State_University_seal.svg#/media/File:Portland_State_University_seal.svg"><img 
+                        alt="Portland State University seal.svg" 
+                        src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b9/Portland_State_University_seal.svg/1200px-Portland_State_University_seal.svg.png"
+                        width = "180px" height = "180px" align="right"></a>
                     <p>Portland State University (PSU) is a public research university in Portland, Oregon. 
                         It was founded in 1946 as a post-secondary educational institution for World War II veterans. 
                         It evolved into a four-year college over the following two decades and was granted university status in 1969.
@@ -208,22 +221,29 @@
                 </div>
                 <div id="uvtdescription2" style="display:none">
                     <h1>Oregon Health & Science University</h1>
+                    <a href="https://en.wikipedia.org/wiki/File:OHSU-Logo.png#/media/File:OHSU-Logo.png"><img alt="OHSU-Logo.png" src="https://upload.wikimedia.org/wikipedia/en/f/ff/OHSU-Logo.png"
+                        width = "148px" height = 180px" align="right"></a>
                     <p>Oregon Health & Science University (OHSU) is a public university in Oregon with a main campus, including two hospitals, in Portland, Oregon. 
                         The institution was founded in 1887 as the University of Oregon Medical Department and later became the University of Oregon Medical School.
                         In 1974, the campus became an independent, self-governed institution called the University of Oregon Health Sciences Center, 
                         combining state dentistry, medicine, nursing, and public health programs into a single center.
                         It was renamed Oregon Health Sciences University in 1981 and took its current name in 2001, as part of a merger with the Oregon Graduate Institute (OGI), 
-                        in Hillsboro.[5] The university has several partnership programs including a joint PharmD Pharmacy program with Oregon State University in Corvallis. 
+                        in Hillsboro.The university has several partnership programs including a joint PharmD Pharmacy program with Oregon State University in Corvallis. 
                     </p>
                 </div>
                 <div id="uvtdescription3" style="display:none">
                     <h1>University of Portland</h1>
-                    <p>The University of Portland (UP) is a private Roman Catholic university in Portland, Oregon. It was founded in 1901 and is affiliated with the Congregation of Holy Cross, which also founded UP's sister school the University of Notre Dame. The university has a student body of approximately 4,200 students. 
+                    <a href="https://en.wikipedia.org/wiki/File:University_of_Portland_seal.svg#/media/File:University_of_Portland_seal.svg"><img 
+                        alt="University of Portland seal.svg" 
+                        src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/University_of_Portland_seal.svg/1200px-University_of_Portland_seal.svg.png"
+                        width="180px" height="180px" align="right"></a>
+                    <p BR CLEAR="left">The University of Portland (UP) is a private Roman Catholic university in Portland, Oregon. It was founded in 1901 and is affiliated with the Congregation of Holy Cross, which also founded UP's sister school the University of Notre Dame. The university has a student body of approximately 4,200 students. 
                         The campus is located in the University Park neighborhood near St. Johns, on a bluff overlooking the Willamette River. 
                         With a college of arts and sciences; a graduate school; and schools of business, education, engineering, and nursing, 
                         it is the only comprehensive Catholic university in Oregon.
                         It is the largest corporation in North Portland and has an annual economic impact on Portland of some $170 million. 
                         More than 13,000 alumni live in the Portland metropolitan area.
+                        
                     </p>
                 </div>
 
@@ -231,9 +251,11 @@
             </div> 
         </div>
         
-        <div class="row">
-            <div class="col-lg-6 col-md-12 col-sm-12 p3 my-3 border text-black" id="PLG1">
-                <div id="curve_chart" style="width: 100%; height: 400px"></div>
+        <!--the row that contain staistic graph or chart, which use to display Portland information-->
+        <div class="row" id="PLG1">
+            <!--chart 1: Population statistic line chart--> 
+            <div class="col-lg-6 col-md-12 col-sm-12 p3 my-3 border text-black">
+                <div id="curve_chart1" style="width: 100%; height: 400px"></div>
                 <!--style="width: 900px; height: 500px"-->
                 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
                 <script type="text/javascript">
@@ -241,7 +263,7 @@
                     google.charts.setOnLoadCallback(drawChart);
             
                     function drawChart() {
-                    var data = google.visualization.arrayToDataTable([
+                        var data = google.visualization.arrayToDataTable([
                         ['year', 'Population'],
                         ['2010',  585463],
                         ['2011',  595410],
@@ -252,27 +274,97 @@
                         ['2016',  643136],
                         ['2017',  648630],
                         ['2018',  653115],
-                    ]);
+                        ]);
         
-                    var options = {
-                        title: 'Portland Population Statistic',
-                        legend: { position: 'bottom' }
-                    };
+                        var options = {
+                            title: 'Portland Population Statistic',
+                            subtitle: 'End at 2018',
+                            legend: { position: 'bottom'}
+                        };
         
-                    var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
-            
-                    chart.draw(data, options);
+                        var chart = new google.visualization.LineChart(document.getElementById('curve_chart1'));
+                        chart.draw(data, options);
                     }
                 </script>
             </div>
+            <!--chart 2: race distribution column chart-->
+            <div class="col-lg-6 col-md-12 col-sm-12 p3 my-3 border text-black">
+                <div id="columnchart_material" style="width: 100%; height: 400px;"></div>
+                <script type="text/javascript">
+                    google.charts.load('current', {'packages':['bar']});
+                    google.charts.setOnLoadCallback(drawChart);
+
+                    function drawChart() {
+                        var data = google.visualization.arrayToDataTable([
+                        ['Race', 'Population'],
+                        ['White', 412241],
+                        ['Asian', 33470],
+                        ['Black', 35115],
+                        ['Native',5587],
+                        ['Hawiian', 1993],
+                        ['Multiple', 21955],
+                        ['Other', 18760]
+                        ]);
+
+                        var options = {
+                            title: 'Portland Races Distribution',
+                            subtitle: 'February 28, 2017',
+                            legend: { position: 'right', maxLines:2}
+
+                        };
+
+                        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+                        chart.draw(data, google.charts.Bar.convertOptions(options));
+                    }
+            </script>
+            </div>
         </div>
-
+        <!--another line of chart of Oregon Info-->
+        <div class="row" id="PLG2">
+            <!--how many patient physician need deal, just interest-->
+            <div class="col-lg-6 col-md-12 col-sm-12 p3 my-3 border text-black">
+                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                <div id="curve_chart2" style="width: 100%; height: 400px"></div>
+                <p>     This is an interesting statistic especially for current situation.</p>
+                <script type="text/javascript">
+                    google.charts.load('current', {'packages':['corechart']});
+                    google.charts.setOnLoadCallback(drawChart);
+              
+                    function drawChart() {
+                      var data = google.visualization.arrayToDataTable([
+                        ['Year', 'Nevada', 'Idaho', 'Oregon', 'Washington', 'California'],
+                        ['2018',  1760, 1560, 1070, 1200, 1280],
+                        ['2017',  1750, 1560, 1070, 1190, 1280],
+                        ['2016',  1750, 1580, 1080, 1190, 1270],
+                        ['2015',  1780, 1620, 1110, 1200, 1290],
+                        ['2014',  1740, 1680, 1120, 1220, 1330],
+                        ]);
+              
+                        var options = {
+                            title: 'Patient to Clinician Ratios',
+                            subtitle: 'How many people one primary care physician need deal',
+                            curveType: 'function',
+                            legend: { position: 'bottom' }
+                        };
+              
+                        var chart = new google.visualization.LineChart(document.getElementById('curve_chart2'));
+              
+                        chart.draw(data, options);
+                    }
+                  </script>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12 p3 my-3 border text-black">
+                <img src="/images/Portland Universities.png" id = "imagePLU" alt="This really interesting graph come from one website, but i don't know how to make it">
+                <!--come from here: https://datausa.io/profile/geo/portland-or/#economy-->
+            </div>
+        </div>
     </div>
-
+    
     <script>
         var keypri = 0;
         var keysub = 0;
 
+        //reset all description, which means clean the description field.
         function cleandescription(){
             document.getElementById("description0").style.display="none";
             document.getElementById("musdescription1").style.display="none";
@@ -295,23 +387,35 @@
             keysub = 0;
         }
 
+        //function control the main menu, the left side one
         function clickswitch(key1){
             if(keypri == key1){
                 document.getElementById("submenu"+key1).style.display="none";
                 document.getElementById("submenu0").style.display="";
+                document.getElementById("PLG1").style.display="";
+                document.getElementById("PLG2").style.display="";
                 keypri = 0;
                 cleandescription();
                 document.getElementById("description0").style.display="";
             }else{
                 document.getElementById("submenu"+keypri).style.display="none";
                 document.getElementById("submenu0").style.display="none";
+                document.getElementById("PLG1").style.display="none";
+                document.getElementById("PLG2").style.display="none";
                 document.getElementById("submenu"+key1).style.display="";
                 keypri = key1;
                 cleandescription();
-                document.getElementById("description0").style.display="";
+                if(key1 == 0){
+                    document.getElementById("PLG1").style.display="";
+                    document.getElementById("PLG2").style.display="";
+                    document.getElementById("description0").style.display="";
+                }
+                
             }
         }
 
+        //this long-long-long function will coordinate with two variable 
+        //control what will be displayed in the description field, each location has one
         function clickdescription(key2){
             if(keypri == 0){
                 cleandescription();
@@ -475,6 +579,7 @@
         });
       }
     </script>
+
 
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
