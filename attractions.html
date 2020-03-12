@@ -97,6 +97,7 @@
         <!-- MAIN CONTENT -->
         <div class="p-3 tab-content bg-light">
           <!-- ATTRACTIONS -->
+
           <div class="container">
             <div class="row">
               <div
@@ -129,6 +130,7 @@
                 id="submenupanel"
               >
                 <div id="submenu0">
+                  <!--Portland photo at init page-->
                   <img
                     src="/images/Portland2.jpg"
                     id="imagePL1"
@@ -275,6 +277,7 @@
             </div>
 
             <div class="row">
+              <!--description area, which collect all the position description, display them when needed-->
               <div
                 class="col-lg-12 col-md-12 col-sm-12 p3 my-3 border text-black"
                 style="height:420px"
@@ -694,6 +697,7 @@
             </div>
 
             <div class="row">
+              <!--display map here-->
               <div
                 class="col-lg-12 col-md-12 col-sm-12 p3 my-3 text-black"
                 id="mappannel"
@@ -848,13 +852,14 @@
                 <img
                   src="/images/Portland Universities.png"
                   id="imagePLU"
-                  alt="This really interesting graph come from one website, but i don't know how to make it"
+                  alt="Portland University Student Graduate Major Distribution"
                 />
                 <!--come from here: https://datausa.io/profile/geo/portland-or/#economy-->
+                <!--this is an execllent chart, but i failed to figure out how to made it-->
               </div>
             </div>
 
-            <!--Below is galary for Museums-->
+            <!--Below is galary for different Museums-->
             <div class="row" id="MUG1" style="display:none">
               <div
                 class="col-lg-6 col-md-12 col-sm-12 p3 my-3 border text-black"
@@ -937,7 +942,7 @@
               </div>
             </div>
 
-            <!--Below is the gallary for landmark-->
+            <!--Below is the gallary for different landmark-->
             <div class="row" id="LMG1" style="display:none">
               <div
                 class="col-lg-6 col-md-12 col-sm-12 p3 my-3 border text-black"
@@ -1031,6 +1036,7 @@
               </div>
             </div>
 
+            <!--Below is photo for different University-->
             <div class="row" id="UTG1" style="display:none">
               <div
                 class="col-lg-6 col-md-12 col-sm-12 p3 my-3 border text-black"
@@ -1062,243 +1068,6 @@
       </div>
     </div>
 
-    <script>
-      var keypri = 0;
-      var keysub = 0;
-
-      //reset all description, which means clean the description field.
-      function cleandescription() {
-        document.getElementById("description0").style.display = "none";
-        document.getElementById("musdescription1").style.display = "none";
-        document.getElementById("musdescription2").style.display = "none";
-        document.getElementById("musdescription3").style.display = "none";
-        document.getElementById("musdescription4").style.display = "none";
-        document.getElementById("lmkdescription1").style.display = "none";
-        document.getElementById("lmkdescription2").style.display = "none";
-        document.getElementById("lmkdescription3").style.display = "none";
-        document.getElementById("lmkdescription4").style.display = "none";
-        document.getElementById("lmkdescription5").style.display = "none";
-        document.getElementById("spcdescription1").style.display = "none";
-        document.getElementById("spcdescription2").style.display = "none";
-        document.getElementById("spcdescription3").style.display = "none";
-        document.getElementById("spcdescription4").style.display = "none";
-        document.getElementById("spcdescription5").style.display = "none";
-        document.getElementById("uvtdescription1").style.display = "none";
-        document.getElementById("uvtdescription2").style.display = "none";
-        document.getElementById("uvtdescription3").style.display = "none";
-        document.getElementById("MUG1").style.display = "none";
-        document.getElementById("MUG2").style.display = "none";
-        document.getElementById("MUG3").style.display = "none";
-        document.getElementById("MUG4").style.display = "none";
-        document.getElementById("LMG1").style.display = "none";
-        document.getElementById("LMG2").style.display = "none";
-        document.getElementById("LMG3").style.display = "none";
-        document.getElementById("LMG4").style.display = "none";
-        document.getElementById("LMG5").style.display = "none";
-        document.getElementById("UTG1").style.display = "none";
-        document.getElementById("UTG2").style.display = "none";
-        document.getElementById("UTG3").style.display = "none";
-        keysub = 0;
-      }
-
-      //function control the main menu, the left side one
-      function clickswitch(key1) {
-        if (keypri == key1) {
-          document.getElementById("submenu" + key1).style.display = "none";
-          document.getElementById("submenu0").style.display = "";
-          document.getElementById("PLG1").style.display = "";
-          document.getElementById("PLG2").style.display = "";
-          keypri = 0;
-          cleandescription();
-          document.getElementById("description0").style.display = "";
-        } else {
-          document.getElementById("submenu" + keypri).style.display = "none";
-          document.getElementById("submenu0").style.display = "none";
-          document.getElementById("PLG1").style.display = "none";
-          document.getElementById("PLG2").style.display = "none";
-          document.getElementById("submenu" + key1).style.display = "";
-          keypri = key1;
-          cleandescription();
-          if (key1 == 0) {
-            document.getElementById("PLG1").style.display = "";
-            document.getElementById("PLG2").style.display = "";
-            document.getElementById("description0").style.display = "";
-          }
-        }
-      }
-
-      //this long-long-long function will coordinate with two variable
-      //control what will be displayed in the description field, each location has one
-      function clickdescription(key2) {
-        if (keypri == 0) {
-          cleandescription();
-          document.getElementById("description0").style.display = "";
-        } else if (keypri == 1) {
-          if (key2 == 1) {
-            cleandescription();
-            document.getElementById("musdescription1").style.display = "";
-            document.getElementById("MUG1").style.display = "";
-          } else if (key2 == 2) {
-            cleandescription();
-            document.getElementById("musdescription2").style.display = "";
-            document.getElementById("MUG2").style.display = "";
-          } else if (key2 == 3) {
-            cleandescription();
-            document.getElementById("musdescription3").style.display = "";
-            document.getElementById("MUG3").style.display = "";
-          } else if (key2 == 4) {
-            cleandescription();
-            document.getElementById("musdescription4").style.display = "";
-            document.getElementById("MUG4").style.display = "";
-          }
-        } else if (keypri == 2) {
-          if (key2 == 1) {
-            cleandescription();
-            document.getElementById("lmkdescription1").style.display = "";
-            document.getElementById("LMG1").style.display = "";
-          } else if (key2 == 2) {
-            cleandescription();
-            document.getElementById("lmkdescription2").style.display = "";
-            document.getElementById("LMG2").style.display = "";
-          } else if (key2 == 3) {
-            cleandescription();
-            document.getElementById("lmkdescription3").style.display = "";
-            document.getElementById("LMG3").style.display = "";
-          } else if (key2 == 4) {
-            cleandescription();
-            document.getElementById("lmkdescription4").style.display = "";
-            document.getElementById("LMG4").style.display = "";
-          } else if (key2 == 5) {
-            cleandescription();
-            document.getElementById("lmkdescription5").style.display = "";
-            document.getElementById("LMG5").style.display = "";
-          }
-        } else if (keypri == 3) {
-          if (key2 == 1) {
-            cleandescription();
-            document.getElementById("spcdescription1").style.display = "";
-          } else if (key2 == 2) {
-            cleandescription();
-            document.getElementById("spcdescription2").style.display = "";
-          } else if (key2 == 3) {
-            cleandescription();
-            document.getElementById("spcdescription3").style.display = "";
-          } else if (key2 == 4) {
-            cleandescription();
-            document.getElementById("spcdescription4").style.display = "";
-          } else if (key2 == 5) {
-            cleandescription();
-            document.getElementById("spcdescription5").style.display = "";
-          }
-        } else if (keypri == 4) {
-          if (key2 == 1) {
-            cleandescription();
-            document.getElementById("uvtdescription1").style.display = "";
-            document.getElementById("UTG1").style.display = "";
-          } else if (key2 == 2) {
-            cleandescription();
-            document.getElementById("uvtdescription2").style.display = "";
-            document.getElementById("UTG2").style.display = "";
-          } else if (key2 == 3) {
-            cleandescription();
-            document.getElementById("uvtdescription3").style.display = "";
-            document.getElementById("UTG3").style.display = "";
-          }
-        }
-      }
-
-      //several varible that required for initialize google map API
-      var map;
-      var service;
-      var infowindow;
-      //matrix store location name, which eaiser to serach them by API
-      var address = [
-        ["Downtown Portland"],
-        [
-          "Oregon Museum of Science and Industry",
-          "Portland Art Museum",
-          "Oregon Historical Society Museum",
-          "Portland Children's Museum"
-        ],
-        [
-          "Pioneer Courthouse Square",
-          "Oregon Zoo",
-          "Pittock Mansion",
-          "Portland Japanese Garden",
-          "Washington Park"
-        ],
-        [
-          "Pioneer Place",
-          "Lloyd Center",
-          "Uptown Shopping Center",
-          "Woodburn Premium Outlets",
-          "Columbia Gorge Premium Outlets"
-        ],
-        [
-          "Portland State University",
-          "Oregon Health & Science University",
-          "University of Portland"
-        ]
-      ];
-
-      function initmap(number1, number2) {
-        var portland = new google.maps.LatLng(-30.867, 151.195);
-
-        infowindow = new google.maps.InfoWindow();
-
-        map = new google.maps.Map(document.getElementById("map"), {
-          center: portland,
-          zoom: 13
-        });
-
-        if ((number1 == null) & (number2 == null)) {
-          var request = {
-            query: address[0][0],
-            fields: ["name", "geometry"]
-          };
-        } else {
-          var request = {
-            query: address[number1][number2],
-            fields: ["name", "geometry"]
-          };
-        }
-
-        service = new google.maps.places.PlacesService(map);
-
-        service.findPlaceFromQuery(request, function(results, status) {
-          if (status === google.maps.places.PlacesServiceStatus.OK) {
-            for (var i = 0; i < results.length; i++) {
-              createMarker(results[i]);
-            }
-
-            map.setCenter(results[0].geometry.location);
-          }
-        });
-
-        // Create the search box and link it to the UI element.
-        var input = document.getElementById("pac-input");
-        var searchBox = new google.maps.places.SearchBox(input);
-        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
-
-        // Bias the SearchBox results towards current map's viewport.
-        map.addListener("bounds_changed", function() {
-          searchBox.setBounds(map.getBounds());
-        });
-      }
-
-      function createMarker(place) {
-        var marker = new google.maps.Marker({
-          map: map,
-          position: place.geometry.location
-        });
-
-        google.maps.event.addListener(marker, "click", function() {
-          infowindow.setContent(place.name);
-          infowindow.open(map, this);
-        });
-      }
-    </script>
-
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -1309,7 +1078,10 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASboHPi1uBcf0bh-2D146ldzkwBDUGr68&libraries=places&callback=initmap&language=EN&region=US"
     ></script>
 
-    <!-- Javascript -->
+    <!-- Attractions javscript -->
+    <script src="./scripts/map-page.js"></script>
+
+    <!-- Bootstrap Javascript -->
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -1325,13 +1097,6 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-
-    <!-- jquery -->
-    <!-- <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script> -->
 
     <!-- Time functionality -->
     <script src="/scripts/time.js"></script>
