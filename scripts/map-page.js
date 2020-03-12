@@ -37,6 +37,10 @@
             document.getElementById("UTG1").style.display="none";
             document.getElementById("UTG2").style.display="none";
             document.getElementById("UTG3").style.display="none";
+            document.getElementById("sampphoto1").style.display="none";
+            document.getElementById("sampphoto2").style.display="none";
+            document.getElementById("sampphoto3").style.display="none";
+            document.getElementById("sampphoto4").style.display="none";
             keysub = 0;
         }
 
@@ -58,6 +62,7 @@
                 document.getElementById("PLG1").style.display="none";
                 document.getElementById("PLG2").style.display="none";
                 document.getElementById("submenu"+key1).style.display="";
+                
                 keypri = key1;
                 cleandescription();
                 if(key1 == 0){
@@ -65,6 +70,8 @@
                     document.getElementById("PLG1").style.display="";
                     document.getElementById("PLG2").style.display="";
                     document.getElementById("description0").style.display="";
+                }else{
+                    document.getElementById("sampphoto"+key1).style.display="";
                 }
             }
         }
