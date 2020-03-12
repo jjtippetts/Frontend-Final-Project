@@ -87,7 +87,7 @@ function displayFiveDayForecast(fullData) {
     let time = formatTime(hours, 00);
 
     day = $("<div class='font-weight-bold'></div>").text(day);
-    time = $("<div></div>").text(time);
+    time = $("<div class='font-weight-bold'></div>").text(time);
     let temp = $("<div></div>").text(
       Math.round(forecast.main.temp).toString() + " \xB0 F"
     );
