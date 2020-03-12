@@ -47,31 +47,38 @@
         //function control the main menu, the left side one
         function clickswitch(key1){
             if(keypri == key1){
+                if(key1 == 0){
+
+                }else{
+                    cleandescription();
+                    document.getElementById("submenu"+key1).style.display="none";
+                    document.getElementById("submenu0").style.display="";
+                    keypri = 0;
+                    document.getElementById("description0").style.display="";
+                }
                 //the situation that click one major button twice, which cancel its function and display Portland
-                document.getElementById("submenu"+key1).style.display="none";
-                document.getElementById("submenu0").style.display="";
-                document.getElementById("PLG1").style.display="";
-                document.getElementById("PLG2").style.display="";
-                keypri = 0;
-                cleandescription();
-                document.getElementById("description0").style.display="";
+                //document.getElementById("PLG1").style.display="";
+                //document.getElementById("PLG2").style.display="";
+                //moved to analytics already
+                
             }else{
                 //jump to new page, actually hide current page and set new one be displayed
                 document.getElementById("submenu"+keypri).style.display="none";
-                document.getElementById("submenu0").style.display="none";
-                document.getElementById("PLG1").style.display="none";
-                document.getElementById("PLG2").style.display="none";
-                document.getElementById("submenu"+key1).style.display="";
-                
+                //document.getElementById("PLG1").style.display="none";
+                //document.getElementById("PLG2").style.display="none";
                 keypri = key1;
                 cleandescription();
+
                 if(key1 == 0){
                     //if press portland button, just display portland, not leave them blank
-                    document.getElementById("PLG1").style.display="";
-                    document.getElementById("PLG2").style.display="";
+                    //document.getElementById("PLG1").style.display="";
+                    //document.getElementById("PLG2").style.display="";
                     document.getElementById("description0").style.display="";
+                    document.getElementById("submenu0").style.display="";
                 }else{
+                    document.getElementById("submenu"+key1).style.display="";
                     document.getElementById("sampphoto"+key1).style.display="";
+                    document.getElementById("description"+keypri).style.display="";
                 }
             }
         }
