@@ -7,6 +7,7 @@ async function getCurrentWeather() {
     "https://api.openweathermap.org/data/2.5/weather?q=Portland&units=imperial&appid=a0c908be7bf2e72f9b00b4f7f2d3a43f";
   let response = await fetch(url);
   let data = await response.json();
+  console.log(data);
   return data;
 }
 
@@ -43,6 +44,10 @@ function displayCurrentWeather(data) {
   //Humidity
   let humidity = data.main.humidity;
   $(".humidity").append(" " + humidity + "%");
+
+  //Wind
+  let wind = data.wind.speed;
+  $(".wind").append(" " + wind + " mph");
 
   //Sunrise/Sunset
   let timeZone;
@@ -83,11 +88,14 @@ function displayFiveDayForecast(fullData) {
 
     day = $("<div class='font-weight-bold'></div>").text(day);
     time = $("<div></div>").text(time);
-    let temp = $("<div></div>").text(forecast.main.temp);
+    let temp = $("<div></div>").text(
+      Math.round(forecast.main.temp).toString() + " \xB0 F"
+    );
     let description = $("<div></div>").text(forecast.weather[0].description);
+    let wind = $("<div></div>").text(forecast.wind.speed + " mph");
     let parent = $(
       "<div class='weather-item p-4 h-100 d-flex-column'></div>"
-    ).append(day, time, temp, description);
+    ).append(day, time, temp, description, wind);
     $(".fiveDayForecast").append(parent);
   });
 }
