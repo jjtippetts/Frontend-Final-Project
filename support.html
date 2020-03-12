@@ -51,8 +51,8 @@
     </header>
 
     <!-- Sidebar Plus Main Content -->
-    <div class="main-content container-fluid">
-      <div class="row nav-main">
+    <div class="main-content container-fluid pl-0 pr-0 h-100">
+      <div class="nav-main">
         <!-- SIDEBAR NAV -->
         <div
           class="col-12 navbar nav flex-column flex-grow-1 accordion p-2 align-items-center justify-content-center"
@@ -88,7 +88,7 @@
         </div>
 
         <!-- MAIN CONTENT -->
-        <div class="col-12 col-sm p-3 tab-content bg-light">
+        <div class="p-3 tab-content bg-light">
           <!-- Support -->
           <div class="" id="" role="tabpanel" aria-labelledby="">
             <form method="post" action="support.php" id="form">
@@ -129,15 +129,15 @@
                       </label>
                       <br />
                       <textarea
+                        class="form-control"
                         id="message"
                         rows="5"
-                        cols="100"
                         name="message"
                         required
                       ></textarea>
                     </div>
                   </div>
-                  <div class="row">
+                  <div class="row pt-2">
                     <div class="col-lg-3">
                       <input type="submit" value="Send" name="submit" />
                       <input type="reset" value="Reset" name="reset" />
