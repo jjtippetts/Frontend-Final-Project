@@ -71,15 +71,15 @@
             Attractions
           </a>
 
-          <a class="text-dark nav-link rounded w-100 active" href="./analytics.html">
+          <a
+            class="text-dark nav-link rounded w-100 active"
+            href="./analytics.html"
+          >
             <i class="fas fa-chart-bar"></i>
             Analytics
           </a>
 
-          <a
-            class="text-dark nav-link rounded w-100"
-            href="./gallery.html"
-          >
+          <a class="text-dark nav-link rounded w-100" href="./gallery.html">
             <i class="fas fa-images"></i>
             Gallery
           </a>
@@ -94,7 +94,224 @@
         </div>
 
         <div class="col-12 col-sm p-3 tab-content bg-light">
-            <h1 class="display-4">Portland Analytics</h1>
+          <div class="row">
+            <div class="col-3">
+              <h3>About</h3>
+              <p>
+                Portland is the largest and most populous city in the U.S. state
+                of Oregon and the seat of Multnomah County. It is a major port
+                in the Willamette Valley region of the Pacific Northwest, at the
+                confluence of the Willamette and Columbia rivers.
+              </p>
+            </div>
+            <div class="col-5">
+              <h3>History</h3>
+              <p>
+                The Oregon settlement began to be populated in the 1830s near
+                the end of the Oregon Trail. Its water access provided
+                convenient transportation of goods, and the timber industry was
+                a major force in the city's early economy. After the city's
+                economy experienced an industrial boom during World War II, its
+                hard-edged reputation began to dissipate. Beginning in the
+                1960s, Portland became noted for its growing progressive
+                political values, earning it a reputation as a bastion of
+                counterculture.
+              </p>
+            </div>
+            <div class="col-4">
+              <h3>Culture</h3>
+              <p>
+                As of late, Portland is best known for its hipster, extremely
+                liberal and environmentally-friendly behavior. Whether it's
+                coffee, the outdoors, arts, beer and food, cultural communities,
+                events or nightlife, culture in Portland takes many forms,
+                drawing a growing amount of visitors every year.
+              </p>
+            </div>
+          </div>
+
+          <!--the row that contain staistic graph or chart, which use to display Portland information-->
+          <div class="row" id="PLG1">
+            <!--chart 1: Population statistic line chart-->
+            <div class="col-lg-4 col-md-12 col-sm-12 p3 my-3 border text-black">
+              <div id="curve_chart1" style="width: 100%; height: 400px"></div>
+              <!--style="width: 900px; height: 500px"-->
+              <script
+                type="text/javascript"
+                src="https://www.gstatic.com/charts/loader.js"
+              ></script>
+              <script type="text/javascript">
+                google.charts.load("current", { packages: ["corechart"] });
+                google.charts.setOnLoadCallback(drawChart);
+
+                function drawChart() {
+                  var data = google.visualization.arrayToDataTable([
+                    ["year", "Population"],
+                    ["2010", 585463],
+                    ["2011", 595410],
+                    ["2012", 604285],
+                    ["2013", 609970],
+                    ["2014", 620647],
+                    ["2015", 631539],
+                    ["2016", 643136],
+                    ["2017", 648630],
+                    ["2018", 653115]
+                  ]);
+
+                  var options = {
+                    title: "Portland Population Statistic",
+                    subtitle: "End at 2018",
+                    legend: { position: "bottom" }
+                  };
+
+                  var chart = new google.visualization.LineChart(
+                    document.getElementById("curve_chart1")
+                  );
+                  chart.draw(data, options);
+                }
+              </script>
+            </div>
+            <!--chart 2: race distribution column chart-->
+            <div class="col-lg-4 col-md-12 col-sm-12 p3 my-3 border text-black">
+              <div
+                id="columnchart_material"
+                style="width: 100%; height: 400px;"
+              ></div>
+              <script type="text/javascript">
+                google.charts.load("current", { packages: ["bar"] });
+                google.charts.setOnLoadCallback(drawChart);
+
+                function drawChart() {
+                  var data = google.visualization.arrayToDataTable([
+                    ["Race", "Population"],
+                    ["White", 412241],
+                    ["Asian", 33470],
+                    ["Black", 35115],
+                    ["Native", 5587],
+                    ["Hawiian", 1993],
+                    ["Multiple", 21955],
+                    ["Other", 18760]
+                  ]);
+
+                  var options = {
+                    title: "Portland Races Distribution",
+                    subtitle: "February 28, 2017",
+                    legend: { position: "right", maxLines: 2 }
+                  };
+
+                  var chart = new google.charts.Bar(
+                    document.getElementById("columnchart_material")
+                  );
+                  chart.draw(data, google.charts.Bar.convertOptions(options));
+                }
+              </script>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 p3 my-3">
+              <h3>Diversity</h3>
+              Portland, OR is home to a population of 653k people, from which
+              93.5% are citizens. As of 2017, 13.6% of Portland, OR residents
+              were born outside of the country (88.2k people). The ethnic
+              composition of the population of Portland, OR is composed of 457k
+              White Alone residents (70%), 60.8k Hispanic or Latino residents
+              (9.31%), 57.5k Asian Alone residents (8.82%), 39.9k Black or
+              African American Alone residents (6.11%)
+            </div>
+          </div>
+          <!--another line of chart of Oregon Info-->
+          <div class="row" id="PLG2">
+            <div class="col-lg-3 col-md-12 col-sm-12 p3 my-3">
+              <h3>Health</h3>
+              92.6% of the population of Portland, OR has health coverage, with
+              51% on employee plans, 18.1% on Medicaid, 9.07% on Medicare, 13.8%
+              on non-group plans, and 0.657% on military or VA plans. Between
+              2013 and 2014, all personal health care spending per capita in
+              Oregon (including private, Medicare, and Medicaid) grew 7.73%,
+              from $7,467 to $8,044.
+            </div>
+            <!--how many patient physician need deal, just interest-->
+            <div class="col-lg-5 col-md-12 col-sm-12 p3 my-3 border text-black">
+              <script
+                type="text/javascript"
+                src="https://www.gstatic.com/charts/loader.js"
+              ></script>
+              <div id="curve_chart2" style="width: 100%; height: 400px"></div>
+              <script type="text/javascript">
+                google.charts.load("current", { packages: ["corechart"] });
+                google.charts.setOnLoadCallback(drawChart);
+
+                function drawChart() {
+                  var data = google.visualization.arrayToDataTable([
+                    [
+                      "Year",
+                      "Nevada",
+                      "Idaho",
+                      "Oregon",
+                      "Washington",
+                      "California"
+                    ],
+                    ["2018", 1760, 1560, 1070, 1200, 1280],
+                    ["2017", 1750, 1560, 1070, 1190, 1280],
+                    ["2016", 1750, 1580, 1080, 1190, 1270],
+                    ["2015", 1780, 1620, 1110, 1200, 1290],
+                    ["2014", 1740, 1680, 1120, 1220, 1330]
+                  ]);
+
+                  var options = {
+                    title: "Patient to Clinician Ratios",
+                    subtitle:
+                      "How many people one primary care physician need deal",
+                    curveType: "function",
+                    legend: { position: "bottom" }
+                  };
+
+                  var chart = new google.visualization.LineChart(
+                    document.getElementById("curve_chart2")
+                  );
+
+                  chart.draw(data, options);
+                }
+              </script>
+            </div>
+            <div class="col-lg-4 col-md-12 col-sm-12 p3 my-3 border text-black">
+              <script
+                type="text/javascript"
+                src="https://www.gstatic.com/charts/loader.js"
+              ></script>
+              <script type="text/javascript">
+                google.charts.load("current", { packages: ["corechart"] });
+                google.charts.setOnLoadCallback(drawChart);
+                function drawChart() {
+                  var data = google.visualization.arrayToDataTable([
+                    ["spendMethod", "Amount"],
+                    ["Total Per Capita", 8044],
+                    ["Private Health Insurance", 4232],
+                    ["Medicaid", 7185],
+                    ["Medicare", 8942]
+                  ]);
+
+                  var options = {
+                    title: "Personal Health Care Spending"
+                  };
+
+                  var chart = new google.visualization.PieChart(
+                    document.getElementById("piechart")
+                  );
+
+                  chart.draw(data, options);
+                }
+              </script>
+              <div id="piechart" style="width: 400px; height: 400px;"></div>
+            </div>
+
+            <div class="col-lg-6 col-md-12 col-sm-12 p3 my-3 border text-black">
+              <img
+                src="/images/Portland Universities.png"
+                id="imagePLU"
+                alt="Portland University Student Graduate Major Distribution"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
