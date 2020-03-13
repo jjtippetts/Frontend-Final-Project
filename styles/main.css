@@ -121,6 +121,8 @@ header {
 
 .toggle {
   background-color: #4c5c68;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .nav-link {
