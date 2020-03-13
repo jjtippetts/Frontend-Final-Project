@@ -53,7 +53,7 @@
       <div class="nav-main">
         <!-- SIDEBAR NAV -->
         <div
-          class="col-12 navbar nav flex-column flex-grow-1 accordion p-2 align-items-center justify-content-center"
+          class="col-12 navbar nav flex-column p-2 align-items-center justify-content-center"
           role="tablist"
           aria-orientation="vertical"
         >
@@ -84,13 +84,19 @@
             Gallery
           </a>
 
-          <a
-            class="text-dark nav-link mb-auto rounded w-100"
-            href="./support.html"
-          >
+          <a class="text-dark nav-link rounded w-100" href="./support.html">
             <i class="fas fa-wrench"></i>
             Support
           </a>
+
+          <button
+            class="toggle btn d-inline mt-4 mb-auto text-light"
+            type="button"
+            onclick="toggleNav()"
+            role="button"
+          >
+            ☰ <span class="hide">Collapse</span>
+          </button>
         </div>
 
         <!-- MAIN CONTENT -->
@@ -177,5 +183,8 @@
 
     <!-- Open Weather API -->
     <script src="/scripts/weather.js"></script>
+
+    <!-- Collapse for navbar -->
+    <script src="/scripts/collapse.js"></script>
   </body>
 </html>

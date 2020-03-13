@@ -128,3 +128,12 @@ header {
 .home-display-box {
   height: 300px;
 }
+
+.toggle {
+  background-color: $dark-blue;
+  // box-shadow: none !important;
+}
+
+.nav-link {
+  min-height: 2.5rem !important;
+}
