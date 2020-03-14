@@ -32,7 +32,7 @@ $light-gray: #dcdcdd;
   html,
   body,
   .nav-main {
-    height: calc(100vh -50px);
+    height: calc(100vh - 50px);
   }
 
   .main-content {
@@ -70,6 +70,16 @@ header {
   background-image: linear-gradient(#4a8dff, #89bbff);
   height: 250px;
 }
+
+// #uv-chart-box {
+//   vertical-align: middle;
+//   position: relative;
+//   display: inline-block;
+//   canvas {
+//     width: 50%;
+//     height: 100%;
+//   }
+// }
 
 .current-weather {
   font-size: 3rem;
