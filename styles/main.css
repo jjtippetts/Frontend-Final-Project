@@ -13,7 +13,7 @@
   html,
   body,
   .nav-main {
-    height: calc(100vh -50px);
+    height: calc(100vh - 50px);
   }
   .main-content {
     margin-top: 50px;

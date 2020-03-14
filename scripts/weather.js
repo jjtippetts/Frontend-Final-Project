@@ -1,7 +1,7 @@
 // OPEN WEATHER API
 // **********************************************
 
-//API CALLS TO GET CURRENT WEATHER & FIVE DAY FORECAST
+//API CALLS TO GET CURRENT WEATHER & FIVE DAY FORECAST & UV INDEX
 async function getCurrentWeather() {
   let url =
     "https://api.openweathermap.org/data/2.5/weather?q=Portland&units=imperial&appid=a0c908be7bf2e72f9b00b4f7f2d3a43f";
@@ -14,6 +14,14 @@ async function getCurrentWeather() {
 async function getFiveDayForecast() {
   let url =
     "https://api.openweathermap.org/data/2.5/forecast?q=Portland&units=imperial&appid=a0c908be7bf2e72f9b00b4f7f2d3a43f";
+  let response = await fetch(url);
+  let data = await response.json();
+  return data;
+}
+
+async function getUVIndex() {
+  let url =
+    "https://api.openweathermap.org/data/2.5/uvi?&appid=a0c908be7bf2e72f9b00b4f7f2d3a43f&lat=45.52&lon=-122.68";
   let response = await fetch(url);
   let data = await response.json();
   return data;
@@ -100,6 +108,42 @@ function displayFiveDayForecast(fullData) {
   });
 }
 
+//Display UV Index
+function displayUVIndex(data) {
+  console.log(data);
+  let uvIndex = data.value;
+  console.log(uvIndex);
+  $(".uv-index").append(" " + uvIndex);
+  let ctx = document.getElementById("uv-chart").getContext("2d");
+  let weatherChart = new Chart(ctx, {
+    type: "bar",
+    data: {
+      labels: ["Today"],
+      datasets: [
+        {
+          label: "UV Index",
+          data: [uvIndex],
+          backgroundColor: ["rgba(247, 254, 114, 0.8)"],
+          borderColor: ["rgba(247, 254, 114, 1)"],
+          borderWidth: 1
+        }
+      ]
+    },
+    options: {
+      scales: {
+        yAxes: [
+          {
+            ticks: {
+              max: 12,
+              beginAtZero: true
+            }
+          }
+        ]
+      }
+    }
+  });
+}
+
 //***************************************
 //CALL DISPLAY FUNCTIONS
 async function displayWeather() {
@@ -109,18 +153,23 @@ async function displayWeather() {
   //Get Five Day Forecast
   fiveDayForecast = await getFiveDayForecast();
   displayFiveDayForecast(fiveDayForecast);
+  // uvIndex = await getUVIndex();
+  // displayUVIndex(uvIndex);
 }
 
 displayWeather();
 
-const map_url =
-  "https://tile.openweathermap.org/map/clouds/3/7/7.png?appid=a0c908be7bf2e72f9b00b4f7f2d3a43f";
+//***************************************************
+//MAP API CALLS WORK IN PROGRESS NEED PAID SUBSCRIPTION
 
-fetch(map_url)
-  .then(response => response.json())
-  .then(data => {
-    console.log(data);
-  })
-  .catch(error => {
-    console.log(error);
-  });
+// const map_url =
+//   "https://tile.openweathermap.org/map/clouds/3/7/7.png?appid=a0c908be7bf2e72f9b00b4f7f2d3a43f";
+
+// fetch(map_url)
+//   .then(response => response.json())
+//   .then(data => {
+//     console.log(data);
+//   })
+//   .catch(error => {
+//     console.log(error);
+//   });
